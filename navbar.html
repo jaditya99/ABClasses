@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <title>AB CLASSES - CAT Coaching</title>
+  <style>
+    .vertical-dropdown-menu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: rgb(255, 255, 255);
+      border: 1px solid #ddd;
+      width: 200px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .dropdown:hover .vertical-dropdown-menu {
+      display: block;
+    }
+
+    .vertical-dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .vertical-dropdown-menu a:hover {
+      background: #fff5f5;
+    }
+
+    .hover-blue:hover {
+      color: blue;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+  <header class="border-b border-gray-300">
+    <div class="flex justify-between items-center py-3 px-4">
+      <div class="sm:hidden">
+        <button id="mobile-menu-button" class="text-2xl" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="flex items-center space-x-1">
+        <span class="font-bold text-2xl text-black">AB</span>
+        <span class="font-bold text-2xl text-black">Classes</span>
+      </div>
+
+      <nav class="hidden sm:flex space-x-8" role="navigation" aria-label="Primary Navigation">
+        <a class="font-bold hover-blue" href="about.html">About Us</a>
+
+        <div class="relative dropdown">
+          <a class="font-bold flex items-center space-x-1 cursor-pointer" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <span>Previous Papers</span>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="vertical-dropdown-menu" role="menu" aria-label="Previous Papers submenu">
+            <a href="Previous_Year/p1.html" role="menuitem" tabindex="-1">CAT Previous Papers</a>
+            <a href="Previous_Year/p1.html" role="menuitem" tabindex="-1">XAT Previous Papers</a>
+            <a href="Previous_Year/p1.html" role="menuitem" tabindex="-1">SNAP Previous Papers</a>
+            <a href="Previous_Year/p1.html" role="menuitem" tabindex="-1">Other Exams</a>
+          </div>
+        </div>
+
+        <div class="relative dropdown">
+          <a class="font-bold flex items-center space-x-1 cursor-pointer" tabindex="0" aria-haspopup="true" aria-expanded="false">
+            <span>Resources</span>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="vertical-dropdown-menu" role="menu" aria-label="Resources submenu">
+            <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem" tabindex="-1">Free CAT Resources</a>
+            <a href="articles-with-navbar.html" role="menuitem" tabindex="-1">Latest MBA Articles</a>
+            <a href="iim-call-predictor.html" role="menuitem" tabindex="-1">IIM Call Predictor</a>
+            <a href="mba-colleges.html" role="menuitem" tabindex="-1">MBA Colleges</a>
+          </div>
+        </div>
+
+        <a class="font-bold" href="results.html">Results</a>
+        <a class="font-bold hover-blue" href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+      </nav>
+
+      <div class="hidden sm:flex space-x-2 items-center font-bold text-xl">
+        <a class="text-lg hover-blue" href="https://website-6ig.pages.dev/registration">Register</a>
+        <span>|</span>
+        <a class="text-lg hover-blue" href="https://learn.abclasses.in/learn/account/signin">Login</a>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden sm:hidden flex-col bg-white w-full text-black px-4 py-4 space-y-4 text-lg font-bold border-t border-gray-300" role="menu" aria-label="Mobile menu">
+      <a href="about-us.html" class="block" role="menuitem" tabindex="-1">About Us</a>
+      <div class="relative group">
+        <button aria-haspopup="true" aria-expanded="false" class="flex justify-between items-center w-full font-bold text-left" id="mobile-previous-papers-button">
+          <span>Previous Papers</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-previous-papers-menu" class="hidden absolute left-0 top-full bg-white shadow-md pl-4 pr-6 py-3 text-base font-normal space-y-2 z-10 w-full">
+          <a href="Previous_Year/p1.html" class="block" role="menuitem" tabindex="-1">CAT Previous Papers</a>
+          <a href="Previous_Year/p1.html" class="block" role="menuitem" tabindex="-1">XAT Previous Papers</a>
+          <a href="Previous_Year/p1.html" class="block" role="menuitem" tabindex="-1">SNAP Previous Papers</a>
+          <a href="Previous_Year/p1.html" class="block" role="menuitem" tabindex="-1">Other Exams</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button aria-haspopup="true" aria-expanded="false" class="flex justify-between items-center w-full font-bold text-left" id="mobile-resources-button">
+          <span>Resources</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-resources-menu" class="hidden absolute left-0 top-full bg-white shadow-md pl-4 pr-6 py-3 text-base font-normal space-y-2 z-10 w-full">
+          <a href="free-cat-resources.html" class="block" role="menuitem" tabindex="-1">Free CAT Resources</a>
+          <a href="articles.html" class="block" role="menuitem" tabindex="-1">Latest MBA Articles</a>
+          <a href="iim-call-predictor.html" class="block" role="menuitem" tabindex="-1">IIM Call Predictor</a>
+          <a href="cat-daily-articles.html" class="block" role="menuitem" tabindex="-1">CAT Daily Articles</a>
+          <a href="mba-colleges.html" class="block" role="menuitem" tabindex="-1">MBA Colleges</a>
+        </div>
+      </div>
+      <a href="results.html" class="block" role="menuitem" tabindex="-1">Results</a>
+      <a href="https://website-6ig.pages.dev/registration" class="block" role="menuitem" tabindex="-1">Register</a>
+      <a href="https://learn.abclasses.in/learn/account/signin" class="block" role="menuitem" tabindex="-1">Login</a>
+    </div>
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll("#mobile-menu a").forEach(link => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Mobile previous papers submenu toggle
+      const mobilePreviousPapersButton = document.getElementById("mobile-previous-papers-button");
+      const mobilePreviousPapersMenu = document.getElementById("mobile-previous-papers-menu");
+
+      mobilePreviousPapersButton.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+        if (mobilePreviousPapersMenu.classList.contains("hidden")) {
+          mobilePreviousPapersMenu.classList.remove("hidden");
+        } else {
+          mobilePreviousPapersMenu.classList.add("hidden");
+        }
+      });
+
+      // Mobile resources submenu toggle
+      const mobileResourcesButton = document.getElementById("mobile-resources-button");
+      const mobileResourcesMenu = document.getElementById("mobile-resources-menu");
+
+      mobileResourcesButton.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+        if (mobileResourcesMenu.classList.contains("hidden")) {
+          mobileResourcesMenu.classList.remove("hidden");
+        } else {
+          mobileResourcesMenu.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
