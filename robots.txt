@@ -1,4 +1,9 @@
+# Allow all search engine crawlers full access to the site.
+# This is the default behavior, but we are being explicit for clarity.
 User-agent: *
 Allow: /
 
-Sitemap: https://jaditya99.github.io/ABClasses/sitemap.xml
+# Location of the XML sitemap.
+# This tells search engines where to find a list of all your important pages.
+# Ensure your sitemap is uploaded and accessible at this final URL.
+Sitemap: https://abclasses.in/sitemap.xml
