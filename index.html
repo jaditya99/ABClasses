@@ -1046,12 +1046,23 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      if (document.getElementById('stepper')) {
+      const stepper = document.getElementById('stepper');
+      if (stepper) {
         buildDots();
         buildCards();
         updateUI();
         let autoTimer = setInterval(() => navigate(1), 5000);
-        document.getElementById('stepper').addEventListener('pointerdown', () => clearInterval(autoTimer), { once: true });
+        
+        const stopAuto = () => clearInterval(autoTimer);
+        stepper.addEventListener('pointerdown', stopAuto, { once: true });
+        stepper.addEventListener('touchstart', stopAuto, { once: true });
+
+        let tX = 0, tY = 0;
+        stepper.addEventListener('touchstart', e => { tX = e.changedTouches[0].screenX; tY = e.changedTouches[0].screenY; }, { passive: true });
+        stepper.addEventListener('touchend', e => {
+          const dX = tX - e.changedTouches[0].screenX, dY = tY - e.changedTouches[0].screenY;
+          if (Math.abs(dX) > 40 && Math.abs(dX) > Math.abs(dY)) navigate(dX > 0 ? 1 : -1);
+        }, { passive: true });
       }
     });
   </script>
