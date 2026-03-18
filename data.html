@@ -1,250 +1,271 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Transforming Learning Outcomes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <style>
-    body {
-      font-family: "Inter", sans-serif;
-      background: #f9fafb;
-      color: #121826;
+    :root {
+      --red:        #e8192c;
+      --red-dark:   #c0121f;
+      --red-soft:   #fff0f1;
+      --white:      #ffffff;
+      --bg:         #f8f9fb;
+      --border:     #e4e7ed;
+      --text:       #1a1d23;
+      --text-mid:   #4a5060;
+      --text-light: #7a8090;
+      --shadow-xs:  0 1px 4px rgba(0,0,0,0.06);
+      --shadow-sm:  0 2px 12px rgba(0,0,0,0.07);
+      --shadow-md:  0 6px 28px rgba(0,0,0,0.09);
+      --radius-md:  14px;
+      --radius-sm:  8px;
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+      --font:       'Plus Jakarta Sans', sans-serif;
     }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── WRAPPER ── */
+    .data-section {
+      padding: 72px 24px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── HEADER ── */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-heading .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: var(--red-soft);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .section-heading h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .section-heading p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    .section-heading .bar {
+      width: 40px;
+      height: 3px;
+      background: var(--red);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* ── GRID ── */
+    .stats-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* ── CARD ── */
     .stat-card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-        0 4px 6px -4px rgb(0 0 0 / 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 20px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow-xs);
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+      border-radius: 3px 3px 0 0;
     }
     .stat-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15),
-        0 10px 10px -5px rgb(0 0 0 / 0.1);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+      border-color: #ffd6d9;
     }
-    .stat-number {
-      font-weight: 900;
-      font-size: 3.5rem;
-      color: #d94a3d;
-      line-height: 1;
-    }
-    .stat-description {
-      font-weight: 600;
-      font-size: 1.125rem;
-      color: #2e3a59;
-      margin-top: 0.5rem;
-    }
+
+    /* ── ICON ── */
     .icon-circle {
-      background: #d94a3d;
-      color: white;
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 9999px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      box-shadow: 0 4px 6px rgb(217 74 61 / 0.4);
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(232,25,44,0.3);
+      flex-shrink: 0;
     }
 
-    /* Animation keyframes */
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      12.5% { opacity: 1; }
-      37.5% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 0; }
+    /* ── NUMBER ── */
+    .stat-number {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
-    /* Mobile only animation container */
+    /* ── LABEL ── */
+    .stat-description {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.4;
+    }
+
+    /* ── RESPONSIVE: 2-col tablet ── */
+    @media (max-width: 900px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+
+    /* ── RESPONSIVE: mobile ── */
     @media (max-width: 639px) {
-      body {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        padding-right: 12px;
-        background: transparent !important;
+      body { background: transparent; }
+
+      .data-section {
+        padding: 32px 16px 36px; /* top gap so it breathes below result image */
+        background: var(--bg);
+        border-top: 1px solid var(--border);
       }
-      .stat-cards-container {
+
+      .section-heading { margin-bottom: 24px; }
+      .section-heading h2 { font-size: 1.35rem; }
+
+      /* Animated carousel on mobile */
+      .stats-grid {
+        display: block;
         position: relative;
-        height: 280px; /* slightly reduced height */
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 230px;
+        max-width: 420px;
+        margin: 0 auto;
       }
+
       .stat-card {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
+        top: 0; left: 0; right: 0;
         width: 100%;
-        max-width: 400px;
         opacity: 0;
         pointer-events: none;
-        animation-name: fadeInOut;
-        animation-duration: 12s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: none;
-        padding: 2rem 2rem 1rem 2rem; /* reduced vertical padding */
-        background: white !important;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        animation: fadeInOut 16s infinite;
+        padding: 24px 20px 20px;
       }
-      /* Each card gets a different animation delay to appear one after another */
-      .stat-card:nth-child(1) {
-        animation-delay: 0s;
-      }
-      .stat-card:nth-child(2) {
-        animation-delay: 2s;
-      }
-      .stat-card:nth-child(3) {
-        animation-delay: 4s;
-      }
-      .stat-card:nth-child(4) {
-        animation-delay: 6s;
-      }
-      .stat-card:nth-child(5) {
-        animation-delay: 8s;
-      }
-      .stat-card:nth-child(6) {
-        animation-delay: 10s;
-      }
-      /* Hide Years of Excellence and Student Satisfaction Rate on mobile */
-      .stat-card:nth-child(7),
-      .stat-card:nth-child(8) {
-        display: none !important;
-      }
-      /* Hide header and paragraph on mobile */
-      .header-container {
-        display: none;
-      }
-      .stat-number {
-        font-size: 3rem;
-      }
-      .stat-description {
-        font-size: 1rem;
-        margin-top: 0.25rem;
-      }
-      .icon-circle {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-      }
-    }
 
-    /* On larger screens, show all cards normally */
-    @media (min-width: 640px) {
-      body {
-        padding-top: 64px;
-        padding-bottom: 64px;
-        padding-left: 24px;
-        padding-right: 24px;
-        background: #f9fafb !important;
+      .stat-card:nth-child(1) { animation-delay: 0s; }
+      .stat-card:nth-child(2) { animation-delay: 2s; }
+      .stat-card:nth-child(3) { animation-delay: 4s; }
+      .stat-card:nth-child(4) { animation-delay: 6s; }
+      .stat-card:nth-child(5) { animation-delay: 8s; }
+      .stat-card:nth-child(6) { animation-delay: 10s; }
+      .stat-card:nth-child(7) { animation-delay: 12s; }
+      .stat-card:nth-child(8) { animation-delay: 14s; }
+
+      @keyframes fadeInOut {
+        0%    { opacity: 0; }
+        6.25% { opacity: 1; }
+        18.75%{ opacity: 1; }
+        25%   { opacity: 0; }
+        100%  { opacity: 0; }
       }
-      .stat-cards-container {
-        height: auto !important;
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .stat-card {
-        position: static !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        animation: none !important;
-        width: auto !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 2rem;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-          0 4px 6px -4px rgb(0 0 0 / 0.1);
-      }
-      .header-container {
-        display: block;
-      }
-      .stat-number {
-        font-size: 3.5rem;
-      }
-      .stat-description {
-        font-size: 1.125rem;
-        margin-top: 0.5rem;
-      }
-      .icon-circle {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
+
+      .stat-number { font-size: 2.8rem; }
+      .stat-description { font-size: 0.8rem; }
+      .icon-circle { width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 12px; }
     }
   </style>
 </head>
-<body class="px-6">
-  <div class="header-container max-w-7xl mx-auto text-center mb-16 px-4">
-    <h1 class="text-4xl font-extrabold text-[#121826] max-w-3xl mx-auto leading-tight">
-      Transforming Learning Outcomes with Proven Results
-    </h1>
-    <p class="mt-4 text-lg text-[#4B5563] max-w-xl mx-auto">
-      Empowering thousands of students through quality education and interactive experiences.
-    </p>
-  </div>
+<body>
+  <section class="data-section">
 
-  <div class="stat-cards-container max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-user-graduate"></i></div>
-      <p class="stat-number">2500+</p>
-      <p class="stat-description">Students Enrolled</p>
+    <div class="section-heading">
+      <span class="eyebrow">By The Numbers</span>
+      <h2>Transforming Learning Outcomes</h2>
+      <div class="bar"></div>
+      <p>Empowering thousands of students through quality education &amp; proven results</p>
     </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-video"></i></div>
-      <p class="stat-number">2500+</p>
-      <p class="stat-description">Hours of Video Content</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-user-graduate"></i></div>
+        <p class="stat-number">2500+</p>
+        <p class="stat-description">Students Enrolled</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-video"></i></div>
+        <p class="stat-number">2500+</p>
+        <p class="stat-description">Hours of Video Content</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
+        <p class="stat-number">25000+</p>
+        <p class="stat-description">Mock Tests Taken</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+        <p class="stat-number">99.99%</p>
+        <p class="stat-description">Highest Percentile (CAT)</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+        <p class="stat-number">2500+</p>
+        <p class="stat-description">IIM Calls</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-comments"></i></div>
+        <p class="stat-number">300+</p>
+        <p class="stat-description">Hours of Interactive Sessions</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-award"></i></div>
+        <p class="stat-number">10+</p>
+        <p class="stat-description">Years of Excellence</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon-circle"><i class="fas fa-smile"></i></div>
+        <p class="stat-number">99%</p>
+        <p class="stat-description">Student Satisfaction Rate</p>
+      </div>
     </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
-      <p class="stat-number">25000+</p>
-      <p class="stat-description">Mock Tests Taken</p>
-    </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
-      <p class="stat-number">99.99%</p>
-      <p class="stat-description">Highest Percentile Achieved(CAT)</p>
-    </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
-      <p class="stat-number">2500+</p>
-      <p class="stat-description">IIMs Calls</p>
-    </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-comments"></i></div>
-      <p class="stat-number">300+</p>
-      <p class="stat-description">Hours of Interactive Sessions</p>
-    </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-award"></i></div>
-      <p class="stat-number">10+</p>
-      <p class="stat-description">Years of Excellence</p>
-    </div>
-    <div class="stat-card flex flex-col items-center text-center">
-      <div class="icon-circle"><i class="fas fa-smile"></i></div>
-      <p class="stat-number">99%</p>
-      <p class="stat-description">Student Satisfaction Rate</p>
-    </div>
-  </div>
+
+  </section>
 </body>
 </html>

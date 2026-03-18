@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>How To Prepare For CAT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    :root {
+      --red:        #e8192c;
+      --red-dark:   #c0121f;
+      --red-soft:   #fff0f1;
+      --white:      #ffffff;
+      --bg:         #f8f9fb;
+      --border:     #e4e7ed;
+      --text:       #1a1d23;
+      --text-mid:   #4a5060;
+      --text-light: #7a8090;
+      --shadow-sm:  0 2px 12px rgba(0,0,0,0.07);
+      --shadow-md:  0 6px 28px rgba(0,0,0,0.09);
+      --radius-md:  14px;
+      --radius-sm:  8px;
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+      --font:       'Plus Jakarta Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── SHARED SECTION WRAPPER ─── */
+    .cat-prep-section {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── SECTION HEADING ─── */
+    .section-heading {
+      text-align: center;
+      padding: 56px 24px 40px;
+    }
+    .section-heading .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: var(--red-soft);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .section-heading h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .section-heading .bar {
+      width: 40px;
+      height: 3px;
+      background: var(--red);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* ─── DESKTOP: show flowchart image ─── */
+    .desktop-flowchart {
+      display: block;
+      padding: 0 24px 56px;
+      text-align: center;
+    }
+    .desktop-flowchart img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    /* ─── MOBILE: interactive stepper ─── */
+    .mobile-stepper { display: none; }
+
+    /* ─── PHASE DATA ─── */
+    /* colors per phase */
+    :root {
+      --c0: #0bb89a; /* Foundation  — teal   */
+      --c1: #e8192c; /* Practice    — red    */
+      --c2: #e8192c; /* Mock Tests  — red    */
+      --c3: #f59e0b; /* Strategy    — amber  */
+      --c4: #e8192c; /* Final Lap   — red    */
+      --c5: #0bb89a; /* 99.5+ %ile  — teal   */
+    }
+
+    /* ─── PROGRESS DOTS ─── */
+    .stepper-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px 0 0;
+    }
+    .stepper-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background var(--transition), transform var(--transition), width var(--transition);
+      cursor: pointer;
+    }
+    .stepper-dot.active {
+      width: 24px;
+      border-radius: 4px;
+      background: var(--red);
+      transform: none;
+    }
+
+    /* ─── CARD STACK ─── */
+    .stepper-card-wrap {
+      position: relative;
+      padding: 20px 16px 28px;
+      min-height: 380px;
+    }
+
+    .stepper-card {
+      position: absolute;
+      top: 20px;
+      left: 16px;
+      right: 16px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 28px 22px 24px;
+      box-shadow: var(--shadow-sm);
+      opacity: 0;
+      transform: translateX(48px);
+      transition: opacity 0.38s cubic-bezier(0.4,0,0.2,1), transform 0.38s cubic-bezier(0.4,0,0.2,1);
+      pointer-events: none;
+    }
+    .stepper-card.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+    .stepper-card.exit-left {
+      opacity: 0;
+      transform: translateX(-48px);
+    }
+
+    /* phase badge */
+    .phase-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 4px 12px 4px 8px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .phase-badge .phase-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* phase number */
+    .phase-number {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    /* phase title */
+    .phase-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    /* horizontal rule */
+    .phase-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    /* phase description */
+    .phase-desc {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    /* checklist */
+    .phase-checks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .phase-checks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+    .phase-checks li .chk {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #fff;
+      margin-top: 1px;
+    }
+
+    /* duration chip */
+    .phase-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 18px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-mid);
+    }
+    .phase-duration i { font-size: 0.7rem; color: var(--red); }
+
+    /* ─── NAV BUTTONS ─── */
+    .stepper-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 28px;
+      gap: 12px;
+    }
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 20px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 0.83rem;
+      cursor: pointer;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-mid);
+      transition: all var(--transition);
+    }
+    .nav-btn:hover { border-color: var(--red); color: var(--red); }
+    .nav-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+    .nav-btn.primary {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-btn.primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+    /* phase counter badge */
+    .phase-counter {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+      min-width: 42px;
+      text-align: center;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .section-heading { padding: 36px 16px 0; }
+      .desktop-flowchart { display: none; }
+      .mobile-stepper { display: block; }
+    }
+  </style>
+</head>
+<body>
+<section class="cat-prep-section">
+
+  <!-- Shared heading -->
+  <div class="section-heading">
+    <span class="eyebrow">Strategy</span>
+    <h2>How To Prepare For CAT?</h2>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Desktop: flowchart image -->
+  <div class="desktop-flowchart">
+    <img src="images/flowchart.jpg" alt="CAT Preparation Flowchart" loading="lazy">
+  </div>
+
+  <!-- Mobile: interactive stepper -->
+  <div class="mobile-stepper" id="stepper">
+
+    <!-- Progress dots -->
+    <div class="stepper-dots" id="dots"></div>
+
+    <!-- Card stack -->
+    <div class="stepper-card-wrap" id="card-wrap"></div>
+
+    <!-- Nav -->
+    <div class="stepper-nav">
+      <button class="nav-btn" id="btn-prev" onclick="navigate(-1)" disabled>
+        <i class="fas fa-arrow-left"></i> Prev
+      </button>
+      <span class="phase-counter" id="counter">1 / 6</span>
+      <button class="nav-btn primary" id="btn-next" onclick="navigate(1)">
+        Next <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const phases = [
+    {
+      color: "#0bb89a",
+      bg: "#e6faf6",
+      icon: "fas fa-layer-group",
+      label: "Phase 1",
+      title: "Foundation",
+      duration: "Months 1–3",
+      desc: "Build rock-solid fundamentals in Quant, VARC, and DILR before touching any mock test.",
+      checks: [
+        "Master CAT syllabus topics from scratch",
+        "Strengthen Quant basics — Number Theory, Algebra, Geometry",
+        "Build reading habit — 1 editorial daily",
+        "Practice DILR sets systematically"
+      ]
+    },
+    {
+      color: "#e8192c",
+      bg: "#fff0f1",
+      icon: "fas fa-pen-nib",
+      label: "Phase 2",
+      title: "Practice Phase",
+      duration: "Months 3–5",
+      desc: "Solve topic-wise questions and sectional tests to sharpen speed and accuracy.",
+      checks: [
+        "Topic-wise question banks (500+ per topic)",
+        "Sectional tests with time-bound practice",
+        "Analyse weak areas after every test",
+        "Target 80%+ accuracy before moving on"
+      ]
+    },
+    {
+      color: "#e8192c",
+      bg: "#fff0f1",
+      icon: "fas fa-file-alt",
+      label: "Phase 3",
+      title: "Mock Tests",
+      duration: "Months 5–8",
+      desc: "Attempt full-length mocks in exam conditions. Analyse every single mistake.",
+      checks: [
+        "1 full mock per week (SimCAT / IMS / TIME)",
+        "Spend 2× time analysing vs attempting",
+        "Track percentile trends week-on-week",
+        "Fix recurring errors in a dedicated notebook"
+      ]
+    },
+    {
+      color: "#f59e0b",
+      bg: "#fffbeb",
+      icon: "fas fa-chess",
+      label: "Phase 4",
+      title: "Strategy Phase",
+      duration: "Month 8–9",
+      desc: "Develop your personalised exam strategy — section order, question selection, time splits.",
+      checks: [
+        "Lock in your attempt sequence",
+        "Identify 'sure-shot' vs 'skip' question types",
+        "Practice pressure management techniques",
+        "Target your scoring ceiling per section"
+      ]
+    },
+    {
+      color: "#e8192c",
+      bg: "#fff0f1",
+      icon: "fas fa-bolt",
+      label: "Phase 5",
+      title: "Final Lap",
+      duration: "Last 4 Weeks",
+      desc: "Intensive revision, last-minute practice, and fine-tuning of weak spots before the exam.",
+      checks: [
+        "Solve previous year CAT papers (2017–2024)",
+        "Daily 2-hour speed-accuracy drills",
+        "Revise shortcut techniques and formulas",
+        "Maintain sleep, diet — peak physical state"
+      ]
+    },
+    {
+      color: "#0bb89a",
+      bg: "#e6faf6",
+      icon: "fas fa-trophy",
+      label: "Goal",
+      title: "99.5+ %ile",
+      duration: "CAT Exam Day",
+      desc: "Execute the plan. Stay calm. Trust the preparation. AB Classes students have done it — you can too.",
+      checks: [
+        "Reach exam centre 30 mins early",
+        "Section 1: stick to your planned order",
+        "Don't get stuck — move, flag, return",
+        "Celebrate 🎉"
+      ]
+    }
+  ];
+
+  let current = 0;
+  let animating = false;
+
+  function buildDots() {
+    const wrap = document.getElementById('dots');
+    wrap.innerHTML = '';
+    phases.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'stepper-dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      wrap.appendChild(d);
+    });
+  }
+
+  function buildCards() {
+    const wrap = document.getElementById('card-wrap');
+    wrap.innerHTML = '';
+    phases.forEach((p, i) => {
+      const card = document.createElement('div');
+      card.className = 'stepper-card' + (i === 0 ? ' active' : '');
+      card.id = 'card-' + i;
+      card.innerHTML = `
+        <div class="phase-badge" style="background:${p.bg}; color:${p.color};">
+          <span class="phase-dot" style="background:${p.color};"></span>
+          <i class="${p.icon}" style="font-size:0.7rem;"></i>
+          ${p.label}
+        </div>
+        <div class="phase-number">${p.label.toUpperCase()}</div>
+        <div class="phase-title">${p.title}</div>
+        <hr class="phase-rule">
+        <p class="phase-desc">${p.desc}</p>
+        <ul class="phase-checks">
+          ${p.checks.map(c => `
+            <li>
+              <span class="chk" style="background:${p.color};">
+                <i class="fas fa-check"></i>
+              </span>
+              ${c}
+            </li>
+          `).join('')}
+        </ul>
+        <div class="phase-duration">
+          <i class="fas fa-clock"></i> ${p.duration}
+        </div>
+      `;
+      wrap.appendChild(card);
+    });
+  }
+
+  function updateUI() {
+    // dots
+    document.querySelectorAll('.stepper-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+    // counter
+    document.getElementById('counter').textContent = (current + 1) + ' / ' + phases.length;
+    // buttons
+    document.getElementById('btn-prev').disabled = current === 0;
+    const nextBtn = document.getElementById('btn-next');
+    if (current === phases.length - 1) {
+      nextBtn.innerHTML = '<i class="fas fa-redo"></i> Restart';
+    } else {
+      nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+    }
+  }
+
+  function goTo(next) {
+    if (animating || next === current) return;
+    animating = true;
+    const dir = next > current ? 1 : -1;
+    const oldCard = document.getElementById('card-' + current);
+    const newCard = document.getElementById('card-' + next);
+
+    // prep new card off-screen in the correct direction
+    newCard.style.transition = 'none';
+    newCard.style.opacity = '0';
+    newCard.style.transform = `translateX(${dir * 48}px)`;
+    newCard.classList.remove('active', 'exit-left');
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        newCard.style.transition = '';
+        // exit old
+        oldCard.classList.remove('active');
+        oldCard.classList.add(dir > 0 ? 'exit-left' : '');
+        if (dir < 0) {
+          oldCard.style.transform = 'translateX(48px)';
+          oldCard.style.opacity = '0';
+        }
+        // enter new
+        newCard.classList.add('active');
+        newCard.style.opacity = '';
+        newCard.style.transform = '';
+
+        current = next;
+        updateUI();
+
+        setTimeout(() => {
+          oldCard.classList.remove('exit-left');
+          oldCard.style.transform = '';
+          oldCard.style.opacity = '';
+          animating = false;
+        }, 420);
+      });
+    });
+  }
+
+  function navigate(dir) {
+    const next = (current + dir + phases.length) % phases.length;
+    goTo(next);
+  }
+
+  // init
+  buildDots();
+  buildCards();
+  updateUI();
+
+  // auto-advance every 5s if user hasn't interacted
+  let autoTimer = setInterval(() => navigate(1), 5000);
+  document.getElementById('stepper').addEventListener('pointerdown', () => {
+    clearInterval(autoTimer);
+  }, { once: true });
+</script>
+</body>
+</html>
