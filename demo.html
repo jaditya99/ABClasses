@@ -4,853 +4,1355 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="google-site-verification" content="6h63mKYgfW6_MyfukUfpVH57g8D7Z0cE9IVY12Xi1_M" />
-  <meta name="description" content="AB Classes, Raipur (Chhattisgarh) is the Best Coaching center to prepare for CAT, XAT, IIFT, SNAP, NMAT, and other MBA entrance exams. Join us for expert guidance and top-notch preparation.">
+  <meta name="description" content="AB Classes, Raipur (Chhattisgarh) is the Best Coaching center to prepare for CAT, XAT, IIFT, SNAP, NMAT, and other MBA entrance exams.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <title>Best CAT Preparation in Raipur - AB Classes</title>
 
   <style>
     /* ============================================================
-       VARIABLES & RESET
+       DESIGN TOKENS
+       Palette: Clean white base · Soft grays · Vivid red accent
     ============================================================ */
     :root {
-      --red:        #FF0000;
-      --red-dark:   #cc0000;
-      --teal:       #005f73;
-      --teal-hover: #0a9396;
-      --white:      #ffffff;
-      --black:      #000000;
-      --gray-light: #f0f0f0;
-      --gray-mid:   #ddd;
-      --gray-text:  #444;
-      --shadow-sm:  0 4px 6px rgba(0,0,0,0.1);
-      --shadow-md:  0 4px 8px rgba(0,0,0,0.1);
-      --radius:     10px;
-      --transition: 0.3s ease;
-      --font:       'Arial', sans-serif;
+      --red:          #e8192c;
+      --red-dark:     #c0121f;
+      --red-soft:     #fff0f1;
+      --red-mid:      #ffd6d9;
+      --teal:         #0077b6;
+      --teal-dark:    #005f8e;
+      --teal-soft:    #e8f4fb;
+      --white:        #ffffff;
+      --bg:           #f8f9fb;
+      --bg-alt:       #f2f4f8;
+      --border:       #e4e7ed;
+      --border-dark:  #cdd2db;
+      --text:         #1a1d23;
+      --text-mid:     #4a5060;
+      --text-light:   #7a8090;
+      --shadow-xs:    0 1px 4px rgba(0,0,0,0.06);
+      --shadow-sm:    0 2px 12px rgba(0,0,0,0.07);
+      --shadow-md:    0 6px 28px rgba(0,0,0,0.09);
+      --shadow-lg:    0 12px 48px rgba(0,0,0,0.11);
+      --radius-sm:    8px;
+      --radius-md:    14px;
+      --radius-lg:    20px;
+      --transition:   0.22s cubic-bezier(0.4,0,0.2,1);
+      --font:         'Plus Jakarta Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; scroll-behavior: smooth; }
     body {
       font-family: var(--font);
-      background-color: var(--white);
-    }
-
-    /* ============================================================
-       NAVBAR (navbar.html styles)
-    ============================================================ */
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 100%;
       background: var(--white);
-      border: 1px solid var(--gray-mid);
-      width: 200px;
-      box-shadow: var(--shadow-sm);
-      z-index: 1000;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
-
-    .dropdown:hover .nav-dropdown-menu { display: block; }
-
-    .nav-dropdown-menu a {
-      display: block;
-      padding: 10px 15px;
-      color: var(--black);
-      text-decoration: none;
-      font-weight: 700;
-      transition: background var(--transition);
-    }
-
-    .nav-dropdown-menu a:hover { background: #fff5f5; }
-
-    .hover-blue:hover { color: #2563eb; }
 
     /* ============================================================
-       HEADER (header.html styles)
-       Mobile hamburger + menu handled by header.html script below.
+       TOP HEADER (header.html)
     ============================================================ */
+    .top-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .top-header .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-header-logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    .top-header-logo span {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      display: none;
+    }
+    @media (min-width: 500px) { .top-header-logo span { display: block; } }
+
+    .top-header-actions { display: flex; gap: 8px; }
+
+    .top-header-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .btn-wa {
+      background: #f0faf3;
+      color: #1a7a3c;
+      border: 1px solid #c3e6cc;
+    }
+    .btn-wa:hover { background: #dcf5e4; }
+
+    .btn-start {
+      background: var(--red);
+      color: var(--white);
+      border: 1px solid var(--red);
+    }
+    .btn-start:hover { background: var(--red-dark); }
+
+    .top-hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-mid);
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .top-mobile-nav { display: none; background: var(--bg); border-top: 1px solid var(--border); }
+    .top-mobile-nav.open { display: block; }
+    .top-mobile-nav a {
+      display: block;
+      padding: 12px 24px;
+      color: var(--text-mid);
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color var(--transition);
+    }
+    .top-mobile-nav a:hover { color: var(--red); }
+
+    @media (max-width: 500px) {
+      .top-header-actions { display: none; }
+      .top-hamburger { display: block; }
+    }
+
+    /* header.html compat */
     @media (max-width: 767px) {
       #mobile-menu        { display: none !important; }
       #mobile-menu-button { display: none !important; }
     }
 
     /* ============================================================
-       MAIN CONTAINER / HERO
+       NAVBAR (navbar.html)
     ============================================================ */
-    .main-container {
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .navbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1300px;
-      margin: auto;
-      gap: 50px;
-      padding: 20px;
+      height: 60px;
     }
 
-    .text-section {
-      flex: 1;
-      text-align: left;
-      max-width: 450px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
+    .navbar-brand {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.3px;
     }
+    .navbar-brand em { font-style: normal; color: var(--red); }
 
-    .text-section h1 {
-      font-size: 40px;
-      font-weight: bold;
-      color: var(--black);
-      margin-bottom: 15px;
-      opacity: 0;
-      animation: fadeIn 1.2s ease-in-out forwards;
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
     }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
 
-    .description {
-      font-size: 20px;
-      color: #333;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
+    .nav-links a,
+    .nav-links .dropdown-trigger {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color var(--transition);
     }
+    .nav-links a:hover,
+    .nav-links .dropdown-trigger:hover { color: var(--red); }
 
-    .image-container {
-      flex: 2;
-      max-width: 750px;
-      height: 350px;
-      position: relative;
-      border-radius: var(--radius);
+    .nav-dropdown { position: relative; }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      min-width: 210px;
+      box-shadow: var(--shadow-md);
+      z-index: 300;
       overflow: hidden;
+      padding: 6px 0;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 18px;
+      color: var(--text-mid);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background var(--transition), color var(--transition);
+    }
+    .nav-dropdown-menu a:hover { background: var(--red-soft); color: var(--red); }
+
+    .nav-right {
+      display: none;
+      align-items: center;
+      gap: 18px;
+    }
+    @media (min-width: 768px) { .nav-right { display: flex; } }
+
+    .nav-right a {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .nav-right a:hover { color: var(--red); }
+    .nav-divider { color: var(--border-dark); }
+
+    .nav-mobile-quick {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    @media (min-width: 768px) { .nav-mobile-quick { display: none; } }
+
+    .nav-mobile-quick a {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      text-decoration: none;
     }
 
-    .carousel { width: 100%; height: 100%; }
-
-    .carousel img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      opacity: 1;
-      transition: none;
-      border-radius: var(--radius);
+    .nav-hamburger {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-mid);
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: border-color var(--transition), color var(--transition);
     }
+    .nav-hamburger:hover { border-color: var(--red); color: var(--red); }
+
+    .nav-mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a {
+      padding: 12px 24px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-mobile-menu a:hover { color: var(--red); background: var(--red-soft); }
 
     /* ============================================================
        RESULT IMAGE
     ============================================================ */
+    .result-section {
+      background: var(--bg);
+      padding: 36px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
     .result-wrapper {
-      width: 100%;
       display: flex;
       justify-content: center;
-      margin: 24px 0;
-      padding: 0 12px;
     }
 
     .result-wrapper img {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1100px;
       height: auto;
       display: block;
-      border-radius: 6px;
-      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
     }
 
     /* ============================================================
-       BUTTONS
+       RED ANNOUNCEMENT STRIP
     ============================================================ */
-    .button-container { display: flex; gap: 15px; margin-top: 10px; }
-
-    .button {
-      background-color: var(--red);
-      color: var(--white);
-      border: none;
-      padding: 12px 18px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out, background-color var(--transition);
-    }
-
-    .button:hover { background-color: var(--red-dark); transform: scale(1.05); }
-
-    .btn-details {
-      background-color: #007bff;
-      color: var(--white);
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color var(--transition);
-    }
-    .btn-details:hover { background-color: #0056b3; }
-
-    .btn-enroll {
-      background-color: var(--red);
-      color: var(--white);
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color var(--transition);
-    }
-    .btn-enroll:hover { background-color: var(--red-dark); }
-
-    /* ============================================================
-       RED BANNERS
-    ============================================================ */
-    .red-banner {
-      padding: 20px;
-      background-color: var(--red);
+    .announcement-strip {
+      background: var(--red);
+      padding: 16px 24px;
       text-align: center;
     }
 
-    .red-banner span {
+    .announcement-strip p {
+      font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+      font-weight: 700;
       color: var(--white);
-      font-size: 28px;
+      letter-spacing: 0.2px;
+    }
+
+    /* ============================================================
+       SECTION HEADINGS
+    ============================================================ */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-heading .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: var(--red-soft);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
       font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
     }
 
-    .red-heading-block {
-      background-color: var(--red);
-      width: 100%;
-      padding: 30px 10px 20px;
-      text-align: center;
-    }
-
-    .red-heading-block h2 {
-      color: var(--white);
-      font-size: 24px;
-      font-weight: bold;
-      margin: 0;
+    .section-heading .bar {
+      width: 40px;
+      height: 3px;
+      background: var(--red);
+      border-radius: 2px;
+      margin: 14px auto 0;
     }
 
     /* ============================================================
        STATS
     ============================================================ */
     .stats-section {
-      background-color: var(--red);
-      padding: 40px 24px;
+      background: var(--white);
+      padding: 56px 24px;
+      border-bottom: 1px solid var(--border);
     }
 
     .stats-grid {
-      max-width: 1100px;
-      margin: auto;
+      max-width: 960px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 16px;
     }
 
     .stat-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 16px;
       text-align: center;
-      box-shadow: var(--shadow-md);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+    .stat-card h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 6px;
     }
 
-    .stat-card h2 { font-size: 2.5rem; font-weight: bold; }
-    .stat-card p  { font-size: 1.1rem; margin-top: 6px; }
-    .count        { transition: all 2s ease; }
+    .stat-card p {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
 
     /* ============================================================
        FLOWCHART
     ============================================================ */
-    .flowchart-section { text-align: center; margin: 20px 0; }
-
-    .flowchart-section h1 { font-size: 36px; color: var(--red); }
+    .flowchart-section {
+      background: var(--bg);
+      padding: 72px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
 
     .flowchart-section img {
       max-width: 100%;
       height: auto;
-      border-radius: var(--radius);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
     }
 
     /* ============================================================
        COURSES
     ============================================================ */
-    .courses-heading       { text-align: center; margin: 20px 0; }
-    .courses-heading h1    { font-size: 36px; }
+    .courses-section {
+      background: var(--white);
+      padding: 72px 24px;
+    }
 
     .course-grid {
+      max-width: 1160px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      max-width: 1400px;
-      margin: auto;
-      padding-bottom: 30px;
     }
 
     .course-card {
       background: var(--white);
-      border: 2px solid var(--black);
-      border-radius: var(--radius);
-      padding: 40px;
-      text-align: center;
-      min-height: 500px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-xs);
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .course-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
+      border-color: var(--red-mid);
     }
 
-    .course-card h2       { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
-    .course-card hr       { border: 1px solid var(--black); width: 100%; margin: 0; }
-    .course-card-body     { font-size: 18px; color: #333; margin: 10px 0; }
-
-    .course-card-actions  { display: flex; justify-content: center; gap: 10px; padding-top: 10px; }
-
-    @media (min-width: 769px) {
-      #self-paced-course-box { padding-bottom: 40px; margin-bottom: 0; }
+    /* Top accent line */
+    .course-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+      border-radius: 3px 3px 0 0;
     }
+
+    .course-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--red);
+      background: var(--red-soft);
+      padding: 3px 10px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .course-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .course-card hr {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .course-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .course-card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .btn-outline {
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.83rem;
+      text-decoration: none;
+      border: 1.5px solid var(--border-dark);
+      color: var(--text-mid);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
+
+    .btn-cta {
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.83rem;
+      text-decoration: none;
+      background: var(--red);
+      color: var(--white);
+      border: 1.5px solid var(--red);
+      transition: all var(--transition);
+    }
+    .btn-cta:hover { background: var(--red-dark); border-color: var(--red-dark); }
 
     /* ============================================================
        VIDEO SECTION
     ============================================================ */
-    .video-bg {
-      background-color: var(--gray-light);
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
+    .video-section {
+      background: #12151c;
+      padding: 72px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle dot-grid texture */
+    .video-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .video-section .section-heading { position: relative; z-index: 1; }
+
+    .video-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: rgba(232,25,44,0.15);
+      border: 1px solid rgba(232,25,44,0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .video-heading {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .video-subtext {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 40px;
     }
 
     .video-grid {
-      display: flex;
-      justify-content: center;
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      flex-wrap: wrap;
-      max-width: 1400px;
-      margin: auto;
+      position: relative;
+      z-index: 1;
     }
 
-    .video-grid iframe { width: 400px; height: 225px; border: none; border-radius: 6px; }
+    .video-card {
+      background: #1e2330;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232,25,44,0.4);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      display: block;
+    }
+
+    .video-card-label {
+      padding: 12px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .video-card-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      flex-shrink: 0;
+    }
 
     /* ============================================================
        MENTOR
     ============================================================ */
     .mentor-section {
-      background-color: #f8f9fa;
-      width: 100%;
-      padding: 40px 10px;
-      text-align: center;
+      background: var(--white);
+      padding: 72px 24px;
     }
-
-    .mentor-section > h2 { color: #333; font-size: 28px; font-weight: bold; margin-bottom: 20px; }
 
     .mentor-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 44px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      gap: 44px;
       flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-      background: var(--white);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-sm);
     }
 
-    .mentor-img-wrap         { flex: 1; min-width: 250px; text-align: center; }
+    .mentor-img-wrap { flex-shrink: 0; }
 
     .mentor-img-wrap img {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid var(--gray-mid);
+      border: 3px solid var(--border);
+      box-shadow: var(--shadow-md);
       transition: transform var(--transition);
     }
-    .mentor-img-wrap img:hover { transform: scale(1.05); }
+    .mentor-img-wrap img:hover { transform: scale(1.04); }
 
-    .mentor-info             { flex: 2; min-width: 300px; text-align: left; padding: 20px; }
-    .mentor-info h3          { color: #222; font-size: 24px; font-weight: bold; margin: 0; }
-    .mentor-info .school     { color: var(--red); font-size: 18px; font-weight: bold; }
-    .mentor-info p           { color: #555; font-size: 16px; margin: 10px 0; line-height: 1.6; }
-    .mentor-info strong      { color: var(--red); }
+    .mentor-info { flex: 1; min-width: 240px; }
+
+    .mentor-info h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .mentor-school {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .mentor-info p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .mentor-info strong { color: var(--text); font-weight: 700; }
 
     /* ============================================================
-       SUCCESS STORIES / TESTIMONIAL SLIDERS
+       SUCCESS STORIES
     ============================================================ */
-    .success-section         { background: var(--white); width: 100%; padding: 0; text-align: center; }
+    .success-section { background: var(--bg); padding: 0 0 72px; }
 
     .success-banner {
-      background-color: var(--red);
-      width: 100%;
-      padding: 20px 0;
+      background: var(--red);
+      padding: 40px 24px;
       text-align: center;
+      margin-bottom: 48px;
     }
-    .success-banner h2 { color: var(--white); font-size: 32px; font-weight: bold; text-transform: uppercase; margin: 0; }
+
+    .success-banner h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.3px;
+    }
 
     .testimonial-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      max-width: 1200px;
-      margin: 40px auto;
-      gap: 40px;
-      flex-wrap: nowrap;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
 
     .testimonial-box {
-      width: 48%;
       background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      min-height: 600px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
     }
 
-    .testimonial-box h3 { color: #333; font-size: 26px; font-weight: bold; margin-bottom: 20px; text-align: center; }
+    .testimonial-box-header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+
+    .testimonial-box-header h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
 
     .slider-wrap {
       position: relative;
-      max-width: 100%;
       overflow: hidden;
-      border-radius: 12px;
-      height: 500px;
+      height: 400px;
     }
 
     .testimonial-slider {
       display: flex;
-      transition: transform 0.8s ease-in-out;
+      height: 100%;
       width: 400%;
+      transition: transform 0.65s cubic-bezier(0.4,0,0.2,1);
     }
 
-    .testimonial-slider img { width: 25%; border-radius: 12px; }
+    .testimonial-slider img {
+      width: 25%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
     .slider-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: var(--white);
-      border: none;
-      padding: 10px 15px;
+      background: rgba(255,255,255,0.9);
+      color: var(--text);
+      border: 1px solid var(--border);
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       cursor: pointer;
-      transition: background var(--transition);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      z-index: 5;
+      backdrop-filter: blur(4px);
     }
-    .slider-btn:hover  { background: rgba(0,0,0,0.75); }
-    .slider-btn.prev   { left: 10px; }
-    .slider-btn.next   { right: 10px; }
+    .slider-btn:hover { background: var(--red); color: var(--white); border-color: var(--red); transform: translateY(-50%) scale(1.08); }
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
 
     /* ============================================================
        FAQ
     ============================================================ */
-    .faq-section { width: 100%; padding: 40px 15%; }
+    .faq-section {
+      background: var(--white);
+      padding: 72px 24px;
+      border-top: 1px solid var(--border);
+    }
 
-    .faq-section > h2   { text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 10px; }
-    .faq-subtitle       { text-align: center; font-size: 16px; color: #666; margin-bottom: 30px; }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
 
     .faq-tabs {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      border-bottom: 2px solid var(--gray-mid);
-      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
     }
 
     .faq-tab {
-      font-size: 16px;
-      font-weight: bold;
+      padding: 8px 18px;
+      border-radius: 40px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      font-family: var(--font);
+      font-weight: 600;
+      font-size: 0.83rem;
       cursor: pointer;
-      padding: 10px;
-      position: relative;
-      transition: color var(--transition);
-      background: none;
-      border: none;
-      color: inherit;
+      color: var(--text-mid);
+      transition: all var(--transition);
     }
+    .faq-tab:hover  { border-color: var(--red); color: var(--red); }
+    .faq-tab.active { background: var(--red); border-color: var(--red); color: var(--white); }
 
-    .faq-tab.active { color: var(--red); }
+    .faq-list { display: flex; flex-direction: column; gap: 6px; }
 
-    .faq-tab.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 100%;
-      height: 3px;
-      background-color: var(--red);
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      overflow: hidden;
+      transition: border-color var(--transition), box-shadow var(--transition);
     }
-
-    .faq-item   { border-bottom: 1px solid var(--gray-mid); padding: 15px 0; cursor: pointer; display: block; }
+    .faq-item:hover { border-color: var(--border-dark); box-shadow: var(--shadow-xs); }
 
     .faq-question {
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       width: 100%;
-      border: none;
       background: none;
+      border: none;
+      padding: 17px 20px;
       text-align: left;
+      font-family: var(--font);
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--text);
       cursor: pointer;
-      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--red); }
+    .faq-question i { color: var(--red); font-size: 0.75rem; flex-shrink: 0; transition: transform var(--transition); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      border-top: 1px solid var(--border);
     }
 
-    .faq-question i  { font-size: 16px; color: var(--red); }
-    .faq-answer      { display: none; font-size: 16px; color: var(--gray-text); padding-top: 10px; }
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--text);
+      color: var(--white);
+      padding: 56px 24px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-col h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 18px;
+    }
+
+    .footer-col p,
+    .footer-col address {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.85;
+      font-style: normal;
+    }
+
+    .footer-col a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      display: block;
+      font-size: 0.875rem;
+      margin-bottom: 8px;
+      transition: color var(--transition);
+    }
+    .footer-col a:hover { color: var(--white); }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.875rem;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all var(--transition);
+    }
+    .footer-social a:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+    }
 
     /* ============================================================
        ANIMATIONS
     ============================================================ */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     /* ============================================================
-       RESPONSIVE — ≤768px
+       IFRAME
     ============================================================ */
-    @media (max-width: 768px) {
+    .iframe-block { width: 100%; border: none; display: block; }
 
-      .main-container {
-        flex-direction: column;
-        padding: 10px;
-        gap: 20px;
-        justify-content: flex-start !important;
-      }
-
-      .text-section,
-      .image-container { max-width: 100% !important; width: 100% !important; }
-
-      /* Hero image full bleed */
-      .main-container > .image-container {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        position: relative !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        border-radius: 0 !important;
-        height: auto !important;
-      }
-
-      .main-container > .image-container .carousel img {
-        border-radius: 0 !important;
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-      }
-
-      /* Show only first carousel image */
-      .carousel img                   { animation: none; opacity: 1 !important; position: relative !important; }
-      .carousel img:not(:first-child) { display: none !important; }
-
-      .image-container { height: 300px; margin-top: 20px; }
-
-      /* Typography */
-      .text-section h1 { font-size: 1.8rem !important; margin-bottom: 0.5rem !important; }
-      .description h2  { font-size: 1.6rem !important; margin-bottom: 0.3rem !important; }
-      .description h1  { font-size: 1.8rem !important; margin-bottom: 0.3rem !important; }
-      .description p   { font-size: 1.3rem !important; margin-bottom: 1rem !important; }
-
-      .cta-buttons     { display: none !important; }
-
-      /* Red banner text wrap */
-      .red-banner span { font-size: 20px !important; white-space: normal !important; display: block; }
-
-      /* Stats 2-col */
-      .stats-grid      { grid-template-columns: repeat(2, 1fr); }
-      .stats-section   { background-color: transparent; }
-
-      /* Courses single col */
-      .course-grid     { grid-template-columns: 1fr !important; padding: 0 10px !important; }
-
-      /* Testimonials stack */
-      .testimonial-container   { flex-direction: column; height: auto; }
-      .testimonial-box         { width: 100% !important; margin-bottom: 20px; }
-
-      /* Hide testimonial iframe */
-      iframe[src="testimonial.html"] { display: none !important; }
-
-      /* Data iframe */
-      iframe[src="data.html"] { height: 400px !important; margin-top: 5px !important; margin-bottom: 5px !important; }
-
-      /* Flowchart */
-      .flowchart-section h1 { font-size: 24px !important; margin-bottom: 10px !important; }
-
-      /* FAQ mobile */
-      .faq-section  { padding: 20px 15px !important; }
-      .faq-section > h2 { font-size: 24px !important; margin-bottom: 8px !important; }
-      .faq-subtitle     { font-size: 14px !important; margin-bottom: 20px !important; }
-
-      .faq-tabs {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 0 !important;
-        border-bottom: none !important;
-        margin-bottom: 15px !important;
-      }
-
-      .faq-tab {
-        text-align: left !important;
-        padding: 15px 10px !important;
-        border-bottom: 1px solid #eee !important;
-        font-size: 16px !important;
-        margin: 0 !important;
-        background-color: var(--white) !important;
-      }
-
-      .faq-tab:last-child       { border-bottom: none !important; }
-      .faq-tab.active           { background-color: #f9f9f9 !important; color: var(--red) !important; }
-
-      .faq-question { font-size: 15px !important; padding: 10px 0 !important; }
-      .faq-answer   { font-size: 14px !important; padding-top: 8px !important; }
+    /* ============================================================
+       FLOATING WHATSAPP BUTTON (mobile only)
+    ============================================================ */
+    .wa-float {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #25d366;
+      color: #fff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      text-decoration: none;
+      transition: transform var(--transition), box-shadow var(--transition);
     }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
 
-    @media (max-width: 480px) {
-      .text-section h1 { font-size: 1.8rem !important; }
-      .description h2  { font-size: 1.6rem !important; }
-      .description h1  { font-size: 1.8rem !important; }
-      .description p   { font-size: 1.3rem !important; }
-      .image-container { height: 200px; }
+    /* ============================================================
+       RESPONSIVE — DESKTOP only overrides
+    ============================================================ */
+    @media (min-width: 769px) {
+      .nav-mobile-quick .nav-hamburger { display: none; }
     }
 
     /* ============================================================
-       RESPONSIVE — ≥769px
+       RESPONSIVE — TABLET (≤768px)
     ============================================================ */
-    @media (min-width: 769px) {
-      .image-container { height: auto !important; }
-      .carousel img    { height: auto !important; object-fit: cover !important; }
+    @media (max-width: 768px) {
+
+      /* --- Floating WA button --- */
+      .wa-float { display: flex; }
+
+      /* --- Hide redundant top header on mobile (navbar already has login/results) --- */
+      .top-header { display: none; }
+
+      /* --- Navbar tighter on mobile --- */
+      .navbar-inner { height: 52px; padding: 0 16px; }
+      .navbar-brand { font-size: 1.2rem; }
+
+      /* --- Result image: no heavy padding --- */
+      .result-section { padding: 16px 12px; }
+      .result-wrapper img { border-radius: var(--radius-sm); }
+
+      /* --- Announcement strip --- */
+      .announcement-strip { padding: 12px 16px; }
+      .announcement-strip p { font-size: 0.875rem; white-space: normal; }
+
+      /* --- Section headings tighter --- */
+      .section-heading { margin-bottom: 28px; }
+      .section-heading h2 { font-size: 1.4rem; }
+
+      /* --- Stats: 2 col, tighter --- */
+      .stats-section { padding: 36px 16px; }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .stat-card { padding: 20px 12px; border-radius: var(--radius-sm); }
+      .stat-card h2 { font-size: 1.9rem; }
+      .stat-card p { font-size: 0.75rem; }
+
+      /* --- Flowchart --- */
+      .flowchart-section { padding: 40px 16px; }
+
+      /* --- Courses: single column, full padding --- */
+      .courses-section { padding: 40px 16px; }
+      .course-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .course-card { padding: 24px 18px; gap: 12px; }
+      .course-card h3 { font-size: 1rem; }
+
+      /* --- Video section --- */
+      .video-section { padding: 40px 16px; }
+      .video-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .video-card iframe { height: 195px; }
+      .video-heading { font-size: 1.35rem; }
+      .video-subtext { font-size: 0.82rem; margin-bottom: 24px; }
+
+      /* --- Mentor --- */
+      .mentor-section { padding: 40px 16px; }
+      .mentor-card {
+        padding: 24px 18px;
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+        border-radius: var(--radius-md);
+      }
+      .mentor-img-wrap { width: 100%; display: flex; justify-content: center; }
+      .mentor-img-wrap img { width: 110px; height: 110px; }
+      .mentor-info { text-align: center; min-width: unset; }
+      .mentor-info h3 { font-size: 1.15rem; }
+      .mentor-info p { font-size: 0.875rem; }
+
+      /* --- Success / Testimonials --- */
+      .success-section { padding-bottom: 40px; }
+      .success-banner { padding: 28px 16px; margin-bottom: 28px; }
+      .testimonial-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+      }
+      .slider-wrap { height: 260px; }
+      .testimonial-box-header { padding: 12px 16px; }
+      .testimonial-box-header h3 { font-size: 0.85rem; }
+
+      /* --- FAQ --- */
+      .faq-section { padding: 40px 16px; }
+      .faq-inner { max-width: 100%; }
+      .faq-tabs { gap: 6px; }
+      .faq-tab { padding: 7px 14px; font-size: 0.78rem; }
+      .faq-question { font-size: 0.875rem; padding: 14px 16px; }
+      .faq-answer { padding: 0 16px 14px; font-size: 0.875rem; }
+
+      /* --- Footer --- */
+      .footer { padding: 40px 16px 80px; } /* extra bottom for WA float */
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; }
+      .footer-col h3 { margin-bottom: 12px; }
+      .footer-bottom { font-size: 0.75rem; margin-top: 20px; }
+
+      /* --- Hide heavy iframes on mobile --- */
+      iframe[src="testimonial.html"]   { display: none !important; }
+      iframe[src="course_details.html"]{ display: none !important; }
+
+      /* --- Data iframe: reduced height --- */
+      iframe[src="data.html"] { height: 380px !important; margin-top: 0 !important; }
+
+      /* --- Video testimonial iframe --- */
+      iframe[src="video_testimonial.html"] { height: 600px !important; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — SMALL PHONE (≤390px)
+    ============================================================ */
+    @media (max-width: 390px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .stat-card h2 { font-size: 1.6rem; }
+      .course-card { padding: 20px 14px; }
+      .navbar-brand { font-size: 1.1rem; }
+      .video-card iframe { height: 175px; }
+      .slider-wrap { height: 220px; }
     }
   </style>
 </head>
-<body class="bg-white font-sans">
+<body>
 
-  <!-- ===================== HEADER (from header.html) ===================== -->
-  <header class="bg-[#005f73] text-white w-full">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="images/logo.jpg" alt="AB Classes Logo" class="h-12 w-auto mr-3"/>
-        <h1 class="text-xl font-bold hidden sm:block">Welcome to AB Classes!</h1>
+  <!-- ===== TOP HEADER (header.html) ===== -->
+  <div class="top-header">
+    <div class="inner">
+      <div class="top-header-logo">
+        <img src="images/logo.jpg" alt="AB Classes Logo">
+        <span>Welcome to AB Classes!</span>
       </div>
-      <div class="hidden sm:flex items-center space-x-4">
+      <div class="top-header-actions">
         <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-           class="bg-white text-[#005f73] py-2 px-4 rounded-md flex items-center transition duration-300 hover:bg-gray-600 hover:text-white"
-           target="_blank">
-          <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+           class="btn-wa" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
         <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-           class="bg-white text-[#005f73] py-2 px-4 rounded-md transition duration-300 hover:bg-gray-600 hover:text-white">
-          Get Started
-        </a>
+           class="btn-start" target="_blank">Get Started</a>
       </div>
-      <button aria-controls="mobile-menu-header" aria-expanded="false" aria-label="Toggle menu"
-              class="md:hidden text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white rounded"
-              id="mobile-menu-button-header">
-        <i class="fas fa-bars fa-lg"></i>
-      </button>
+      <button class="top-hamburger" id="topHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
-    <nav aria-label="Mobile menu" class="hidden md:hidden bg-[#005f73] border-t border-gray-200" id="mobile-menu-header">
-      <a href="index.html"       class="block px-6 py-3 border-b border-gray-200 hover:bg-[#0a9396] hover:text-white font-semibold transition">Home</a>
-      <a href="cd.html"          class="block px-6 py-3 border-b border-gray-200 hover:bg-[#0a9396] hover:text-white font-semibold transition">Courses</a>
-      <a href="#why-choose-title" class="block px-6 py-3 border-b border-gray-200 hover:bg-[#0a9396] hover:text-white font-semibold transition">Why Choose Us</a>
-      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-         class="block px-6 py-3 hover:bg-[#0a9396] hover:text-white font-semibold transition">Contact</a>
+    <nav class="top-mobile-nav" id="topMobileNav">
+      <a href="index.html">Home</a>
+      <a href="cd.html">Courses</a>
+      <a href="#why-choose-title">Why Choose Us</a>
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
     </nav>
-  </header>
+  </div>
 
-  <!-- ===================== NAVBAR (from navbar.html) ===================== -->
-  <header class="border-b border-gray-300">
-    <div class="flex justify-between items-center py-3 px-4">
-      <div class="flex items-center space-x-1">
-        <span class="font-bold text-2xl text-black select-none">AB</span>
-        <span class="font-bold text-2xl text-black select-none">Classes</span>
-      </div>
+  <!-- ===== NAVBAR (navbar.html) ===== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html">AB<em>Classes</em></a>
 
-      <div class="flex flex-row text-black font-bold text-lg ml-[-10px] sm:hidden pr-4">
-        <a href="https://learn.abclasses.in/learn/account/signin" class="pr-4">Login</a>
-        <a href="results.html" class="pr-4">Results</a>
-      </div>
-
-      <nav class="hidden sm:flex space-x-8" role="navigation" aria-label="Primary Navigation">
-        <a class="font-bold hover-blue" href="about.html">About Us</a>
-        <a class="font-bold hover-blue" href="py.html">Previous Papers</a>
-        <div class="relative dropdown">
-          <a class="font-bold flex items-center space-x-1 cursor-pointer select-none"
-             tabindex="0" aria-haspopup="true" aria-expanded="false">
-            <span>Resources</span>
-            <i class="fas fa-chevron-down"></i>
-          </a>
-          <div class="nav-dropdown-menu" role="menu" aria-label="Resources submenu">
+      <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+        <a href="about.html">About Us</a>
+        <a href="py.html">Previous Papers</a>
+        <div class="nav-dropdown">
+          <span class="dropdown-trigger">
+            Resources <i class="fas fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i>
+          </span>
+          <div class="nav-dropdown-menu" role="menu">
             <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem">Free CAT Resources</a>
             <a href="articles-with-navbar.html"                  role="menuitem">Latest MBA Articles</a>
             <a href="iim-call-predictor.html"                    role="menuitem">IIM Call Predictor</a>
             <a href="mba-colleges.html"                          role="menuitem">MBA Colleges</a>
           </div>
         </div>
-        <a class="font-bold hover-blue" href="results.html">Results</a>
-        <a class="font-bold hover-blue" href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+        <a href="results.html">Results</a>
+        <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
       </nav>
 
-      <div class="hidden sm:flex space-x-2 items-center font-bold text-xl">
-        <a class="text-lg hover-blue" href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
-        <span>|</span>
-        <a class="text-lg hover-blue" href="https://learn.abclasses.in/learn/account/signin">Login</a>
+      <div class="nav-right">
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
+        <span class="nav-divider">|</span>
+        <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+      </div>
+
+      <div class="nav-mobile-quick">
+        <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+        <a href="results.html">Results</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
 
-    <div id="mobile-menu-navbar"
-         class="flex flex-col sm:hidden bg-white w-full text-black px-4 py-4 space-y-4 text-lg font-bold border-t border-gray-300"
-         role="menu" aria-label="Mobile menu">
-    </div>
+    <nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation">
+      <a href="about.html">About Us</a>
+      <a href="py.html">Previous Papers</a>
+      <a href="https://www.youtube.com/@Abhishekabclasses">Free CAT Resources</a>
+      <a href="articles-with-navbar.html">Latest MBA Articles</a>
+      <a href="iim-call-predictor.html">IIM Call Predictor</a>
+      <a href="mba-colleges.html">MBA Colleges</a>
+      <a href="results.html">Results</a>
+      <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+         style="color:var(--red); font-weight:700;">Register / Contact</a>
+    </nav>
   </header>
 
-  <!-- ===================== RESULT IMAGE ===================== -->
-  <div class="main-container" style="padding:0; width:100%; max-width:100%; justify-content:center;">
-    <!-- CHANGE RESULT HERE: swap r4.jpg for the latest result filename -->
+  <!-- ===== RESULT IMAGE ===== -->
+  <!-- CHANGE RESULT HERE: swap r4.jpg for latest result filename -->
+  <section class="result-section">
     <div class="result-wrapper">
-      <img src="results/r4.jpg" alt="CAT 2025 Results" loading="eager">
+      <img src="results/r4.jpg" alt="CAT 2025 Results - AB Classes" loading="eager">
     </div>
+  </section>
+
+  <!-- ===== ANNOUNCEMENT STRIP ===== -->
+  <div class="announcement-strip">
+    <p>Why AB Classes is the Right Choice for CAT — Hear From Rankers</p>
   </div>
 
-  <!-- ===================== RED BANNER ===================== -->
-  <div class="red-banner">
-    <span>Why AB CLASSES is the Right Choice For CAT – Hear From Rankers!</span>
-  </div>
+  <!-- ===== TESTIMONIAL iframe (desktop only) ===== -->
+  <iframe src="testimonial.html" class="iframe-block hidden md:block"
+          style="height:100vh; padding-top:100px; overflow:hidden;"></iframe>
 
-  <!-- ===================== TESTIMONIAL iframe (desktop only) ===================== -->
-  <iframe src="testimonial.html"
-          class="w-full block hidden md:block"
-          style="height:100vh; margin:0; padding-top:100px; border:none; overflow:hidden;">
-  </iframe>
+  <!-- ===== DATA iframe ===== -->
+  <iframe src="data.html" class="iframe-block mt-10" style="height:1000px;"></iframe>
 
-  <!-- ===================== DATA iframe ===================== -->
-  <iframe src="data.html" class="w-full mt-10" style="height:1000px; border:none;"></iframe>
-
-  <!-- ===================== STATS ===================== -->
+  <!-- ===== STATS ===== -->
   <section class="stats-section">
     <div class="stats-grid">
       <div class="stat-card">
-        <h2 class="count" data-target="50">0</h2>
-        <p><strong>99+ %ile</strong> — 50+ Students</p>
+        <h2><span class="count" data-target="50">0</span>+</h2>
+        <p>99+ Percentile</p>
       </div>
       <div class="stat-card">
-        <h2 class="count" data-target="200">0</h2>
-        <p><strong>95+ %ile</strong> — 200+ Students</p>
+        <h2><span class="count" data-target="200">0</span>+</h2>
+        <p>95+ Percentile</p>
       </div>
       <div class="stat-card">
-        <h2 class="count" data-target="400">0</h2>
-        <p><strong>90+ %ile</strong> — 400+ Students</p>
+        <h2><span class="count" data-target="400">0</span>+</h2>
+        <p>90+ Percentile</p>
       </div>
       <div class="stat-card">
-        <h2 class="count" data-target="500">0</h2>
-        <p><strong>OMETS</strong> — 500+ Students</p>
+        <h2><span class="count" data-target="500">0</span>+</h2>
+        <p>OMET Selections</p>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FLOWCHART ===================== -->
-  <div class="flowchart-section">
-    <h1><b>How To Prepare For CAT?</b></h1>
-    <img src="images/flowchart.jpg" alt="Flowchart" loading="lazy">
-  </div>
+  <!-- ===== FLOWCHART ===== -->
+  <section class="flowchart-section">
+    <div class="section-heading">
+      <span class="eyebrow">Strategy</span>
+      <h2>How To Prepare For CAT?</h2>
+      <div class="bar"></div>
+    </div>
+    <img src="images/flowchart.jpg" alt="CAT Preparation Flowchart" loading="lazy">
+  </section>
 
-  <!-- ===================== VIDEO TESTIMONIAL iframe ===================== -->
-  <iframe src="video_testimonial.html" class="w-full mt-10" style="height:1000px; border:none;"></iframe>
+  <!-- ===== VIDEO TESTIMONIAL iframe ===== -->
+  <iframe src="video_testimonial.html" class="iframe-block mt-10" style="height:1000px;"></iframe>
 
-  <!-- ===================== COURSES ===================== -->
-  <div class="courses-heading">
-    <h1><b>CAT &amp; Other MBA Courses!</b></h1>
-  </div>
-
-  <div class="course-grid">
-    <div class="course-card">
-      <h2>CAT 2025 COMPLETE COURSE</h2>
-      <hr>
-      <p class="course-card-body">
-        Get intensive, targeted preparation with expert guidance, daily live classes for CAT 2025,
-        and comprehensive practice materials for CAT, XAT, NMAT &amp; SNAP focused study plan.
-      </p>
-      <div class="course-card-actions">
-        <a href="cd.html" class="btn-details">View Details</a>
-        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-enroll">Enroll Now</a>
+  <!-- ===== COURSES ===== -->
+  <section class="courses-section">
+    <div class="section-heading">
+      <span class="eyebrow">Enroll Today</span>
+      <h2>CAT &amp; Other MBA Courses</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="course-grid">
+      <div class="course-card">
+        <span class="course-tag">Most Popular</span>
+        <h3>CAT 2025 Complete Course</h3>
+        <hr>
+        <p>Intensive, targeted preparation with expert guidance, daily live classes, and comprehensive practice materials for CAT, XAT, NMAT &amp; SNAP.</p>
+        <div class="course-card-actions">
+          <a href="cd.html" class="btn-outline">View Details</a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-cta">Enroll Now</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <span class="course-tag">Flexible</span>
+        <h3>CAT 2025 Online Course</h3>
+        <hr>
+        <p>Expert-designed live interactive sessions, detailed study plans, and recorded lectures for comprehensive self-study from anywhere.</p>
+        <div class="course-card-actions">
+          <a href="cd.html" class="btn-outline">View Details</a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-cta">Enroll Now</a>
+        </div>
+      </div>
+      <div class="course-card" id="self-paced-course-box">
+        <span class="course-tag">Self-Paced</span>
+        <h3>CAT 2025 Self-Paced Course</h3>
+        <hr>
+        <p>Lifetime access to structured video lessons, practice questions, and topic-wise tests to master the complete CAT syllabus on your schedule.</p>
+        <div class="course-card-actions">
+          <a href="cd.html" class="btn-outline">View Details</a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-cta">Enroll Now</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="course-card">
-      <h2>CAT 2025 ONLINE COURSE</h2>
-      <hr>
-      <p class="course-card-body">
-        Experience flexible learning with our expert-designed CAT 2025 Online Course. Get access
-        to live interactive sessions, detailed study plans, and recorded lectures for comprehensive self-study.
-      </p>
-      <div class="course-card-actions">
-        <a href="cd.html" class="btn-details">View Details</a>
-        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-enroll">Enroll Now</a>
-      </div>
+  <!-- Course details iframe (desktop only) -->
+  <iframe src="course_details.html" class="iframe-block hidden sm:block" style="height:1000px;"></iframe>
+
+  <!-- ===== VIDEO SECTION ===== -->
+  <section class="video-section">
+    <div style="max-width:1160px; margin:0 auto; text-align:center; position:relative; z-index:1;">
+      <span class="video-label">Free Resources</span>
+      <h2 class="video-heading">Inside Look: CAT 2023 Solved Paper</h2>
+      <p class="video-subtext">Full paper walkthroughs with shortcuts — watch before your next mock</p>
     </div>
-
-    <div class="course-card" id="self-paced-course-box">
-      <h2>CAT 2025 SELF-PACED COURSE</h2>
-      <hr>
-      <p class="course-card-body">
-        Study at your own pace with our Self-Paced Course. Get lifetime access to structured video
-        lessons, practice questions, and topic-wise tests to master the CAT syllabus.
-      </p>
-      <div class="course-card-actions">
-        <a href="cd.html" class="btn-details">View Details</a>
-        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-enroll">Enroll Now</a>
-      </div>
-    </div>
-  </div>
-
-  <iframe src="course_details.html" class="w-full mt-10 hidden sm:block" style="height:1000px; border:none;"></iframe>
-
-  <!-- ===================== VIDEO SECTION ===================== -->
-  <div class="red-heading-block mt-6 sm:mt-0">
-    <h2>Inside Look: CAT 2023 Solved Paper</h2>
-  </div>
-
-  <div class="video-bg">
     <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/_x1jIezkR10" allowfullscreen loading="lazy"></iframe>
-      <iframe src="https://www.youtube.com/embed/HtwJLXdzGMQ" allowfullscreen loading="lazy"></iframe>
-      <iframe src="https://www.youtube.com/embed/dNW-kbcvtfk" allowfullscreen loading="lazy"></iframe>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/_x1jIezkR10" allowfullscreen loading="lazy"></iframe>
+        <div class="video-card-label">CAT 2023 — Slot 3 Quant</div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/HtwJLXdzGMQ" allowfullscreen loading="lazy"></iframe>
+        <div class="video-card-label">CAT 2023 — Slot 2 Quant</div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dNW-kbcvtfk" allowfullscreen loading="lazy"></iframe>
+        <div class="video-card-label">CAT 2023 — Slot 1 Quant</div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ===================== MENTOR ===================== -->
-  <div class="mentor-section">
-    <h2>Know Your Mentor</h2>
+  <!-- ===== MENTOR ===== -->
+  <section class="mentor-section">
+    <div class="section-heading">
+      <span class="eyebrow">Leadership</span>
+      <h2>Know Your Mentor</h2>
+      <div class="bar"></div>
+    </div>
     <div class="mentor-card">
       <div class="mentor-img-wrap">
-        <img src="images/Absir.jpg" alt="Abhishek Sir" loading="lazy">
+        <img src="images/Absir.jpg" alt="Abhishek Sir — Founder" loading="lazy">
       </div>
       <div class="mentor-info">
-        <h3>ABHISHEK SIR, Founder</h3>
-        <p class="school">IIFT Delhi, NIT Raipur</p>
-        <p>Abhishek Sir is a renowned mentor with 10+ years of experience in CAT coaching. His unique approach makes learning Quant, Logical Reasoning, and Data Interpretation easy and effective.</p>
-        <p><strong>Experience:</strong> Over a decade of training thousands of CAT aspirants with high success rates.</p>
+        <h3>Abhishek Sir, Founder</h3>
+        <span class="mentor-school">IIFT Delhi &nbsp;·&nbsp; NIT Raipur Silver Medalist</span>
+        <p>A renowned mentor with 10+ years of experience in CAT coaching. His unique approach makes Quant, Logical Reasoning, and Data Interpretation easy and effective.</p>
+        <p><strong>Experience:</strong> Over a decade training thousands of CAT aspirants with high success rates.</p>
         <p><strong>Achievements:</strong> IIFT Delhi Alumnus | NIT Raipur Silver Medalist.</p>
         <p><strong>Expertise:</strong> CAT, XAT, IIFT, and GMAT with deep conceptual clarity and shortcut techniques.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ===================== SUCCESS STORIES ===================== -->
+  <!-- ===== SUCCESS STORIES ===== -->
   <div class="success-section">
     <div class="success-banner">
       <h2>Hear From Our Students</h2>
     </div>
-
     <div class="testimonial-container">
       <div class="testimonial-box">
-        <h3>CAT 2023 &amp; Beyond</h3>
+        <div class="testimonial-box-header">
+          <div class="header-dot"></div>
+          <h3>CAT 2023 &amp; Beyond</h3>
+        </div>
         <div class="slider-wrap">
           <div class="testimonial-slider" id="testimonial-slider-2023">
             <img src="images/AT_new.jpg" alt="Student" loading="lazy">
@@ -862,9 +1364,11 @@
           <button class="slider-btn next" onclick="nextTestimonial2023()" aria-label="Next">&#10095;</button>
         </div>
       </div>
-
       <div class="testimonial-box">
-        <h3>ACHIEVERS — CAT 2024</h3>
+        <div class="testimonial-box-header">
+          <div class="header-dot"></div>
+          <h3>Achievers — CAT 2024</h3>
+        </div>
         <div class="slider-wrap">
           <div class="testimonial-slider" id="testimonial-slider">
             <img src="images/t1.jpg"     alt="Student" loading="lazy">
@@ -879,132 +1383,139 @@
     </div>
   </div>
 
-  <!-- ===================== FAQ ===================== -->
-  <div class="faq-section" id="faq-section-main-container">
-    <h2>Frequently Asked Questions</h2>
-    <p class="faq-subtitle">Journey Of A Thousand Miles Begins With A Single Step</p>
-
-    <div class="faq-tabs" id="faq-tabs-container-mobile">
-      <span class="faq-tab active" onclick="showFAQ('all')">All</span>
-      <span class="faq-tab" onclick="showFAQ('course')">About the CAT Online Course</span>
-      <span class="faq-tab" onclick="showFAQ('exam')">About CAT Exam</span>
-      <span class="faq-tab" onclick="showFAQ('misc')">Miscellaneous</span>
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="section-heading">
+      <span class="eyebrow">Help</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="bar"></div>
+      <p style="color:var(--text-light); font-size:0.9rem; margin-top:10px;">
+        Journey of a thousand miles begins with a single step
+      </p>
     </div>
-
-    <div id="faq-list">
-      <div class="faq-item" data-category="course">
-        <button class="faq-question" onclick="toggleFAQ(this)">
-          📌 Is online CAT coaching worth it? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">Yes! Online coaching offers structured study plans, flexibility, and expert mentor.</div>
+    <div class="faq-inner">
+      <div class="faq-tabs" id="faq-tabs-container-mobile">
+        <button class="faq-tab active" onclick="showFAQ('all', this)">All</button>
+        <button class="faq-tab" onclick="showFAQ('course', this)">About the Course</button>
+        <button class="faq-tab" onclick="showFAQ('exam', this)">About CAT Exam</button>
+        <button class="faq-tab" onclick="showFAQ('misc', this)">Miscellaneous</button>
       </div>
-      <div class="faq-item" data-category="course">
-        <button class="faq-question" onclick="toggleFAQ(this)">
-          🎓 Are live classes available? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">Yes, we offer both live and recorded classes.</div>
-      </div>
-      <div class="faq-item" data-category="exam">
-        <button class="faq-question" onclick="toggleFAQ(this)">
-          📅 How often is the CAT exam conducted? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">CAT is conducted once every year.</div>
-      </div>
-      <div class="faq-item" data-category="exam">
-        <button class="faq-question" onclick="toggleFAQ(this)">
-          📖 What are the eligibility criteria for CAT? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">Candidates need a Bachelor's degree with at least 50% marks.</div>
-      </div>
-      <div class="faq-item" data-category="misc">
-        <button class="faq-question" onclick="toggleFAQ(this)">
-          📺 Can I prepare for CAT in 3 months? <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">Yes, but a structured plan and intense preparation are required.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="bg-[#ff0000] flex-shrink-0 p-12 text-white w-full">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-12">
-      <div class="flex flex-col space-y-4 md:w-1/3">
-        <h3 class="text-xl font-bold border-b border-white pb-2">AB Classes</h3>
-        <p class="text-sm text-white/90">
-          AB Classes is your trusted partner for CAT preparation, delivering
-          top-notch coaching and success stories year after year.
-        </p>
-        <div class="flex space-x-4 mt-2">
-          <a href="https://www.facebook.com/abclasses"          target="_blank" rel="noopener" aria-label="Facebook"  class="hover:text-white/80 transition"><i class="fab fa-facebook fa-lg"></i></a>
-          <a href="https://twitter.com/abclasses"               target="_blank" rel="noopener" aria-label="Twitter"   class="hover:text-white/80 transition"><i class="fab fa-twitter fa-lg"></i></a>
-          <a href="https://www.instagram.com/cat_abclasses/"    target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white/80 transition"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="https://www.linkedin.com/company/abclasses"  target="_blank" rel="noopener" aria-label="LinkedIn"  class="hover:text-white/80 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item" data-category="course">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            📌 Is online CAT coaching worth it? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">Yes! Online coaching offers structured study plans, flexibility, and expert mentorship from the comfort of your home.</div>
+        </div>
+        <div class="faq-item" data-category="course">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            🎓 Are live classes available? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">Yes, we offer both live and recorded classes so you never miss a session.</div>
+        </div>
+        <div class="faq-item" data-category="exam">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            📅 How often is the CAT exam conducted? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">CAT is conducted once every year, typically in November.</div>
+        </div>
+        <div class="faq-item" data-category="exam">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            📖 What are the eligibility criteria for CAT? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">Candidates need a Bachelor's degree with at least 50% marks (45% for SC/ST/PWD).</div>
+        </div>
+        <div class="faq-item" data-category="misc">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            📺 Can I prepare for CAT in 3 months? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">Yes, but a structured plan and intense preparation are required. AB Classes has dedicated crash course programs for this.</div>
         </div>
       </div>
-      <div class="flex flex-col space-y-4 md:w-1/3">
-        <h3 class="text-xl font-bold border-b border-white pb-2">Quick Links</h3>
-        <nav class="flex flex-col space-y-2 text-white/90">
-          <a href=""             class="hover:text-white/80 transition">Home</a>
-          <a href="results.html" class="hover:text-white/80 transition">Results</a>
-          <a href="cd.html"      class="hover:text-white/80 transition">Courses</a>
-          <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="hover:text-white/80 transition">Contact</a>
-        </nav>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>AB Classes</h3>
+        <p>Your trusted partner for CAT preparation — delivering top-notch coaching and IIM success stories year after year from Raipur, Chhattisgarh.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/abclasses"         target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/abclasses"              target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/cat_abclasses/"   target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/abclasses" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
-      <div class="flex flex-col space-y-4 md:w-1/3">
-        <h3 class="text-xl font-bold border-b border-white pb-2">Contact Us</h3>
-        <address class="not-italic text-white/90 space-y-2">
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="cd.html">Courses</a>
+        <a href="about.html">About Us</a>
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <address>
           <p>AB Classes Pvt. Ltd.</p>
-          <p>Agrasen Chowk, Raipur, Chhattisgarh 492001</p>
-          <p>Phone: <a href="tel:+919827118488" class="hover:text-white/80">+91 98271 18488</a></p>
-          <p>Email: <a href="mailto:info@abclasses.in" class="hover:text-white/80">info@abclasses.in</a></p>
+          <p>Agrasen Chowk, Raipur<br>Chhattisgarh — 492001</p>
+          <p style="margin-top:10px;">
+            <a href="tel:+919827118488">+91 98271 18488</a><br>
+            <a href="mailto:info@abclasses.in">info@abclasses.in</a>
+          </p>
         </address>
       </div>
     </div>
+    <p class="footer-bottom">© 2025 AB Classes Pvt. Ltd. All rights reserved.</p>
   </footer>
 
-  <!-- ===================== SCRIPTS ===================== -->
+  <!-- ===== FLOATING WA BUTTON (mobile) ===== -->
+  <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+     class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    // --- Header hamburger (header.html logic) ---
+    // Top hamburger
+    document.getElementById('topHamburger').addEventListener('click', function () {
+      document.getElementById('topMobileNav').classList.toggle('open');
+    });
+
+    // Navbar hamburger
+    document.getElementById('navHamburger').addEventListener('click', function () {
+      const menu = document.getElementById('navMobileMenu');
+      const icon = this.querySelector('i');
+      menu.classList.toggle('open');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Header.html mobile menu compat
     document.addEventListener("DOMContentLoaded", function () {
       const btn  = document.getElementById("mobile-menu-button-header");
       const menu = document.getElementById("mobile-menu-header");
-
       if (btn) {
         btn.addEventListener("click", () => {
           const expanded = btn.getAttribute("aria-expanded") === "true";
           btn.setAttribute("aria-expanded", !expanded);
-          if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            btn.innerHTML = '<i class="fas fa-times fa-lg"></i>';
-          } else {
-            menu.classList.add("hidden");
-            btn.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
-          }
+          menu.classList.toggle("hidden");
+          btn.innerHTML = expanded
+            ? '<i class="fas fa-bars fa-lg"></i>'
+            : '<i class="fas fa-times fa-lg"></i>';
         });
       }
-
-      // Navbar resources dropdown (navbar.html logic)
-      const reBtn  = document.getElementById("mobile-resources-button");
-      const reMenu = document.getElementById("mobile-resources-menu");
-      if (reBtn) {
-        reBtn.addEventListener("click", function () {
-          const expanded = this.getAttribute("aria-expanded") === "true";
-          this.setAttribute("aria-expanded", !expanded);
-          reMenu.classList.toggle("hidden");
-        });
-      }
-
       // Hide all FAQ items initially
-      document.querySelectorAll('#faq-list .faq-item').forEach(item => {
-        item.style.display = 'none';
-      });
+      document.querySelectorAll('#faq-list .faq-item').forEach(i => i.style.display = 'none');
     });
 
-    // --- Testimonial sliders ---
+    // Sliders
     let index2023 = 0;
     const slider2023 = document.getElementById("testimonial-slider-2023");
     const count2023  = slider2023.children.length;
-
     function showTestimonial2023() { slider2023.style.transform = `translateX(-${index2023 * 25}%)`; }
     function nextTestimonial2023() { index2023 = (index2023 + 1) % count2023; showTestimonial2023(); }
     function prevTestimonial2023() { index2023 = (index2023 - 1 + count2023) % count2023; showTestimonial2023(); }
@@ -1013,74 +1524,59 @@
     let index = 0;
     const slider = document.getElementById("testimonial-slider");
     const count  = slider.children.length;
-
     function showTestimonial() { slider.style.transform = `translateX(-${index * 25}%)`; }
     function nextTestimonial() { index = (index + 1) % count; showTestimonial(); }
     function prevTestimonial() { index = (index - 1 + count) % count; showTestimonial(); }
-    setInterval(nextTestimonial, 5000);
+    setInterval(nextTestimonial, 5200);
 
-    // --- Stats counter ---
+    // Stats counter
     document.addEventListener('DOMContentLoaded', () => {
-      const counters = document.querySelectorAll('.count');
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
           const el     = entry.target;
           const target = +el.getAttribute('data-target');
-          let val      = 0;
-          const step   = Math.ceil(target / 100);
-          const timer  = setInterval(() => {
+          let val = 0;
+          const step = Math.ceil(target / 100);
+          const timer = setInterval(() => {
             val = Math.min(val + step, target);
-            el.innerText = val;
+            el.textContent = val;
             if (val >= target) clearInterval(timer);
-          }, 25);
+          }, 20);
           obs.unobserve(el);
         });
-      }, { threshold: 0.1 });
-      counters.forEach(c => observer.observe(c));
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.count').forEach(c => observer.observe(c));
     });
 
-    // --- FAQ toggle ---
+    // FAQ toggle
     function toggleFAQ(button) {
       const answer = button.nextElementSibling;
       const icon   = button.querySelector("i");
       const isOpen = answer.style.display === "block";
-      answer.style.display = isOpen ? "none" : "block";
-      icon.textContent     = isOpen ? "▼"    : "▲";
+      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = '');
+      if (!isOpen) {
+        answer.style.display = "block";
+        icon.style.transform  = "rotate(180deg)";
+      }
     }
 
-    // --- FAQ filter ---
+    // FAQ filter
     let currentlyDisplayedCategory = null;
-
-    function showFAQ(clickedCategory) {
+    function showFAQ(cat, btn) {
       const items = document.querySelectorAll("#faq-list .faq-item");
       const tabs  = document.querySelectorAll(".faq-tab");
-
-      tabs.forEach(tab => { tab.style.color = ""; tab.classList.remove('active'); });
-
-      if (clickedCategory === currentlyDisplayedCategory) {
-        items.forEach(item => {
-          item.style.display = "none";
-          const ans  = item.querySelector(".faq-answer");
-          const icon = item.querySelector("button i");
-          if (ans && ans.style.display === "block") { ans.style.display = "none"; if (icon) icon.textContent = "▼"; }
-        });
+      tabs.forEach(t => t.classList.remove('active'));
+      if (cat === currentlyDisplayedCategory) {
+        items.forEach(i => i.style.display = 'none');
         currentlyDisplayedCategory = null;
       } else {
-        items.forEach(item => {
-          item.style.display = "none";
-          const ans  = item.querySelector(".faq-answer");
-          const icon = item.querySelector("button i");
-          if (ans && ans.style.display === "block") { ans.style.display = "none"; if (icon) icon.textContent = "▼"; }
+        items.forEach(i => {
+          i.style.display = (cat === 'all' || i.getAttribute('data-category') === cat) ? 'block' : 'none';
         });
-        items.forEach(item => {
-          if (clickedCategory === "all" || item.getAttribute("data-category") === clickedCategory) {
-            item.style.display = "block";
-          }
-        });
-        const activeTab = document.querySelector(`.faq-tab[onclick="showFAQ('${clickedCategory}')"]`);
-        if (activeTab) { activeTab.style.color = "red"; activeTab.classList.add('active'); }
-        currentlyDisplayedCategory = clickedCategory;
+        if (btn) btn.classList.add('active');
+        currentlyDisplayedCategory = cat;
       }
     }
   </script>

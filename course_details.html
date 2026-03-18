@@ -1,120 +1,536 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>CAT 2025 Course Comparison</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    :root {
+      --red:        #e8192c;
+      --red-dark:   #c0121f;
+      --red-soft:   #fff0f1;
+      --white:      #ffffff;
+      --bg:         #f8f9fb;
+      --bg-alt:     #f2f4f8;
+      --border:     #e4e7ed;
+      --text:       #1a1d23;
+      --text-mid:   #4a5060;
+      --text-light: #7a8090;
+      --green:      #16a34a;
+      --green-bg:   #f0fdf4;
+      --green-bd:   #bbf7d0;
+      --shadow:     0 4px 24px rgba(0,0,0,0.08);
+      --font:       'Plus Jakarta Sans', sans-serif;
+      --ease:       0.2s ease;
     }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 48px 16px 64px;
+    }
+
+    /* ── Heading (same as index.html) ── */
+    .heading {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .heading .eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: var(--red-soft);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .heading h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .heading .bar {
+      width: 36px; height: 3px;
+      background: var(--red);
+      border-radius: 2px;
+      margin: 12px auto 0;
+    }
+
+    /* ── TABLE WRAPPER ── */
+    .tbl-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    /* ── COLUMN WIDTHS ── */
+    col.c-feat  { width: 40%; }
+    col.c-plan  { width: 20%; }
+
+    /* ── HEADER ── */
+    thead tr { background: var(--white); }
+
+    thead th {
+      padding: 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: bottom;
+      font-weight: 700;
+    }
+
+    /* Feature label cell */
+    th.th-feat {
+      text-align: left;
+      padding: 20px 20px 18px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      font-weight: 700;
+      vertical-align: bottom;
+    }
+
+    /* Plan column header */
+    th.th-plan {
+      text-align: center;
+      border-left: 1px solid var(--border);
+      padding: 0;
+      vertical-align: bottom;
+    }
+
+    .plan-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 10px 0;
+      gap: 6px;
+    }
+
+    .plan-badge {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .badge-red  { background: var(--red);      color: #fff; }
+    .badge-dark { background: var(--text-mid);  color: #fff; }
+    .badge-gray { background: var(--bg-alt);    color: var(--text-light); border: 1px solid var(--border); }
+
+    .plan-name {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.35;
+      padding-bottom: 14px;
+    }
+
+    /* coloured accent under each plan header */
+    .plan-bar {
+      height: 3px;
+      width: 100%;
+      display: block;
+    }
+    .bar-red  { background: var(--red); }
+    .bar-dark { background: var(--text-mid); }
+    .bar-gray { background: var(--border); }
+
+    /* ── BODY ROWS ── */
+    tbody tr { border-top: 1px solid var(--border); transition: background var(--ease); }
+    tbody tr:hover   { background: var(--bg); }
+    tbody tr.stripe  { background: var(--bg); }
+    tbody tr.stripe:hover { background: var(--bg-alt); }
+
+    td.td-feat {
+      padding: 13px 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    td.td-val {
+      text-align: center;
+      border-left: 1px solid var(--border);
+      padding: 13px 8px;
+      vertical-align: middle;
+    }
+
+    /* ── YES / NO CHIPS ── */
+    .yes, .no {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .yes {
+      color: var(--green);
+      background: var(--green-bg);
+      border: 1px solid var(--green-bd);
+    }
+    .no {
+      color: var(--text-light);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+    }
+
+    /* ── CTA ROW ── */
+    tr.cta-row { border-top: 2px solid var(--border); background: var(--bg); }
+    tr.cta-row:hover { background: var(--bg); }
+
+    td.cta-empty {
+      padding: 20px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      vertical-align: middle;
+    }
+
+    td.cta-val {
+      text-align: center;
+      border-left: 1px solid var(--border);
+      padding: 20px 12px;
+      vertical-align: middle;
+    }
+
+    /* Buttons — exact match to index.html */
+    .btn-cta {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background var(--ease), transform var(--ease);
+      white-space: nowrap;
+      width: 100%;
+      max-width: 140px;
+    }
+    .btn-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-block;
+      background: var(--white);
+      color: var(--text-mid);
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      transition: border-color var(--ease), color var(--ease), background var(--ease);
+      white-space: nowrap;
+      width: 100%;
+      max-width: 140px;
+    }
+    .btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
+
+    /* ════════════════════════════
+       MOBILE CARDS (< 640px)
+    ════════════════════════════ */
+    .mobile-cards { display: none; }
+
+    @media (max-width: 639px) {
+      .tbl-wrap      { display: none; }
+      .mobile-cards  { display: flex; flex-direction: column; gap: 14px; max-width: 440px; margin: 0 auto; }
+    }
+
+    .mc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* top accent same as course cards in index.html */
+    .mc::before { content: ''; display: block; height: 3px; background: var(--border); }
+    .mc.top-red::before  { background: var(--red); }
+    .mc.top-dark::before { background: var(--text-mid); }
+
+    .mc-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .mc.top-red .mc-head { background: var(--red-soft); }
+
+    .mc-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .mc-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      gap: 10px;
+    }
+    .mc-row:last-of-type { border-bottom: none; }
+    .mc-row-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      line-height: 1.35;
+    }
+
+    .mc-cta {
+      padding: 14px 16px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .mc.top-red .mc-cta { background: var(--red-soft); }
+
+    .btn-block {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background var(--ease), transform var(--ease);
+      border: 1.5px solid transparent;
+    }
+    .btn-block:hover { transform: translateY(-1px); }
+
+    .btn-block.red {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+    .btn-block.red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+    .btn-block.outline {
+      background: var(--white);
+      color: var(--text-mid);
+      border-color: var(--border);
+    }
+    .btn-block.outline:hover { border-color: var(--text); color: var(--text); }
   </style>
 </head>
-<body class="bg-gray-50 p-4 sm:p-6 lg:p-8">
-  <div class="max-w-5xl mx-auto">
-    <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6 text-center hidden md:block">CAT 2025 Course Comparison Table</h1>
-    <div aria-label="CAT 2025 Course Comparison Table Wrapper" class="max-w-full mx-auto hidden md:block" style="user-select:none;">
-      <div role="table" aria-label="CAT 2025 Course Comparison" class="w-full bg-white rounded-2xl shadow-lg border border-gray-300 overflow-x-auto">
-        <table class="w-full border-collapse table-fixed text-gray-900 text-sm sm:text-base" style="min-width:600px;">
-          <thead>
-            <tr class="bg-gray-100 text-gray-900 font-semibold border-b-4 border-red-600">
-              <th scope="col" title="Course Features" class="text-left pl-4 py-3 w-[40%] min-w-[220px]">Course Features</th>
-              <th scope="col" title="CAT 2025 COMPLETE COURSE" class="border-l border-gray-300 text-center py-3 w-[20%] min-w-[70px]">CAT 2025 COMPLETE COURSE</th>
-              <th scope="col" title="CAT 2025 ONLINE COURSE" class="border-l border-gray-300 text-center py-3 w-[20%] min-w-[70px]">CAT 2025 ONLINE COURSE</th>
-              <th scope="col" title="CAT 2025 SELF-PACED" class="border-l border-gray-300 text-center py-3 w-[20%] min-w-[70px]">CAT 2025 SELF-PACED</th>
-            </tr>
-          </thead>
-          <tbody class="text-gray-900">
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Live Concept Mastery" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Live Concept Mastery</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-gray-50 border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Applied Learning Sessions" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Applied Learning Sessions</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Foundations of CAT LRDI" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Foundations of CAT LRDI</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Collaborative Peer Learning" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Collaborative Peer Learning</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="10,000+ Curated CAT Practice Questions" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">10,000+ Curated CAT Practice Questions</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-            </tr>
-            <tr class="bg-gray-50 border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="CAT’24-Level Book Set" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">CAT’24-Level Book Set</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Year-Round Practice Drills" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Year-Round Practice Drills</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-            </tr>
-            <tr class="bg-gray-50 border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Skill-Building Assignments" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Skill-Building Assignments</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="24×7 Instant Doubt Support" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">24×7 Instant Doubt Support</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-gray-50 border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Full-Length Mocks with Expert Reviews" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Full-Length Mocks with Expert Reviews</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="No" class="border-l border-gray-300 text-center font-semibold text-gray-500 py-3 whitespace-nowrap">No</td>
-            </tr>
-            <tr class="bg-white border-t border-gray-300 transition-colors duration-300">
-              <th scope="row" title="Targeted Sectional Tests with Video Insights" class="text-left font-medium pl-4 py-3 leading-relaxed min-w-[220px]">Targeted Sectional Tests with Video Insights</th>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-              <td title="Yes" class="border-l border-gray-300 text-center font-semibold text-red-600 py-3 whitespace-nowrap">Yes</td>
-            </tr>
-            <tr class="bg-gray-50 border-t border-gray-300 transition-colors duration-300">
-              <td class="pt-6 pb-8"></td>
-              <td class="border-l border-gray-300 pt-6 pb-8 text-center">
-                <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener noreferrer" class="inline-block w-full max-w-xs bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-base py-2.5 rounded-md shadow-md transition-colors duration-200" aria-label="Enroll Now for CAT 2025 COMPLETE COURSE">
-                  Enroll Now
-                </a>
-              </td>
-              <td class="border-l border-gray-300 pt-6 pb-8 text-center">
-                <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener noreferrer" class="inline-block w-full max-w-xs bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-base py-2.5 rounded-md shadow-md transition-colors duration-200" aria-label=Enroll Now for CAT 2025 ONLINE COURSE">
-                  Enroll Now
-                </a>
-              </td>
-              <td class="border-l border-gray-300 pt-6 pb-8 text-center">
-                <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener noreferrer" class="inline-block w-full max-w-xs bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-base py-2.5 rounded-md shadow-md transition-colors duration-200" aria-label="Enroll Now for CAT 2025 SELF-PACED">
-                  Enroll Now
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<body>
+
+  <div class="heading">
+    <span class="eyebrow">Compare Plans</span>
+    <h2>CAT 2025 Course Comparison</h2>
+    <div class="bar"></div>
   </div>
+
+  <!-- ══ DESKTOP TABLE ══ -->
+  <div class="tbl-wrap">
+    <table>
+      <colgroup>
+        <col class="c-feat">
+        <col class="c-plan">
+        <col class="c-plan">
+        <col class="c-plan">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th class="th-feat">Course Features</th>
+
+          <th class="th-plan">
+            <div class="plan-inner">
+              <span class="plan-badge badge-red">Most Popular</span>
+              <span class="plan-name">Complete<br>Course</span>
+            </div>
+            <span class="plan-bar bar-red"></span>
+          </th>
+
+          <th class="th-plan">
+            <div class="plan-inner">
+              <span class="plan-badge badge-dark">Flexible</span>
+              <span class="plan-name">Online<br>Course</span>
+            </div>
+            <span class="plan-bar bar-dark"></span>
+          </th>
+
+          <th class="th-plan">
+            <div class="plan-inner">
+              <span class="plan-badge badge-gray">Self-Paced</span>
+              <span class="plan-name">Self-Paced<br>Course</span>
+            </div>
+            <span class="plan-bar bar-gray"></span>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="td-feat">Live Concept Mastery</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr class="stripe">
+          <td class="td-feat">Applied Learning Sessions</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr>
+          <td class="td-feat">Foundations of CAT LRDI</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr class="stripe">
+          <td class="td-feat">Collaborative Peer Learning</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr>
+          <td class="td-feat">10,000+ Curated Practice Questions</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+        </tr>
+        <tr class="stripe">
+          <td class="td-feat">CAT '24-Level Book Set</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr>
+          <td class="td-feat">Year-Round Practice Drills</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+        </tr>
+        <tr class="stripe">
+          <td class="td-feat">Skill-Building Assignments</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr>
+          <td class="td-feat">24×7 Instant Doubt Support</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr class="stripe">
+          <td class="td-feat">Full-Length Mocks with Expert Reviews</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="no"><i class="fas fa-minus"></i> No</span></td>
+        </tr>
+        <tr>
+          <td class="td-feat">Sectional Tests with Video Insights</td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+          <td class="td-val"><span class="yes"><i class="fas fa-check"></i> Yes</span></td>
+        </tr>
+
+        <tr class="cta-row">
+          <td class="cta-empty">Questions? Chat with us on WhatsApp — we'll help you pick the right plan.</td>
+          <td class="cta-val"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-cta">Enroll Now</a></td>
+          <td class="cta-val"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-outline">Enroll Now</a></td>
+          <td class="cta-val"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-outline">Enroll Now</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══ MOBILE CARDS ══ -->
+  <div class="mobile-cards">
+
+    <div class="mc top-red">
+      <div class="mc-head">
+        <span class="mc-title">Complete Course</span>
+        <span class="plan-badge badge-red">Most Popular</span>
+      </div>
+      <div class="mc-row"><span class="mc-row-label">Live Concept Mastery</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Applied Learning Sessions</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Foundations of CAT LRDI</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Collaborative Peer Learning</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">10,000+ Practice Questions</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">CAT '24-Level Book Set</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Year-Round Practice Drills</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Skill-Building Assignments</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">24×7 Doubt Support</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Full-Length Mocks + Reviews</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Sectional Tests + Video Insights</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-cta"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-block red">Enroll Now</a></div>
+    </div>
+
+    <div class="mc top-dark">
+      <div class="mc-head">
+        <span class="mc-title">Online Course</span>
+        <span class="plan-badge badge-dark">Flexible</span>
+      </div>
+      <div class="mc-row"><span class="mc-row-label">Live Concept Mastery</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Applied Learning Sessions</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Foundations of CAT LRDI</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Collaborative Peer Learning</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">10,000+ Practice Questions</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">CAT '24-Level Book Set</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Year-Round Practice Drills</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Skill-Building Assignments</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">24×7 Doubt Support</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Full-Length Mocks + Reviews</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Sectional Tests + Video Insights</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-cta"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-block outline">Enroll Now</a></div>
+    </div>
+
+    <div class="mc">
+      <div class="mc-head">
+        <span class="mc-title">Self-Paced Course</span>
+        <span class="plan-badge badge-gray">Self-Paced</span>
+      </div>
+      <div class="mc-row"><span class="mc-row-label">Live Concept Mastery</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Applied Learning Sessions</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Foundations of CAT LRDI</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Collaborative Peer Learning</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">10,000+ Practice Questions</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">CAT '24-Level Book Set</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Year-Round Practice Drills</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-row"><span class="mc-row-label">Skill-Building Assignments</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">24×7 Doubt Support</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Full-Length Mocks + Reviews</span><span class="no"><i class="fas fa-minus"></i> No</span></div>
+      <div class="mc-row"><span class="mc-row-label">Sectional Tests + Video Insights</span><span class="yes"><i class="fas fa-check"></i> Yes</span></div>
+      <div class="mc-cta"><a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" target="_blank" rel="noopener" class="btn-block outline">Enroll Now</a></div>
+    </div>
+
+  </div>
+
 </body>
 </html>
