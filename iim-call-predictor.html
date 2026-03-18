@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
 :root {
   --red:#dc2626;--red2:#b91c1c;--red3:#991b1b;--red-t:#fef2f2;--red-b:#fecaca;
@@ -98,7 +99,7 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);}
 .results-pane{display:flex;flex-direction:column;gap:16px;}
 
 /* ── DATA CARD ── */
-.dcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.dcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;page-break-inside:avoid;break-inside:avoid;}
 .dcard-head{padding:16px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
 .dcard-title{font-size:12.5px;font-weight:700;color:var(--ink);letter-spacing:.01em;}
 .dcard-sub{font-size:11px;color:var(--ink4);}
@@ -482,6 +483,11 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);}
   <!-- RESULTS -->
   <div id="results">
 
+    <!-- PDF Download Button -->
+    <div style="display:flex; justify-content:flex-end; margin-bottom:10px;">
+      <button onclick="downloadPDF()" class="pdf-btn" style="background:var(--ink); color:#fff; border:none; padding:10px 20px; border-radius:8px; font-weight:600; cursor:pointer; font-size:13px; display:inline-flex; align-items:center; gap:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s;"><i class="fas fa-file-pdf"></i> Download Analysis as PDF</button>
+    </div>
+
     <!-- Score Hero -->
     <div class="dcard">
       <div class="dcard-head">
@@ -627,6 +633,11 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);}
 
   <!-- TARGET RESULTS -->
   <div id="target-results">
+    <!-- PDF Download Button -->
+    <div style="display:flex; justify-content:flex-end; margin-bottom:10px;">
+      <button onclick="downloadPDF()" class="pdf-btn" style="background:var(--ink); color:#fff; border:none; padding:10px 20px; border-radius:8px; font-weight:600; cursor:pointer; font-size:13px; display:inline-flex; align-items:center; gap:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s;"><i class="fas fa-file-pdf"></i> Download Target Report as PDF</button>
+    </div>
+
     <div class="dcard">
       <div class="dcard-head"><div><div class="dcard-title">Non-CAT Profile Score</div><div class="dcard-sub">Your profile strength excluding CAT performance</div></div></div>
       <div class="dcard-body">
@@ -1125,6 +1136,46 @@ function predict(){
     document.querySelectorAll('.cmp-bar-fill[data-w]').forEach(b=>{b.style.width=b.dataset.w+'%';});
     document.querySelectorAll('.heat-bar-fill[data-w]').forEach(b=>{b.style.width=b.dataset.w+'%';});
   },160);
+}
+
+function downloadPDF() {
+  // Determine which result section is active
+  const resultsDiv = document.getElementById('results');
+  const targetDiv = document.getElementById('target-results');
+  let element = null;
+  let filename = 'AB_Classes_Report.pdf';
+
+  if (resultsDiv.classList.contains('show')) {
+    element = resultsDiv;
+    filename = 'IIM_Call_Prediction_Analysis.pdf';
+  } else if (targetDiv.classList.contains('show')) {
+    element = targetDiv;
+    filename = 'IIM_Target_Percentile_Report.pdf';
+  } else {
+    alert("Please generate the analysis first.");
+    return;
+  }
+
+  const opt = {
+    margin: [15, 15, 15, 15],
+    filename: filename,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, logging: false },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+
+  // Hide buttons during generation
+  const buttons = element.querySelectorAll('.pdf-btn');
+  buttons.forEach(btn => btn.style.display = 'none');
+
+  html2pdf().set(opt).from(element).save().then(() => {
+    // Restore buttons
+    buttons.forEach(btn => btn.style.display = 'inline-flex');
+  }).catch(err => {
+    console.error(err);
+    buttons.forEach(btn => btn.style.display = 'inline-flex');
+    alert("An error occurred while generating PDF.");
+  });
 }
 </script>
 </body>
