@@ -13,47 +13,137 @@
    body {
       font-family: "Inter", sans-serif;
     }
+    :root { --red: #e8192c; --white: #ffffff; --text-mid: #4a5060; --border: #e4e7ed; --border-dark: #cdd2db; --bg: #f8f9fb; --font: 'Inter', sans-serif; --shadow-xs: 0 1px 4px rgba(0,0,0,0.06); --shadow-md: 0 6px 28px rgba(0,0,0,0.09); --radius-sm: 8px; --radius-md: 14px; --transition: 0.22s cubic-bezier(0.4,0,0.2,1); }
+    
+    /* HEADER & FOOTER CSS INTEGRATION */
+    .top-header { background: var(--white); border-bottom: 1px solid var(--border); }
+    .top-header .inner { max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-header-logo { display: flex; align-items: center; gap: 10px; }
+    .top-header-logo img { height: 40px; width: auto; border-radius: 6px; }
+    .top-header-logo span { font-size: 0.95rem; font-weight: 700; color: #1a1d23; display: none; }
+    @media (min-width: 500px) { .top-header-logo span { display: block; } }
+    .top-header-actions { display: flex; gap: 8px; }
+    .top-header-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all var(--transition); }
+    .btn-wa  { background: #f0faf3; color: #1a7a3c; border: 1px solid #c3e6cc; }
+    .btn-wa:hover { background: #dcf5e4; }
+    .btn-start { background: var(--red); color: var(--white); border: 1px solid var(--red); }
+    .btn-start:hover { background: #c0121f; }
+    .top-hamburger { display: none; background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 1rem; }
+    .top-mobile-nav { display: none; background: var(--bg); border-top: 1px solid var(--border); }
+    .top-mobile-nav.open { display: block; }
+    .top-mobile-nav a { display: block; padding: 12px 24px; color: var(--text-mid); font-weight: 500; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition); }
+    .top-mobile-nav a:hover { color: var(--red); }
+    @media (max-width: 500px) { .top-header-actions { display: none; } .top-hamburger { display: block; } }
+
+    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; box-shadow: var(--shadow-xs); }
+    .navbar-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .navbar-brand { font-size: 1.45rem; font-weight: 800; color: #1a1d23; text-decoration: none; letter-spacing: -0.3px; }
+    .navbar-brand em { font-style: normal; color: var(--red); }
+    .nav-links { display: none; align-items: center; gap: 28px; }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-links a, .nav-links .dropdown-trigger { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; cursor: pointer; transition: color var(--transition); }
+    .nav-links a:hover, .nav-links .dropdown-trigger:hover { color: var(--red); }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); min-width: 210px; box-shadow: var(--shadow-md); z-index: 300; overflow: hidden; padding: 6px 0; }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: var(--text-mid); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background var(--transition), color var(--transition); }
+    .nav-dropdown-menu a:hover { background: #fff0f1; color: var(--red); }
+    .nav-right { display: none; align-items: center; gap: 18px; }
+    @media (min-width: 768px) { .nav-right { display: flex; } }
+    .nav-right a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; transition: color var(--transition); }
+    .nav-right a:hover { color: var(--red); }
+    .nav-divider { color: var(--border-dark); }
+    .nav-mobile-quick { display: flex; align-items: center; gap: 14px; }
+    @media (min-width: 768px) { .nav-mobile-quick { display: none; } }
+    .nav-mobile-quick a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; }
+    .nav-hamburger { background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.95rem; transition: border-color var(--transition), color var(--transition); }
+    .nav-hamburger:hover { border-color: var(--red); color: var(--red); }
+    .nav-mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a { padding: 12px 24px; font-weight: 500; font-size: 0.9rem; color: var(--text-mid); text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition), background var(--transition); }
+    .nav-mobile-menu a:hover { color: var(--red); background: #fff0f1; }
+
+    .footer { background: #1a1d23; color: var(--white); padding: 56px 24px 24px; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+    .footer-col p, .footer-col address { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.85; font-style: normal; }
+    .footer-col a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; font-size: 0.875rem; margin-bottom: 8px; transition: color var(--transition); }
+    .footer-col a:hover { color: var(--white); }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0; border: 1px solid rgba(255,255,255,0.1); transition: all var(--transition); }
+    .footer-social a:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+    .footer-bottom { max-width: 1160px; margin: 24px auto 0; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .wa-float { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #25d366; color: #fff; width: 52px; height: 52px; border-radius: 50%; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 20px rgba(37,211,102,0.45); text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+    @media (min-width: 769px) { .nav-mobile-quick .nav-hamburger { display: none; } }
+    @media (max-width: 768px) { .wa-float { display: flex; } .top-header { display: none; } .navbar-inner { height: 52px; padding: 0 16px; } .navbar-brand { font-size: 1.2rem; } .footer { padding: 40px 16px 80px; } .footer-inner { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; } .footer-col h3 { margin-bottom: 12px; } .footer-bottom { font-size: 0.75rem; margin-top: 20px; } }
   </style>
  </head>
  <body class="bg-white text-gray-900 leading-relaxed">
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200" role="banner">
-   <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
-    <span class="text-3xl font-extrabold text-red-600 tracking-wide select-none">
-     AB Classes
-    </span>
-    <nav aria-label="Primary Navigation" class="hidden md:flex space-x-10 font-semibold text-gray-700 tracking-wide" role="navigation">
-     <a class="hover:text-red-600 transition duration-300 ease-in-out" href="index.html">
-      Home
+
+  <!-- TOP HEADER -->
+  <div class="top-header">
+   <div class="inner">
+    <div class="top-header-logo">
+     <img src="images/logo.jpg" alt="AB Classes Logo">
+     <span>Welcome to AB Classes!</span>
+    </div>
+    <div class="top-header-actions">
+     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-wa" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
      </a>
-     <a class="hover:text-red-600 transition duration-300 ease-in-out" href="cd.html">
-      Courses
-     </a>
-     <a class="hover:text-red-600 transition duration-300 ease-in-out" href="#why-choose-title">
-      Why Choose Us
-     </a>
-     <a class="hover:text-red-600 transition duration-300 ease-in-out" href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">
-      Contact
-     </a>
-    </nav>
-    <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" class="md:hidden text-gray-700 hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 rounded" id="mobile-menu-button">
-     <i class="fas fa-bars fa-lg">
-     </i>
-    </button>
+     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-start" target="_blank">Get Started</a>
+    </div>
+    <button class="top-hamburger" id="topHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
    </div>
-   <nav aria-label="Mobile menu" class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold transition" href="index.html">
-     Home
-    </a>
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold transition" href="cd.html">
-     Courses
-    </a>
-    <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold transition" href="#why-choose-title">
-     Why Choose Us
-    </a>
-    <a class="block px-6 py-3 hover:bg-red-50 hover:text-red-600 font-semibold transition" href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">
-     Contact
-    </a>
+   <nav class="top-mobile-nav" id="topMobileNav">
+    <a href="index.html">Home</a>
+    <a href="cd.html">Courses</a>
+    <a href="#why-choose-title">Why Choose Us</a>
+    <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
+   </nav>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+   <div class="navbar-inner">
+    <a class="navbar-brand" href="index.html">AB<em>Classes</em></a>
+    <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+     <a href="about.html">About Us</a>
+     <a href="py.html">Previous Papers</a>
+     <div class="nav-dropdown">
+      <span class="dropdown-trigger">Resources <i class="fas fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></span>
+      <div class="nav-dropdown-menu" role="menu">
+       <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem">Free CAT Resources</a>
+       <a href="articles-with-navbar.html" role="menuitem">Latest MBA Articles</a>
+       <a href="iim-call-predictor.html" role="menuitem">IIM Call Predictor</a>
+       <a href="mba-colleges.html" role="menuitem">MBA Colleges</a>
+      </div>
+     </div>
+     <a href="results.html">Results</a>
+     <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+    </nav>
+    <div class="nav-right">
+     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
+     <span class="nav-divider">|</span>
+     <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+    </div>
+    <div class="nav-mobile-quick">
+     <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+     <a href="results.html">Results</a>
+     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+   </div>
+   <nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation">
+    <a href="about.html">About Us</a>
+    <a href="py.html">Previous Papers</a>
+    <a href="https://www.youtube.com/@Abhishekabclasses">Free CAT Resources</a>
+    <a href="articles-with-navbar.html">Latest MBA Articles</a>
+    <a href="iim-call-predictor.html">IIM Call Predictor</a>
+    <a href="mba-colleges.html">MBA Colleges</a>
+    <a href="results.html">Results</a>
+    <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+    <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" style="color:var(--red); font-weight:700;">Register / Contact</a>
    </nav>
   </header>
 
@@ -309,99 +399,56 @@
    </section>
   </main>
   <!-- Footer -->
-  <footer class="bg-[#ff0000] flex-shrink-0 p-12 text-white w-full">
-   <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-12">
-    <div class="flex flex-col space-y-4 md:w-1/3">
-     <h3 class="text-xl font-bold border-b border-white pb-2">AB Classes</h3>
-     <p class="text-sm text-white/90">
-      AB Classes is your trusted partner for CAT preparation, delivering
-      top-notch coaching and success stories year after year.
-     </p>
-     <div class="flex space-x-4 mt-2">
-      <a
-        href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-        target="_blank"
-        rel="noopener"
-        aria-label="Facebook"
-        class="hover:text-white/80 transition"
-        ><i class="fab fa-facebook fa-lg"></i
-      ></a>
-      <a
-        href=""
-        target="_blank"
-        rel="noopener"
-        aria-label="Twitter"
-        class="hover:text-white/80 transition"
-        ><i class="fab fa-twitter fa-lg"></i
-      ></a>
-      <a
-        href="https://www.instagram.com/cat_abclasses/"
-        target="_blank"
-        rel="noopener"
-        aria-label="Instagram"
-        class="hover:text-white/80 transition"
-        ><i class="fab fa-instagram fa-lg"></i
-      ></a>
-      <a
-        href=""
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn"
-        class="hover:text-white/80 transition"
-        ><i class="fab fa-linkedin fa-lg"></i
-      ></a>
+  <footer class="footer">
+   <div class="footer-inner">
+    <div class="footer-col">
+     <h3>AB Classes</h3>
+     <p>Your trusted partner for CAT preparation — delivering top-notch coaching and IIM success stories year after year from Raipur, Chhattisgarh.</p>
+     <div class="footer-social">
+      <a href="https://www.facebook.com/abclasses" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/abclasses" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/cat_abclasses/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/abclasses" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=919827118488" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
      </div>
     </div>
-    <div class="flex flex-col space-y-4 md:w-1/3">
-     <h3 class="text-xl font-bold border-b border-white pb-2">Quick Links</h3>
-     <nav class="flex flex-col space-y-2 text-white/90">
-      <a
-        href="index.html"
-        class="hover:text-white/80 transition"
-        >Home</a
-      >
-      <a
-        href="results.html"
-        class="hover:text-white/80 transition"
-        >Results</a
-      >
-      <a
-        href="cd.hmtl"
-        class="hover:text-white/80 transition"
-        >Courses</a
-      >
-      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="hover:text-white/80 transition"
-        >Contact</a
-      >
-     </nav>
+    <div class="footer-col">
+     <h3>Quick Links</h3>
+     <a href="index.html">Home</a>
+     <a href="results.html">Results</a>
+     <a href="cd.html">Courses</a>
+     <a href="about.html">About Us</a>
+     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
     </div>
-    <div class="flex flex-col space-y-4 md:w-1/3">
-     <h3 class="text-xl font-bold border-b border-white pb-2">Contact Us</h3>
-     <address class="not-italic text-white/90 space-y-2">
+    <div class="footer-col">
+     <h3>Contact Us</h3>
+     <address>
       <p>AB Classes Pvt. Ltd.</p>
-      <p>Agrasen Chowk, Raipur, Chhattisgarh 492001</p>
-      <p>Phone: <a href="tel:+919827118488" class="hover:text-white/80">+91 98271 18488</a></p>
-      <p>Email: <a href="mailto:info@abclasses.in" class="hover:text-white/80">info@abclasses.in</a></p>
+      <p>Agrasen Chowk, Raipur<br>Chhattisgarh — 492001</p>
+      <p style="margin-top:10px;"><a href="tel:+919827118488">+91 98271 18488</a><br><a href="mailto:info@abclasses.in">info@abclasses.in</a></p>
      </address>
     </div>
    </div>
+   <p class="footer-bottom">© 2025 AB Classes Pvt. Ltd. All rights reserved.</p>
   </footer>
-  <script>
-   // Mobile menu toggle
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
 
-    mobileMenuButton.addEventListener("click", () => {
-      const expanded =
-        mobileMenuButton.getAttribute("aria-expanded") === "true" || false;
-      mobileMenuButton.setAttribute("aria-expanded", !expanded);
-      if (mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.remove("hidden");
-        mobileMenuButton.innerHTML = '<i class="fas fa-times fa-lg"></i>';
-      } else {
-        mobileMenu.classList.add("hidden");
-        mobileMenuButton.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
-      }
+  <!-- FLOATING WA BUTTON (mobile) -->
+  <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+     class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    document.getElementById('topHamburger').addEventListener('click', function () {
+      document.getElementById('topMobileNav').classList.toggle('open');
+    });
+
+    document.getElementById('navHamburger').addEventListener('click', function () {
+      const menu = document.getElementById('navMobileMenu');
+      const icon = this.querySelector('i');
+      menu.classList.toggle('open');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
     });
   </script>
  </body>
