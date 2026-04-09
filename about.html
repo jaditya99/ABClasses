@@ -1,447 +1,569 @@
-<html class="scroll-smooth" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   About Us | AB Classes
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-      font-family: "Inter", sans-serif;
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>About Us | AB Classes — Best CAT Coaching in Raipur</title>
+  <meta name="description" content="Learn about AB Classes, Raipur's #1 CAT coaching institute founded by IIFT Delhi alumnus Abhishek Gupta. 10+ years, 50+ 99%ile scorers.">
+  <link rel="canonical" href="https://abclasses.in/about" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abclasses.in/about" />
+  <meta property="og:site_name" content="AB Classes" />
+  <meta property="og:title" content="About Us | AB Classes — Best CAT Coaching in Raipur" />
+  <meta property="og:description" content="Learn about AB Classes — Raipur's #1 CAT coaching institute founded by IIFT Delhi alumnus Abhishek Gupta. 10+ years, 50+ students with 99+ percentile." />
+  <meta property="og:image" content="https://abclasses.in/images/Absir.jpg" />
+  <meta property="og:image:alt" content="Abhishek Gupta — Founder, AB Classes, IIFT Delhi Alumnus" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | AB Classes — Best CAT Coaching in Raipur" />
+  <meta name="twitter:description" content="Learn about AB Classes — Raipur's #1 CAT coaching institute founded by IIFT Delhi alumnus Abhishek Gupta. 10+ years, 50+ students with 99+ percentile." />
+  <meta name="twitter:image" content="https://abclasses.in/images/Absir.jpg" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://abclasses.in/about",
+    "name": "About AB Classes — Best CAT Coaching in Raipur",
+    "description": "Learn about AB Classes, Raipur's #1 CAT coaching institute founded by IIFT Delhi alumnus Abhishek Gupta.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://abclasses.in",
+      "name": "AB Classes"
+    },
+    "about": {
+      "@type": "EducationalOrganization",
+      "name": "AB Classes",
+      "url": "https://abclasses.in",
+      "telephone": "+919827118488",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Raipur",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Abhishek Gupta",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "IIFT Delhi"
+        }
+      }
     }
-    :root { --red: #e8192c; --white: #ffffff; --text-mid: #4a5060; --border: #e4e7ed; --border-dark: #cdd2db; --bg: #f8f9fb; --font: 'Inter', sans-serif; --shadow-xs: 0 1px 4px rgba(0,0,0,0.06); --shadow-md: 0 6px 28px rgba(0,0,0,0.09); --radius-sm: 8px; --radius-md: 14px; --transition: 0.22s cubic-bezier(0.4,0,0.2,1); }
-    
-    /* HEADER & FOOTER CSS INTEGRATION */
-    .top-header { background: var(--white); border-bottom: 1px solid var(--border); }
-    .top-header .inner { max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
-    .top-header-logo { display: flex; align-items: center; gap: 10px; }
-    .top-header-logo img { height: 40px; width: auto; border-radius: 6px; }
-    .top-header-logo span { font-size: 0.95rem; font-weight: 700; color: #1a1d23; display: none; }
-    @media (min-width: 500px) { .top-header-logo span { display: block; } }
-    .top-header-actions { display: flex; gap: 8px; }
-    .top-header-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all var(--transition); }
-    .btn-wa  { background: #f0faf3; color: #1a7a3c; border: 1px solid #c3e6cc; }
-    .btn-wa:hover { background: #dcf5e4; }
-    .btn-start { background: var(--red); color: var(--white); border: 1px solid var(--red); }
-    .btn-start:hover { background: #c0121f; }
-    .top-hamburger { display: none; background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 1rem; }
-    .top-mobile-nav { display: none; background: var(--bg); border-top: 1px solid var(--border); }
-    .top-mobile-nav.open { display: block; }
-    .top-mobile-nav a { display: block; padding: 12px 24px; color: var(--text-mid); font-weight: 500; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition); }
-    .top-mobile-nav a:hover { color: var(--red); }
-    @media (max-width: 500px) { .top-header-actions { display: none; } .top-hamburger { display: block; } }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --red: #e8192c; --red-dark: #c0121f; --red-soft: #fff0f1; --red-mid: #ffd6d9;
+      --white: #ffffff; --bg: #f8f9fb; --bg-alt: #f2f4f8;
+      --border: #e4e7ed; --border-dark: #cdd2db;
+      --text: #1a1d23; --text-mid: #4a5060; --text-light: #7a8090;
+      --shadow-xs: 0 1px 4px rgba(0,0,0,0.06); --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+      --shadow-md: 0 6px 28px rgba(0,0,0,0.09); --shadow-lg: 0 12px 48px rgba(0,0,0,0.11);
+      --radius-sm: 8px; --radius-md: 14px; --radius-lg: 20px;
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+      --font: 'Plus Jakarta Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font); background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased; }
 
-    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; box-shadow: var(--shadow-xs); }
-    .navbar-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 60px; }
-    .navbar-brand { font-size: 1.45rem; font-weight: 800; color: #1a1d23; text-decoration: none; letter-spacing: -0.3px; }
+    /* ── NAVBAR ── */
+    .navbar { background: transparent; border-bottom: 1px solid transparent; position: fixed; top: 0; left: 0; right: 0; z-index: 200; transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease; }
+    .navbar.scrolled { background: rgba(255,255,255,0.93); border-bottom-color: var(--border); box-shadow: var(--shadow-xs); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .navbar-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 68px; }
+    .navbar-brand { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.3px; transition: color 0.35s; }
+    .navbar.scrolled .navbar-brand { color: var(--text); }
     .navbar-brand em { font-style: normal; color: var(--red); }
     .nav-links { display: none; align-items: center; gap: 28px; }
     @media (min-width: 768px) { .nav-links { display: flex; } }
-    .nav-links a, .nav-links .dropdown-trigger { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; cursor: pointer; transition: color var(--transition); }
-    .nav-links a:hover, .nav-links .dropdown-trigger:hover { color: var(--red); }
+    .nav-links a, .nav-links .dropdown-trigger { font-weight: 600; font-size: 0.875rem; color: rgba(255,255,255,0.82); text-decoration: none; cursor: pointer; transition: color var(--transition); }
+    .navbar.scrolled .nav-links a, .navbar.scrolled .nav-links .dropdown-trigger { color: var(--text-mid); }
+    .nav-links a:hover, .nav-links .dropdown-trigger:hover { color: var(--red) !important; }
     .nav-dropdown { position: relative; }
+    .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; width: 100%; height: 20px; background: transparent; }
     .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); min-width: 210px; box-shadow: var(--shadow-md); z-index: 300; overflow: hidden; padding: 6px 0; }
     .nav-dropdown:hover .nav-dropdown-menu { display: block; }
     .nav-dropdown-menu a { display: block; padding: 10px 18px; color: var(--text-mid); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background var(--transition), color var(--transition); }
-    .nav-dropdown-menu a:hover { background: #fff0f1; color: var(--red); }
-    .nav-right { display: none; align-items: center; gap: 18px; }
+    .nav-dropdown-menu a:hover { background: var(--red-soft); color: var(--red); }
+    .nav-right { display: none; align-items: center; gap: 16px; }
     @media (min-width: 768px) { .nav-right { display: flex; } }
-    .nav-right a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; transition: color var(--transition); }
-    .nav-right a:hover { color: var(--red); }
-    .nav-divider { color: var(--border-dark); }
+    .nav-right a { font-weight: 600; font-size: 0.875rem; color: rgba(255,255,255,0.82); text-decoration: none; transition: color var(--transition); }
+    .navbar.scrolled .nav-right a { color: var(--text-mid); }
+    .nav-right a:hover { color: var(--red) !important; }
+    .nav-right .btn-nav-cta { background: var(--red); color: #fff !important; padding: 8px 20px; border-radius: var(--radius-sm); border: 1.5px solid var(--red); transition: all var(--transition); }
+    .nav-right .btn-nav-cta:hover { background: var(--red-dark) !important; border-color: var(--red-dark) !important; }
+    .nav-divider { color: rgba(255,255,255,0.25); }
+    .navbar.scrolled .nav-divider { color: var(--border-dark); }
     .nav-mobile-quick { display: flex; align-items: center; gap: 14px; }
     @media (min-width: 768px) { .nav-mobile-quick { display: none; } }
-    .nav-mobile-quick a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; }
-    .nav-hamburger { background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.95rem; transition: border-color var(--transition), color var(--transition); }
+    .nav-mobile-quick a { font-weight: 600; font-size: 0.875rem; color: rgba(255,255,255,0.82); text-decoration: none; transition: color 0.3s; }
+    .navbar.scrolled .nav-mobile-quick a { color: var(--text-mid); }
+    .nav-hamburger { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.9); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.95rem; transition: all var(--transition); }
+    .navbar.scrolled .nav-hamburger { background: none; border-color: var(--border); color: var(--text-mid); }
     .nav-hamburger:hover { border-color: var(--red); color: var(--red); }
     .nav-mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); }
     .nav-mobile-menu.open { display: flex; }
     .nav-mobile-menu a { padding: 12px 24px; font-weight: 500; font-size: 0.9rem; color: var(--text-mid); text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition), background var(--transition); }
-    .nav-mobile-menu a:hover { color: var(--red); background: #fff0f1; }
+    .nav-mobile-menu a:hover { color: var(--red); background: var(--red-soft); }
 
-    .footer { background: #1a1d23; color: var(--white); padding: 56px 24px 24px; }
-    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .footer-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
-    .footer-col p, .footer-col address { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.85; font-style: normal; }
-    .footer-col a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; font-size: 0.875rem; margin-bottom: 8px; transition: color var(--transition); }
-    .footer-col a:hover { color: var(--white); }
-    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
-    .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0; border: 1px solid rgba(255,255,255,0.1); transition: all var(--transition); }
-    .footer-social a:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-    .footer-bottom { max-width: 1160px; margin: 24px auto 0; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-    .wa-float { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #25d366; color: #fff; width: 52px; height: 52px; border-radius: 50%; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 20px rgba(37,211,102,0.45); text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
-    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
-    @media (min-width: 769px) { .nav-mobile-quick .nav-hamburger { display: none; } }
-    @media (max-width: 768px) { .wa-float { display: flex; } .top-header { display: none; } .navbar-inner { height: 52px; padding: 0 16px; } .navbar-brand { font-size: 1.2rem; } .footer { padding: 40px 16px 80px; } .footer-inner { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; } .footer-col h3 { margin-bottom: 12px; } .footer-bottom { font-size: 0.75rem; margin-top: 20px; } }
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: #0f1117; position: relative; overflow: hidden;
+      padding: 120px 24px 80px; text-align: center;
+    }
+    .page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 52px 52px; pointer-events: none; }
+    .page-hero-glow { position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse at center, rgba(232,25,44,0.14) 0%, transparent 65%); pointer-events: none; }
+    .page-hero-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(232,25,44,0.1); border: 1px solid rgba(232,25,44,0.28); color: #ff7a85; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 40px; margin-bottom: 20px; }
+    .page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
+    .page-hero h1 span { background: linear-gradient(130deg, #ff7a85, #e8192c, #ffb347); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero p { font-size: 1rem; color: rgba(255,255,255,0.48); line-height: 1.75; }
+
+    /* ── SECTION HEADINGS ── */
+    .section-heading { text-align: center; margin-bottom: 48px; }
+    .section-heading .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--red); background: var(--red-soft); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .section-heading h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: var(--text); line-height: 1.2; }
+    .section-heading .bar { width: 40px; height: 3px; background: var(--red); border-radius: 2px; margin: 14px auto 0; }
+
+    /* ── ABOUT SPLIT ── */
+    .about-split { max-width: 1160px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: block; }
+    .about-img-badge { position: absolute; bottom: -18px; right: -18px; background: var(--red); color: #fff; padding: 18px 22px; border-radius: var(--radius-md); box-shadow: 0 8px 28px rgba(232,25,44,0.38); text-align: center; }
+    .about-img-badge .big { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .about-img-badge .small { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85; }
+    .about-text .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--red); background: var(--red-soft); padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .about-text h2 { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 18px; }
+    .about-text p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 14px; }
+    .about-text strong { color: var(--text); }
+    .about-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .pill { display: inline-flex; align-items: center; gap: 7px; background: var(--bg); border: 1px solid var(--border); border-radius: 40px; padding: 7px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-mid); }
+    .pill i { color: var(--red); font-size: 0.75rem; }
+
+    /* ── WHY CHOOSE ── */
+    .why-section { background: #0f1117; padding: 80px 24px; position: relative; overflow: hidden; }
+    .why-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+    .why-grid { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; z-index: 1; }
+    .why-card { background: #1e2330; border: 1px solid rgba(255,255,255,0.07); border-radius: var(--radius-md); padding: 32px 24px; transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); cursor: default; }
+    .why-card:hover { transform: translateY(-6px); border-color: rgba(232,25,44,0.35); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+    .why-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(232,25,44,0.12); border: 1px solid rgba(232,25,44,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .why-icon i { color: var(--red); font-size: 1.2rem; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .why-card p { font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+    /* ── UNIQUE FEATURES ── */
+    .unique-section { background: var(--bg); padding: 80px 24px; }
+    .unique-grid { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .unique-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 36px 28px; text-align: center; transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition); position: relative; overflow: hidden; }
+    .unique-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red), #ff9a3c); border-radius: 3px 3px 0 0; opacity: 0; transition: opacity var(--transition); }
+    .unique-card:hover::before { opacity: 1; }
+    .unique-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: var(--red-mid); }
+    .unique-num { font-size: 3rem; margin-bottom: 16px; display: block; filter: grayscale(0); }
+    .unique-card h3 { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+    .unique-card p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* ── MENTOR ── */
+    .mentor-section { background: var(--white); padding: 80px 24px; }
+    .mentor-card { max-width: 900px; margin: 0 auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 52px; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; box-shadow: var(--shadow-sm); }
+    .mentor-img-wrap { flex-shrink: 0; position: relative; width: 170px; height: 170px; }
+    .mentor-img-wrap::before { content: ''; position: absolute; inset: -5px; border-radius: 50%; background: conic-gradient(from 0deg, var(--red) 0%, #ff9a3c 35%, var(--red) 70%, #ff9a3c 100%); animation: spin-ring 4s linear infinite; }
+    .mentor-img-wrap::after { content: ''; position: absolute; inset: -2px; border-radius: 50%; background: var(--bg); }
+    @keyframes spin-ring { to { transform: rotate(360deg); } }
+    .mentor-img-wrap img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; position: absolute; top: 5px; left: 5px; z-index: 1; box-shadow: var(--shadow-md); }
+    .mentor-info { flex: 1; min-width: 240px; }
+    .mentor-info h3 { font-size: 1.4rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+    .mentor-school { font-size: 0.82rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: block; }
+    .mentor-info p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 8px; }
+    .mentor-info strong { color: var(--text); font-weight: 700; }
+    .mentor-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+    .mentor-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--white); border: 1px solid var(--border); border-radius: 40px; padding: 6px 14px; font-size: 0.78rem; font-weight: 600; color: var(--text-mid); }
+    .mentor-badge i { color: var(--red); font-size: 0.72rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--bg); padding: 80px 24px; }
+    .testimonials-grid { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .testi-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 32px 26px; display: flex; flex-direction: column; gap: 18px; box-shadow: var(--shadow-xs); transition: box-shadow var(--transition), transform var(--transition); }
+    .testi-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .testi-stars { display: flex; gap: 3px; }
+    .testi-stars i { color: #f59e0b; font-size: 0.8rem; }
+    .testi-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; font-style: italic; flex: 1; }
+    .testi-text::before { content: '"'; font-size: 2rem; color: var(--red-mid); line-height: 0.5; display: block; margin-bottom: 10px; font-style: normal; font-family: serif; }
+    .testi-author { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--border); padding-top: 14px; }
+    .testi-author strong { font-size: 0.875rem; font-weight: 700; color: var(--text); }
+    .testi-author span { font-size: 0.78rem; color: var(--red); font-weight: 600; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: linear-gradient(135deg, #0f1117 0%, #1e2330 100%); padding: 80px 24px; text-align: center; position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; }
+    .cta-band-glow { position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 700px; height: 400px; background: radial-gradient(ellipse at center, rgba(232,25,44,0.14) 0%, transparent 65%); pointer-events: none; }
+    .cta-band-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--red); background: rgba(232,25,44,0.1); border: 1px solid rgba(232,25,44,0.28); padding: 5px 14px; border-radius: 40px; margin-bottom: 18px; position: relative; z-index: 1; }
+    .cta-band h2 { font-size: clamp(1.8rem, 4vw, 2.9rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 14px; position: relative; z-index: 1; }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.45); max-width: 480px; margin: 0 auto 36px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta-band-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-hero-primary { display: inline-flex; align-items: center; gap: 9px; background: var(--red); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 14px 30px; border-radius: var(--radius-sm); text-decoration: none; border: 2px solid var(--red); transition: all var(--transition); font-family: var(--font); }
+    .btn-hero-primary:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,25,44,0.38); }
+    .btn-hero-secondary { display: inline-flex; align-items: center; gap: 9px; background: transparent; color: rgba(255,255,255,0.8); font-weight: 600; font-size: 0.95rem; padding: 14px 30px; border-radius: var(--radius-sm); text-decoration: none; border: 2px solid rgba(255,255,255,0.18); transition: all var(--transition); font-family: var(--font); }
+    .btn-hero-secondary:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
+
+    /* ── FOOTER ── */
+    .footer { background: #0f1117; color: #fff; padding: 64px 24px 24px; border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-brand { font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 14px; display: block; font-family: var(--font); }
+    .footer-brand em { font-style: normal; color: var(--red); }
+    .footer-col h3 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+    .footer-col p, .footer-col address { font-size: 0.875rem; color: rgba(255,255,255,0.48); line-height: 1.85; font-style: normal; }
+    .footer-col a { color: rgba(255,255,255,0.48); text-decoration: none; display: block; font-size: 0.875rem; margin-bottom: 10px; transition: color var(--transition); }
+    .footer-col a:hover { color: #fff; }
+    .footer-social { display: flex; gap: 10px; margin-top: 22px; }
+    .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.45); font-size: 0.88rem; margin: 0; border: 1px solid rgba(255,255,255,0.07); transition: all var(--transition); }
+    .footer-social a:hover { background: var(--red); border-color: var(--red); color: #fff; transform: translateY(-2px); }
+    .footer-bottom { max-width: 1160px; margin: 24px auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 0.78rem; color: rgba(255,255,255,0.22); text-decoration: none; transition: color var(--transition); }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── WA FLOAT ── */
+    .wa-float { display: none; position: fixed; bottom: 22px; right: 22px; z-index: 999; background: #25d366; color: #fff; width: 56px; height: 56px; border-radius: 50%; align-items: center; justify-content: center; font-size: 1.55rem; box-shadow: 0 4px 22px rgba(37,211,102,0.45); text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float-ring { position: absolute; inset: -5px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.38); animation: wa-ring 2.2s ease-out infinite; }
+    @keyframes wa-ring { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.55); opacity: 0; } }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .wa-float { display: flex; }
+      .navbar-inner { height: 56px; padding: 0 16px; }
+      .navbar-brand { font-size: 1.2rem; }
+      .page-hero { padding: 60px 20px 52px; }
+      .about-split { grid-template-columns: 1fr; gap: 40px; padding: 52px 20px; }
+      .about-img-badge { bottom: -12px; right: -8px; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .why-card { padding: 24px 18px; }
+      .unique-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .unique-card { padding: 28px 18px; }
+      .mentor-card { flex-direction: column; text-align: center; padding: 36px 20px; gap: 28px; }
+      .mentor-img-wrap { margin: 0 auto; }
+      .mentor-badges { justify-content: center; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 14px; }
+      .footer { padding: 48px 16px 80px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; padding-bottom: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+    }
+    @media (max-width: 500px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .unique-grid { grid-template-columns: 1fr; }
+    }
   </style>
- </head>
- <body class="bg-white text-gray-900 leading-relaxed">
+</head>
+<body>
 
-  <!-- TOP HEADER -->
-  <div class="top-header">
-   <div class="inner">
-    <div class="top-header-logo">
-     <img src="images/logo.jpg" alt="AB Classes Logo">
-     <span>Welcome to AB Classes!</span>
-    </div>
-    <div class="top-header-actions">
-     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-wa" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-     </a>
-     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-start" target="_blank">Get Started</a>
-    </div>
-    <button class="top-hamburger" id="topHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
-   </div>
-   <nav class="top-mobile-nav" id="topMobileNav">
-    <a href="index.html">Home</a>
-    <a href="cd.html">Courses</a>
-    <a href="#why-choose-title">Why Choose Us</a>
-    <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
-   </nav>
-  </div>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-   <div class="navbar-inner">
-    <a class="navbar-brand" href="index.html">AB<em>Classes</em></a>
-    <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
-     <a href="about.html">About Us</a>
-     <a href="py.html">Previous Papers</a>
-     <div class="nav-dropdown">
-      <span class="dropdown-trigger">Resources <i class="fas fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></span>
-      <div class="nav-dropdown-menu" role="menu">
-       <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem">Free CAT Resources</a>
-       <a href="articles-with-navbar.html" role="menuitem">Latest MBA Articles</a>
-       <a href="iim-call-predictor.html" role="menuitem">IIM Call Predictor</a>
-       <a href="mba-colleges.html" role="menuitem">MBA Colleges</a>
+  <!-- NAVBAR (fixed, transparent over hero → solid on scroll) -->
+  <header class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html">AB<em>Classes</em></a>
+      <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+        <a href="about.html">About Us</a>
+        <a href="py.html">Previous Papers</a>
+        <div class="nav-dropdown">
+          <span class="dropdown-trigger">Resources <i class="fas fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></span>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem">Free CAT Resources</a>
+            <a href="articles-with-navbar.html" role="menuitem">Latest MBA Articles</a>
+            <a href="iim-call-predictor.html" role="menuitem">IIM Call Predictor</a>
+            <a href="mba-colleges.html" role="menuitem">MBA Colleges</a>
+          </div>
+        </div>
+        <a href="results.html">Results</a>
+        <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+      </nav>
+      <div class="nav-right">
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
+        <span class="nav-divider">|</span>
+        <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-nav-cta">Get Started</a>
       </div>
-     </div>
-     <a href="results.html">Results</a>
-     <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+      <div class="nav-mobile-quick">
+        <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+        <a href="results.html">Results</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation">
+      <a href="about.html">About Us</a>
+      <a href="py.html">Previous Papers</a>
+      <a href="https://www.youtube.com/@Abhishekabclasses">Free CAT Resources</a>
+      <a href="articles-with-navbar.html">Latest MBA Articles</a>
+      <a href="iim-call-predictor.html">IIM Call Predictor</a>
+      <a href="mba-colleges.html">MBA Colleges</a>
+      <a href="results.html">Results</a>
+      <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" style="color:var(--red);font-weight:700;">Register / Contact</a>
     </nav>
-    <div class="nav-right">
-     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
-     <span class="nav-divider">|</span>
-     <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
-    </div>
-    <div class="nav-mobile-quick">
-     <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
-     <a href="results.html">Results</a>
-     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-    </div>
-   </div>
-   <nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation">
-    <a href="about.html">About Us</a>
-    <a href="py.html">Previous Papers</a>
-    <a href="https://www.youtube.com/@Abhishekabclasses">Free CAT Resources</a>
-    <a href="articles-with-navbar.html">Latest MBA Articles</a>
-    <a href="iim-call-predictor.html">IIM Call Predictor</a>
-    <a href="mba-colleges.html">MBA Colleges</a>
-    <a href="results.html">Results</a>
-    <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
-    <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" style="color:var(--red); font-weight:700;">Register / Contact</a>
-   </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section aria-label="Hero section with AB Classes introduction and call to action" class="relative bg-gradient-to-r from-red-100 via-red-50 to-white overflow-hidden">
-   <div class="max-w-7xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12">
-    <div class="max-w-xl text-center md:text-left space-y-6">
-     <h1 class="text-5xl md:text-6xl font-extrabold text-red-700 leading-tight drop-shadow-md">
-      Welcome to AB Classes
-     </h1>
-     <p class="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
-      Your trusted partner for CAT and MBA entrance exam preparation in Raipur
-      and Chhattisgarh. Personalized mentoring, expert faculty, and proven
-      success strategies to help you achieve your dreams.
-     </p>
-     <a class="inline-block mt-8 px-10 py-4 bg-red-700 text-white font-semibold rounded-lg shadow-lg hover:bg-red-800 transition duration-300 ease-in-out" href="https://api.whatsapp.com/send?phone=919827118488&amp;text=I%20want%20to%20enquire%20about%20AB%20Classes" rel="noopener noreferrer" target="_blank">
-      Book a Free Demo Class
-     </a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="page-eyebrow"><i class="fas fa-building" style="font-size:0.65rem;"></i> About AB Classes</div>
+      <h1>Raipur's Most <span>Trusted</span> CAT Institute</h1>
+      <p>Founded by an IIFT Delhi alumnus, AB Classes has helped hundreds of students achieve their IIM dreams through personalised, expert-led coaching.</p>
     </div>
-    <div class="w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
-     <img alt="Adult students in a modern classroom attentively listening to a teacher explaining concepts on a whiteboard" class="w-full h-auto object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4baa47ad-3653-451d-2988-7e83cd787a5d.jpg" width="600"/>
-    </div>
-   </div>
   </section>
-  <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
-   <!-- About Us -->
-   <section aria-labelledby="about-us-title" class="space-y-8 max-w-5xl mx-auto text-center md:text-left">
-    <h2 class="text-4xl font-extrabold text-red-700 border-b-4 border-red-700 inline-block pb-3 tracking-wide" id="about-us-title">
-     About Us
-    </h2>
-    <p class="text-gray-800 text-lg md:text-xl max-w-4xl mx-auto md:mx-0 leading-relaxed">
-     <strong>
-      AB Classes, Raipur
-     </strong>
-     was founded by
-     <strong>
-      Abhishek Gupta
-     </strong>
-     , an alumnus of
-     <strong>
-      IIFT
-     </strong>
-     and
-     <strong>
-      NIT Raipur
-     </strong>
-     , to pursue his passion for teaching and
-     mentoring students.
-    </p>
-    <p class="text-gray-800 text-lg md:text-xl max-w-4xl mx-auto md:mx-0 leading-relaxed">
-     We believe in personalized education and focused preparation to help
-     every aspirant succeed in competitive exams like
-     <strong>
-      CAT, XAT, IIFT, CMAT
-     </strong>
-     , and more.
-    </p>
-   </section>
-   <!-- Courses -->
-   <section aria-labelledby="courses-title" class="space-y-8 max-w-5xl mx-auto text-center md:text-left" id="courses">
-    <h2 class="text-4xl font-extrabold text-red-700 border-b-4 border-red-700 inline-block pb-3 tracking-wide" id="courses-title">
-     Our Courses
-    </h2>
-    <ul class="list-disc list-inside space-y-4 text-gray-800 text-lg md:text-xl max-w-3xl mx-auto md:mx-0">
-     <li>
-      <strong>
-       MBA Exams:
-      </strong>
-      CAT, XAT, IIFT, SNAP, CMAT, NMAT, and more.
-     </li>
-     <li>
-      <strong>
-       IPM / BBA:
-      </strong>
-      Preparation for integrated programs and
-      undergraduate management exams.
-     </li>
-     <li>
-      <strong>
-       Specialized Workshops:
-      </strong>
-      Time management, interview
-      preparation, and group discussion skills.
-     </li>
-     <li>
-      <strong>
-       Online &amp; Offline Classes:
-      </strong>
-      Flexible learning options
-      to suit your schedule.
-     </li>
-    </ul>
-    <p class="text-red-700 font-semibold text-xl mt-6 tracking-wide">
-     🎯 Free Demo Classes Available
-    </p>
-   </section>
-   <!-- Why Choose Us -->
-   <section aria-labelledby="why-choose-title" class="space-y-8 max-w-7xl mx-auto" id="why-choose">
-    <h2 class="text-4xl font-extrabold text-red-700 border-b-4 border-red-700 inline-block pb-3 tracking-wide text-center" id="why-choose-title">
-     Why Choose AB Classes?
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl" role="list">
-     <article class="border-l-8 border-red-700 bg-white p-8 shadow-lg rounded-lg flex flex-col hover:shadow-2xl transition-shadow duration-300" role="listitem">
-      <h3 class="text-2xl font-semibold mb-3 flex items-center gap-3">
-       <span aria-hidden="true" class="text-red-700 text-3xl">
-        📘
-       </span>
-       Best-In-Class Study Material
-      </h3>
-      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
-       Handpicked content curated by top experts to ensure focused
-       preparation.
-      </p>
-     </article>
-     <article class="border-l-8 border-red-700 bg-white p-8 shadow-lg rounded-lg flex flex-col hover:shadow-2xl transition-shadow duration-300" role="listitem">
-      <h3 class="text-2xl font-semibold mb-3 flex items-center gap-3">
-       <span aria-hidden="true" class="text-red-700 text-3xl">
-        👨‍👩‍👦
-       </span>
-       Personal Mentoring
-      </h3>
-      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
-       One-on-one guidance from Abhishek Gupta and experienced mentors.
-      </p>
-     </article>
-     <article class="border-l-8 border-red-700 bg-white p-8 shadow-lg rounded-lg flex flex-col hover:shadow-2xl transition-shadow duration-300" role="listitem">
-      <h3 class="text-2xl font-semibold mb-3 flex items-center gap-3">
-       <span aria-hidden="true" class="text-red-700 text-3xl">
-        📊
-       </span>
-       Mock Test Analysis
-      </h3>
-      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
-       Detailed insights and performance improvement tracking.
-      </p>
-     </article>
-     <article class="border-l-8 border-red-700 bg-white p-8 shadow-lg rounded-lg flex flex-col hover:shadow-2xl transition-shadow duration-300" role="listitem">
-      <h3 class="text-2xl font-semibold mb-3 flex items-center gap-3">
-       <span aria-hidden="true" class="text-red-700 text-3xl">
-        👨‍🏫
-       </span>
-       Expert Teachers
-      </h3>
-      <p class="text-gray-700 flex-grow text-lg leading-relaxed">
-       Faculty from top B-schools who bring clarity and results.
-      </p>
-     </article>
+
+  <!-- ABOUT SPLIT -->
+  <section class="about-split">
+    <div class="about-img-wrap reveal">
+      <img src="images/Absir.jpg" alt="Abhishek Sir — Founder, AB Classes" loading="lazy">
+      <div class="about-img-badge">
+        <div class="big">10+</div>
+        <div class="small">Years of<br>Excellence</div>
+      </div>
     </div>
-   </section>
-   <!-- Highlights Section Rebranded -->
-   <section aria-labelledby="highlights-title" class="space-y-16 max-w-6xl mx-auto mt-12">
-    <h2 class="text-4xl font-extrabold text-red-700 border-b-4 border-red-700 inline-block pb-3 tracking-wide text-center" id="highlights-title">
-     What Makes Us Unique?
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-bounce">
-       ❓
+    <div class="about-text reveal reveal-delay-1">
+      <span class="eyebrow">Our Story</span>
+      <h2>Where Every Aspirant Gets Their Best Shot</h2>
+      <p><strong>AB Classes, Raipur</strong> was founded by <strong>Abhishek Gupta</strong>, an alumnus of <strong>IIFT Delhi</strong> and <strong>NIT Raipur Silver Medalist</strong>, to pursue his passion for teaching and mentoring students.</p>
+      <p>We believe in personalised education and focused preparation to help every aspirant succeed in competitive exams like <strong>CAT, XAT, IIFT, CMAT, NMAT, SNAP</strong>, and more.</p>
+      <p>Our approach combines deep conceptual clarity, shortcut techniques, and rigorous mock analysis — giving students every edge they need on exam day.</p>
+      <div class="about-pills">
+        <span class="pill"><i class="fas fa-graduation-cap"></i> IIFT Delhi</span>
+        <span class="pill"><i class="fas fa-medal"></i> NIT Raipur Silver Medalist</span>
+        <span class="pill"><i class="fas fa-users"></i> 1000+ Students</span>
+        <span class="pill"><i class="fas fa-trophy"></i> 50+ at 99%ile</span>
+        <span class="pill"><i class="fas fa-map-marker-alt"></i> Raipur, CG</span>
       </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Doubt Clearing Sessions
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-       Interactive doubt clearing sessions to ensure no question is left unanswered.
-      </p>
-     </div>
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-pulse">
-       📈
-      </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Periodic Performance Tests
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-       Regular tests to track progress and identify areas for improvement.
-      </p>
-     </div>
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-pulse">
-       🗣️
-      </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Personalized Counselling
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-       One-on-one counselling sessions to guide your career and exam strategy.
-      </p>
-     </div>
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-bounce">
-       📝
-      </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Entrance Test Highlights
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-       Comprehensive entrance test preparation with detailed feedback.
-      </p>
-     </div>
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-pulse">
-       🌐
-      </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Distance Learning Program
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-       Flexible online courses designed for remote learners.
-      </p>
-     </div>
-     <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
-      <div aria-hidden="true" class="text-6xl mb-5 text-red-600 animate-bounce">
-       🏠
-      </div>
-      <h3 class="text-2xl font-extrabold text-red-700 mb-3 tracking-wide">
-       Dedicated CAT Community
-      </h3>
-      <p class="text-gray-700 font-medium max-w-xs">
-        Join our Dedicated CAT Community—a vibrant space to connect, collaborate, and conquer CAT together!.
-      </p>
-     </div>
     </div>
-   </section>
-   <!-- Testimonials -->
-   <section aria-labelledby="testimonials-title" class="space-y-12 max-w-5xl mx-auto mt-16">
-    <h2 class="text-4xl font-extrabold text-red-700 border-b-4 border-red-700 inline-block pb-3 tracking-wide text-center" id="testimonials-title">
-     Success Stories
-    </h2>
-    <div class="space-y-10">
-     <blockquote class="bg-red-50 p-8 rounded-xl shadow-lg border-l-8 border-red-700 italic text-gray-800 text-lg leading-relaxed">
-      "AB Classes helped me crack CAT with a 99.5 percentile! The personalized
-      mentoring and mock test analysis made all the difference."
-      <footer class="mt-6 text-right text-red-700 font-semibold">
-       – Priya Sharma
-      </footer>
-     </blockquote>
-     <blockquote class="bg-red-50 p-8 rounded-xl shadow-lg border-l-8 border-red-700 italic text-gray-800 text-lg leading-relaxed">
-      "The study material and expert teachers at AB Classes gave me the
-      confidence to succeed in XAT and IIFT."
-      <footer class="mt-6 text-right text-red-700 font-semibold">
-       – Rahul Verma
-      </footer>
-     </blockquote>
-     <blockquote class="bg-red-50 p-8 rounded-xl shadow-lg border-l-8 border-red-700 italic text-gray-800 text-lg leading-relaxed">
-      "Joining AB Classes was the best decision for my MBA journey. The free
-      demo class convinced me instantly!"
-      <footer class="mt-6 text-right text-red-700 font-semibold">
-       – Anjali Singh
-      </footer>
-     </blockquote>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section">
+    <div style="max-width:1160px;margin:0 auto;position:relative;z-index:1;">
+      <div class="section-heading reveal" style="margin-bottom:48px;">
+        <span class="eyebrow" style="color:var(--red);background:rgba(232,25,44,0.1);border:1px solid rgba(232,25,44,0.28);">Why Choose Us</span>
+        <h2 style="color:#fff;">The AB Classes Advantage</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Best-In-Class Study Material</h3>
+          <p>Handpicked content curated by top experts to ensure focused, exam-ready preparation.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Personal Mentoring</h3>
+          <p>One-on-one guidance from Abhishek Sir and experienced mentors at every step.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Mock Test Analysis</h3>
+          <p>Detailed insights and performance improvement tracking after every test.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Expert Faculty</h3>
+          <p>Faculty from top B-schools who bring real clarity, shortcuts, and results.</p>
+        </div>
+      </div>
     </div>
-   </section>
-  </main>
-  <!-- Footer -->
+  </section>
+
+  <!-- WHAT MAKES US UNIQUE -->
+  <section class="unique-section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Our Edge</span>
+      <h2>What Makes Us Unique?</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="unique-grid">
+      <div class="unique-card reveal reveal-delay-1">
+        <span class="unique-num">❓</span>
+        <h3>Doubt Clearing Sessions</h3>
+        <p>Interactive sessions to ensure no question is left unanswered — ever.</p>
+      </div>
+      <div class="unique-card reveal reveal-delay-2">
+        <span class="unique-num">📈</span>
+        <h3>Periodic Performance Tests</h3>
+        <p>Regular tests to track progress and pinpoint areas for rapid improvement.</p>
+      </div>
+      <div class="unique-card reveal reveal-delay-3">
+        <span class="unique-num">🗣️</span>
+        <h3>Personalised Counselling</h3>
+        <p>One-on-one career and exam strategy sessions tailored to your profile.</p>
+      </div>
+      <div class="unique-card reveal reveal-delay-1">
+        <span class="unique-num">📝</span>
+        <h3>Entrance Test Highlights</h3>
+        <p>Comprehensive entrance test prep with detailed post-test feedback reports.</p>
+      </div>
+      <div class="unique-card reveal reveal-delay-2">
+        <span class="unique-num">🌐</span>
+        <h3>Distance Learning Program</h3>
+        <p>Flexible online courses designed for remote learners — same quality, zero compromise.</p>
+      </div>
+      <div class="unique-card reveal reveal-delay-3">
+        <span class="unique-num">🏆</span>
+        <h3>Dedicated CAT Community</h3>
+        <p>A vibrant space to connect, collaborate, and conquer CAT together with fellow aspirants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTOR -->
+  <section class="mentor-section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2>Know Your Mentor</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="mentor-card reveal">
+      <div class="mentor-img-wrap">
+        <img src="images/Absir.jpg" alt="Abhishek Sir — Founder" loading="lazy">
+      </div>
+      <div class="mentor-info">
+        <h3>Abhishek Sir, Founder</h3>
+        <span class="mentor-school">IIFT Delhi &nbsp;·&nbsp; NIT Raipur Silver Medalist</span>
+        <p>A renowned mentor with 10+ years of experience in CAT coaching. His unique approach makes Quant, Logical Reasoning, and Data Interpretation easy and effective.</p>
+        <p><strong>Experience:</strong> Over a decade training thousands of CAT aspirants with high success rates.</p>
+        <p><strong>Expertise:</strong> CAT, XAT, IIFT, and GMAT with deep conceptual clarity and shortcut techniques.</p>
+        <div class="mentor-badges">
+          <span class="mentor-badge"><i class="fas fa-graduation-cap"></i> IIFT Delhi</span>
+          <span class="mentor-badge"><i class="fas fa-medal"></i> NIT Silver Medalist</span>
+          <span class="mentor-badge"><i class="fas fa-calendar-alt"></i> 10+ Years</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Success Stories</span>
+      <h2>What Our Students Say</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-text">AB Classes helped me crack CAT with a 99.5 percentile! The personalised mentoring and mock test analysis made all the difference.</p>
+        <div class="testi-author">
+          <strong>Priya Sharma</strong>
+          <span>CAT 99.5 %ile — IIM Ahmedabad</span>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-text">The study material and expert teachers at AB Classes gave me the confidence to succeed in XAT and IIFT. Best decision of my prep journey.</p>
+        <div class="testi-author">
+          <strong>Rahul Verma</strong>
+          <span>XAT 98.2 %ile — XLRI Jamshedpur</span>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testi-text">Joining AB Classes was the best decision for my MBA journey. The free demo class convinced me instantly — I never looked back.</p>
+        <div class="testi-author">
+          <strong>Anjali Singh</strong>
+          <span>CAT 97.8 %ile — IIM Indore</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-glow"></div>
+    <span class="cta-band-eyebrow">Start Today</span>
+    <h2>Your IIM Journey Starts Here</h2>
+    <p>Join hundreds of students who cracked CAT with AB Classes. Limited seats for the upcoming batch.</p>
+    <div class="cta-band-actions">
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-hero-primary" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+      <a href="cd.html" class="btn-hero-secondary">Explore Courses <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-   <div class="footer-inner">
-    <div class="footer-col">
-     <h3>AB Classes</h3>
-     <p>Your trusted partner for CAT preparation — delivering top-notch coaching and IIM success stories year after year from Raipur, Chhattisgarh.</p>
-     <div class="footer-social">
-      <a href="https://www.facebook.com/abclasses" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://twitter.com/abclasses" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/cat_abclasses/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/company/abclasses" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=919827118488" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-     </div>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-brand">AB<em>Classes</em></span>
+        <p>Your trusted partner for CAT preparation — delivering top-notch coaching and IIM success stories year after year from Raipur, Chhattisgarh.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/abclasses" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/abclasses" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/cat_abclasses/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/abclasses" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/@Abhishekabclasses" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="cd.html">Courses</a>
+        <a href="about.html">About Us</a>
+        <a href="articles-with-navbar.html">MBA Articles</a>
+        <a href="iim-call-predictor.html">IIM Call Predictor</a>
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <address>
+          <p>AB Classes Pvt. Ltd.</p>
+          <p>Agrasen Chowk, Raipur<br>Chhattisgarh — 492001</p>
+          <p style="margin-top:12px;">
+            <a href="tel:+919827118488"><i class="fas fa-phone" style="color:var(--red);margin-right:7px;font-size:0.72rem;"></i>+91 98271 18488</a>
+            <a href="mailto:info@abclasses.in"><i class="fas fa-envelope" style="color:var(--red);margin-right:7px;font-size:0.72rem;"></i>info@abclasses.in</a>
+          </p>
+        </address>
+      </div>
     </div>
-    <div class="footer-col">
-     <h3>Quick Links</h3>
-     <a href="index.html">Home</a>
-     <a href="results.html">Results</a>
-     <a href="cd.html">Courses</a>
-     <a href="about.html">About Us</a>
-     <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
+    <div class="footer-bottom">
+      <p>© 2026 AB Classes Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
     </div>
-    <div class="footer-col">
-     <h3>Contact Us</h3>
-     <address>
-      <p>AB Classes Pvt. Ltd.</p>
-      <p>Agrasen Chowk, Raipur<br>Chhattisgarh — 492001</p>
-      <p style="margin-top:10px;"><a href="tel:+919827118488">+91 98271 18488</a><br><a href="mailto:info@abclasses.in">info@abclasses.in</a></p>
-     </address>
-    </div>
-   </div>
-   <p class="footer-bottom">© 2025 AB Classes Pvt. Ltd. All rights reserved.</p>
   </footer>
 
-  <!-- FLOATING WA BUTTON (mobile) -->
-  <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-     class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-float-ring"></span>
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <script>
-    document.getElementById('topHamburger').addEventListener('click', function () {
-      document.getElementById('topMobileNav').classList.toggle('open');
-    });
+    // ── Navbar scroll state ──
+    const nav = document.getElementById('mainNav');
+    function updateNav() { nav.classList.toggle('scrolled', window.scrollY > 60); }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
 
     document.getElementById('navHamburger').addEventListener('click', function () {
       const menu = document.getElementById('navMobileMenu');
@@ -450,6 +572,27 @@
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-times');
     });
+
+    // Scroll reveal
+    document.addEventListener('DOMContentLoaded', () => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    });
+
+    // 3D tilt
+    if (window.matchMedia('(min-width:769px) and (hover:hover)').matches) {
+      document.querySelectorAll('.why-card, .unique-card, .testi-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width  - 0.5;
+          const y = (e.clientY - r.top)  / r.height - 0.5;
+          card.style.transform = `perspective(700px) rotateY(${x * 9}deg) rotateX(${-y * 7}deg) translateY(-6px)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      });
+    }
   </script>
- </body>
+</body>
 </html>

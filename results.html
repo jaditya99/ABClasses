@@ -1,165 +1,291 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>AB Classes CAT Results &amp; Enquiry</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
-    rel="stylesheet"
-  />
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>CAT Results | AB Classes — Raipur's Top CAT Coaching</title>
+  <meta name="description" content="CAT 2025, 2024 & 2023 results from AB Classes students — 50+ scored 99+ percentile. See all toppers and success stories.">
+  <link rel="canonical" href="https://abclasses.in/results" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abclasses.in/results" />
+  <meta property="og:site_name" content="AB Classes" />
+  <meta property="og:title" content="CAT Results | AB Classes — Raipur's Top CAT Coaching" />
+  <meta property="og:description" content="CAT 2025, 2024 & 2023 results — 50+ AB Classes students scored 99+ percentile. See Raipur's most successful CAT coaching record." />
+  <meta property="og:image" content="https://abclasses.in/results/r4.jpg" />
+  <meta property="og:image:alt" content="CAT 2025 toppers — AB Classes students scoring 99+ percentile" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CAT Results | AB Classes — Raipur's Top CAT Coaching" />
+  <meta name="twitter:description" content="CAT 2025, 2024 & 2023 results — 50+ AB Classes students scored 99+ percentile. See Raipur's most successful CAT coaching record." />
+  <meta name="twitter:image" content="https://abclasses.in/results/r4.jpg" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://abclasses.in/results",
+    "name": "CAT Results | AB Classes — Raipur's Top CAT Coaching",
+    "description": "CAT 2025, 2024 & 2023 results from AB Classes students. 50+ scored 99+ percentile.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://abclasses.in",
+      "name": "AB Classes"
+    },
+    "about": {
+      "@type": "EducationalOrganization",
+      "name": "AB Classes",
+      "url": "https://abclasses.in"
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
   <style>
-    :root { --red: #e8192c; --white: #ffffff; --text-mid: #4a5060; --border: #e4e7ed; --border-dark: #cdd2db; --bg: #f8f9fb; --font: 'Inter', sans-serif; --shadow-xs: 0 1px 4px rgba(0,0,0,0.06); --shadow-md: 0 6px 28px rgba(0,0,0,0.09); --radius-sm: 8px; --radius-md: 14px; --transition: 0.22s cubic-bezier(0.4,0,0.2,1); }
-    body {
-      font-family: "Inter", sans-serif;
+    :root {
+      --red:#e8192c; --red-dark:#c0121f; --red-soft:#fff0f1; --red-mid:#ffd6d9;
+      --white:#ffffff; --bg:#f8f9fb; --bg-alt:#f2f4f8;
+      --border:#e4e7ed; --border-dark:#cdd2db;
+      --text:#1a1d23; --text-mid:#4a5060; --text-light:#7a8090;
+      --shadow-xs:0 1px 4px rgba(0,0,0,0.06); --shadow-sm:0 2px 12px rgba(0,0,0,0.07);
+      --shadow-md:0 6px 28px rgba(0,0,0,0.09); --shadow-lg:0 12px 48px rgba(0,0,0,0.13);
+      --radius-sm:8px; --radius-md:14px; --radius-lg:20px;
+      --transition:0.22s cubic-bezier(0.4,0,0.2,1);
+      --font:'Plus Jakarta Sans',sans-serif;
     }
-    .progress-fill {
-      animation: fillBar 1.5s ease-in-out forwards;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html,body{overflow-x:hidden;scroll-behavior:smooth;}
+    body{font-family:var(--font);background:var(--white);color:var(--text);-webkit-font-smoothing:antialiased;}
+
+    /* ── NAVBAR (transparent → frosted) ── */
+    .navbar{background:transparent;border-bottom:1px solid transparent;position:fixed;top:0;left:0;right:0;z-index:200;transition:background 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;}
+    .navbar.scrolled{background:rgba(255,255,255,0.93);border-bottom-color:var(--border);box-shadow:var(--shadow-xs);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+    .navbar-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:68px;}
+    .navbar-brand{font-size:1.5rem;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.3px;transition:color 0.35s;}
+    .navbar.scrolled .navbar-brand{color:var(--text);}
+    .navbar-brand em{font-style:normal;color:var(--red);}
+    .nav-links{display:none;align-items:center;gap:28px;}
+    @media(min-width:768px){.nav-links{display:flex;}}
+    .nav-links a,.nav-links .dropdown-trigger{font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.82);text-decoration:none;cursor:pointer;transition:color var(--transition);}
+    .navbar.scrolled .nav-links a,.navbar.scrolled .nav-links .dropdown-trigger{color:var(--text-mid);}
+    .nav-links a:hover,.nav-links .dropdown-trigger:hover{color:var(--red) !important;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown::after{content:'';position:absolute;top:100%;left:0;width:100%;height:20px;background:transparent;}
+    .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);min-width:210px;box-shadow:var(--shadow-md);z-index:300;overflow:hidden;padding:6px 0;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;padding:10px 18px;color:var(--text-mid);font-size:0.875rem;font-weight:500;text-decoration:none;transition:background var(--transition),color var(--transition);}
+    .nav-dropdown-menu a:hover{background:var(--red-soft);color:var(--red);}
+    .nav-right{display:none;align-items:center;gap:16px;}
+    @media(min-width:768px){.nav-right{display:flex;}}
+    .nav-right a{font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.82);text-decoration:none;transition:color var(--transition);}
+    .navbar.scrolled .nav-right a{color:var(--text-mid);}
+    .nav-right a:hover{color:var(--red) !important;}
+    .nav-right .btn-nav-cta{background:var(--red);color:#fff !important;padding:8px 20px;border-radius:var(--radius-sm);border:1.5px solid var(--red);transition:all var(--transition);}
+    .nav-right .btn-nav-cta:hover{background:var(--red-dark) !important;border-color:var(--red-dark) !important;}
+    .nav-divider{color:rgba(255,255,255,0.25);}
+    .navbar.scrolled .nav-divider{color:var(--border-dark);}
+    .nav-mobile-quick{display:flex;align-items:center;gap:14px;}
+    @media(min-width:768px){.nav-mobile-quick{display:none;}}
+    .nav-mobile-quick a{font-weight:600;font-size:0.875rem;color:rgba(255,255,255,0.82);text-decoration:none;}
+    .navbar.scrolled .nav-mobile-quick a{color:var(--text-mid);}
+    .nav-hamburger{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.9);padding:7px 10px;border-radius:var(--radius-sm);cursor:pointer;font-size:0.95rem;transition:all var(--transition);}
+    .navbar.scrolled .nav-hamburger{background:none;border-color:var(--border);color:var(--text-mid);}
+    .nav-hamburger:hover{border-color:var(--red);color:var(--red);}
+    .nav-mobile-menu{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--border);}
+    .nav-mobile-menu.open{display:flex;}
+    .nav-mobile-menu a{padding:12px 24px;font-weight:500;font-size:0.9rem;color:var(--text-mid);text-decoration:none;border-bottom:1px solid var(--border);transition:color var(--transition),background var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--red);background:var(--red-soft);}
+
+    /* ── HERO ── */
+    .page-hero{background:#0f1117;position:relative;overflow:hidden;padding:140px 24px 90px;text-align:center;}
+    .hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
+    .hero-bg-glow{position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse at center,rgba(232,25,44,0.16) 0%,transparent 65%);pointer-events:none;}
+    .hero-particle{position:absolute;border-radius:50%;pointer-events:none;opacity:0;animation:particle-float linear infinite;}
+    @keyframes particle-float{0%{transform:translateY(0) scale(0.3);opacity:0;}12%{opacity:0.6;}88%{opacity:0.25;}100%{transform:translateY(-400px) scale(1.2);opacity:0;}}
+
+    @keyframes heroEnter{from{opacity:0;transform:translateY(40px);filter:blur(4px);}to{opacity:1;transform:none;filter:blur(0);}}
+    .hero-badge-pill{animation:heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s both;}
+    .hero-h1{animation:heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.22s both;}
+    .hero-sub-text{animation:heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.36s both;}
+    .hero-big-stats{animation:heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both;}
+    .hero-cta-row{animation:heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.62s both;}
+
+    .hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1;}
+    .hero-badge-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(232,25,44,0.1);border:1px solid rgba(232,25,44,0.28);color:#ff7a85;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:6px 14px;border-radius:40px;margin-bottom:24px;}
+    .hero-badge-pill .pdot{width:6px;height:6px;border-radius:50%;background:#ff7a85;animation:pdot 1.8s infinite;}
+    @keyframes pdot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.35;transform:scale(0.65);}}
+    .hero-h1{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.02em;margin-bottom:18px;}
+    .hero-h1 .grad{background:linear-gradient(130deg,#ff7a85,#e8192c,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .hero-sub-text{font-size:1rem;color:rgba(255,255,255,0.52);line-height:1.75;max-width:560px;margin:0 auto 44px;}
+
+    /* big stat counters in hero */
+    .hero-big-stats{display:flex;justify-content:center;gap:0;margin-bottom:44px;flex-wrap:wrap;}
+    .hstat{text-align:center;padding:0 36px;position:relative;}
+    .hstat+.hstat::before{content:'';position:absolute;left:0;top:15%;height:70%;width:1px;background:rgba(255,255,255,0.12);}
+    .hstat-num{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;}
+    .hstat-num .suffix{font-size:0.55em;color:var(--red);}
+    .hstat-label{font-size:0.76rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;}
+
+    .hero-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    .btn-hero-primary{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;font-weight:700;font-size:0.95rem;padding:13px 28px;border-radius:var(--radius-sm);text-decoration:none;transition:all var(--transition);box-shadow:0 4px 18px rgba(232,25,44,0.38);position:relative;overflow:hidden;}
+    .btn-hero-primary::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);transform:skewX(-20deg);transition:left 0.55s ease;}
+    .btn-hero-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,25,44,0.44);}
+    .btn-hero-primary:hover::after{left:160%;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.85);font-weight:600;font-size:0.95rem;padding:13px 28px;border-radius:var(--radius-sm);text-decoration:none;transition:all var(--transition);}
+    .btn-ghost:hover{background:rgba(255,255,255,0.11);border-color:rgba(255,255,255,0.35);}
+
+    /* ── MARQUEE STRIP ── */
+    .marquee-strip{background:#0a0c0f;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:14px 0;overflow:hidden;}
+    .marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite;}
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+    .marquee-item{display:inline-flex;align-items:center;gap:8px;padding:0 28px;white-space:nowrap;font-size:0.8rem;font-weight:700;color:rgba(255,255,255,0.45);}
+    .marquee-item .dot{width:4px;height:4px;border-radius:50%;background:var(--red);flex-shrink:0;}
+    .marquee-item .pct{color:#fff;}
+
+    /* ── RESULTS SECTION ── */
+    .results-section{background:var(--bg);padding:80px 24px 100px;}
+    .results-inner{max-width:1280px;margin:0 auto;}
+    .section-heading{text-align:center;margin-bottom:48px;}
+    .section-heading .eyebrow{display:inline-block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--red);background:var(--red-soft);padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+    .section-heading h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:var(--text);line-height:1.2;letter-spacing:-0.01em;}
+    .section-heading .bar{width:40px;height:3px;background:var(--red);border-radius:2px;margin:14px auto 0;}
+
+    /* year tabs */
+    .year-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:52px;}
+    .ytab{padding:11px 32px;border-radius:40px;border:1.5px solid var(--border);background:var(--white);font-family:var(--font);font-weight:700;font-size:0.9rem;cursor:pointer;color:var(--text-mid);transition:all var(--transition);position:relative;overflow:hidden;}
+    .ytab:hover{border-color:var(--red);color:var(--red);}
+    .ytab.active-2025{background:linear-gradient(135deg,#16a34a,#22c55e);border-color:transparent;color:#fff;box-shadow:0 4px 18px rgba(22,163,74,0.35);}
+    .ytab.active-2024{background:linear-gradient(135deg,var(--red),#ff5c6e);border-color:transparent;color:#fff;box-shadow:0 4px 18px rgba(232,25,44,0.35);}
+    .ytab.active-2023{background:linear-gradient(135deg,#f59e0b,#fbbf24);border-color:transparent;color:#fff;box-shadow:0 4px 18px rgba(245,158,11,0.35);}
+
+    /* result cards */
+    .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .panel{display:none;}
+    .panel.active{display:grid;}
+
+    .rcard{
+      background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-lg);
+      padding:0;display:flex;flex-direction:column;position:relative;overflow:hidden;
+      transition:transform 0.32s cubic-bezier(0.16,1,0.3,1),box-shadow 0.32s cubic-bezier(0.16,1,0.3,1),border-color 0.22s;
+      opacity:0;transform:translateY(24px);will-change:transform;
     }
-    @keyframes fillBar {
-      from {
-        width: 0%;
-      }
-      to {
-        width: var(--fill);
-      }
+    .rcard.in{opacity:1;transform:translateY(0);}
+    .rcard:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);}
+    .rcard.y2025:hover{border-color:#86efac;box-shadow:0 16px 48px rgba(22,163,74,0.14);}
+    .rcard.y2024:hover{border-color:var(--red-mid);box-shadow:0 16px 48px rgba(232,25,44,0.13);}
+    .rcard.y2023:hover{border-color:#fde68a;box-shadow:0 16px 48px rgba(245,158,11,0.13);}
+
+    /* top accent bar */
+    .rcard-accent{height:4px;width:100%;}
+    .rcard.y2025 .rcard-accent{background:linear-gradient(90deg,#16a34a,#4ade80);}
+    .rcard.y2024 .rcard-accent{background:linear-gradient(90deg,var(--red),#ff9a3c);}
+    .rcard.y2023 .rcard-accent{background:linear-gradient(90deg,#f59e0b,#fde68a);}
+
+    .rcard-body{padding:24px 22px 20px;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;}
+
+    /* rank badge */
+    .rcard-rank{
+      position:absolute;top:16px;right:16px;
+      width:28px;height:28px;border-radius:50%;
+      font-size:0.68rem;font-weight:800;
+      display:flex;align-items:center;justify-content:center;
     }
-    /* Card Animations and Styles */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .rcard.y2025 .rcard-rank{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;}
+    .rcard.y2024 .rcard-rank{background:var(--red-soft);color:var(--red);border:1px solid var(--red-mid);}
+    .rcard.y2023 .rcard-rank{background:#fffbeb;color:#d97706;border:1px solid #fde68a;}
+
+    /* icon circle */
+    .rcard-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:1.4rem;flex-shrink:0;}
+    .rcard.y2025 .rcard-icon{background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#16a34a;}
+    .rcard.y2024 .rcard-icon{background:linear-gradient(135deg,var(--red-soft),#ffe4e6);color:var(--red);}
+    .rcard.y2023 .rcard-icon{background:linear-gradient(135deg,#fffbeb,#fef3c7);color:#d97706;}
+
+    /* big percentile */
+    .rcard-pct{font-size:1.65rem;font-weight:800;line-height:1;margin-bottom:4px;letter-spacing:-0.02em;}
+    .rcard.y2025 .rcard-pct{color:#16a34a;}
+    .rcard.y2024 .rcard-pct{color:var(--red);}
+    .rcard.y2023 .rcard-pct{color:#d97706;}
+    .rcard-pct-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-light);margin-bottom:14px;}
+
+    .rcard-divider{width:32px;height:2px;border-radius:2px;margin:0 auto 14px;}
+    .rcard.y2025 .rcard-divider{background:linear-gradient(90deg,#16a34a,#4ade80);}
+    .rcard.y2024 .rcard-divider{background:linear-gradient(90deg,var(--red),#ff9a3c);}
+    .rcard.y2023 .rcard-divider{background:linear-gradient(90deg,#f59e0b,#fde68a);}
+
+    .rcard-name{font-size:0.95rem;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.3;}
+    .rcard-quote{font-size:0.8rem;color:var(--text-light);line-height:1.65;font-style:italic;margin-top:auto;padding-top:12px;border-top:1px solid var(--border);}
+
+    /* ── CTA BAND ── */
+    .cta-band{background:linear-gradient(135deg,#0f1117 0%,#1e2330 100%);padding:90px 24px;text-align:center;position:relative;overflow:hidden;}
+    .cta-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.025) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+    .cta-glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse at center,rgba(232,25,44,0.15) 0%,transparent 65%);pointer-events:none;}
+    .cta-eyebrow{display:inline-block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#ff7a85;background:rgba(232,25,44,0.1);border:1px solid rgba(232,25,44,0.28);padding:5px 14px;border-radius:40px;margin-bottom:20px;position:relative;z-index:1;}
+    .cta-band h2{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:800;color:#fff;margin-bottom:14px;position:relative;z-index:1;letter-spacing:-0.02em;}
+    .cta-band p{font-size:1rem;color:rgba(255,255,255,0.48);max-width:480px;margin:0 auto 36px;line-height:1.7;position:relative;z-index:1;}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+
+    /* ── FOOTER ── */
+    .footer{background:#0a0c0f;color:#fff;padding:64px 24px 24px;}
+    .footer-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1.2fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .footer-brand{font-size:1.38rem;font-weight:800;color:#fff;margin-bottom:14px;display:block;}
+    .footer-brand em{font-style:normal;color:var(--red);}
+    .footer-col h3{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.35);margin-bottom:18px;}
+    .footer-col p,.footer-col address{font-size:0.875rem;color:rgba(255,255,255,0.45);line-height:1.85;font-style:normal;}
+    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;display:block;font-size:0.875rem;margin-bottom:10px;transition:color var(--transition);}
+    .footer-col a:hover{color:#fff;}
+    .footer-social{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
+    .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.45);font-size:0.88rem;margin:0;border:1px solid rgba(255,255,255,0.08);transition:all var(--transition);}
+    .footer-social a:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px);}
+    .footer-bottom{max-width:1240px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:0.78rem;color:rgba(255,255,255,0.25);}
+    .footer-bottom-links{display:flex;gap:20px;}
+    .footer-bottom-links a{font-size:0.78rem;color:rgba(255,255,255,0.25);text-decoration:none;transition:color var(--transition);}
+    .footer-bottom-links a:hover{color:rgba(255,255,255,0.7);}
+
+    /* ── WA FLOAT ── */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.55rem;box-shadow:0 4px 22px rgba(37,211,102,0.45);text-decoration:none;transition:transform var(--transition);}
+    .wa-float:hover{transform:scale(1.1);}
+    .wa-float-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(37,211,102,0.38);animation:wa-ring 2.2s ease-out infinite;}
+    @keyframes wa-ring{0%{transform:scale(1);opacity:0.7;}100%{transform:scale(1.55);opacity:0;}}
+
+    /* ── SCROLL REVEAL ── */
+    @keyframes revealUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:none;}}
+    .reveal{opacity:0;}
+    .reveal.visible{animation:revealUp 0.8s cubic-bezier(0.16,1,0.3,1) both;}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px){.results-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:768px){
+      .page-hero{padding:110px 20px 70px;}
+      .hstat{padding:0 20px;}
+      .results-section{padding:56px 16px 64px;}
+      .results-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
+      .rcard-pct{font-size:1.35rem;}
+      .footer-inner{grid-template-columns:1fr;gap:28px;padding-bottom:28px;}
+      .footer-bottom{flex-direction:column;text-align:center;}
+      .footer-bottom-links{justify-content:center;}
+      .year-tabs{gap:6px;}
+      .ytab{padding:9px 20px;font-size:0.84rem;}
     }
-
-    #panel-2025 > div,
-    #panel-2024 > div,
-    #panel-2023 > div {
-      opacity: 0; /* Start hidden for animation */
-      animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    @media(max-width:480px){
+      .results-grid{grid-template-columns:1fr;}
+      .hero-big-stats{gap:4px;}
+      .hstat{padding:0 14px;}
     }
-
-    #panel-2025 > div:hover,
-    #panel-2024 > div:hover,
-    #panel-2023 > div:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
-      z-index: 10;
-    }
-
-    /* Staggered Animation Delays */
-    #panel-2025 > div:nth-child(1), #panel-2024 > div:nth-child(1), #panel-2023 > div:nth-child(1) { animation-delay: 0.1s; }
-    #panel-2025 > div:nth-child(2), #panel-2024 > div:nth-child(2), #panel-2023 > div:nth-child(2) { animation-delay: 0.15s; }
-    #panel-2025 > div:nth-child(3), #panel-2024 > div:nth-child(3), #panel-2023 > div:nth-child(3) { animation-delay: 0.2s; }
-    #panel-2025 > div:nth-child(4), #panel-2024 > div:nth-child(4), #panel-2023 > div:nth-child(4) { animation-delay: 0.25s; }
-    #panel-2025 > div:nth-child(n+5), #panel-2024 > div:nth-child(n+5), #panel-2023 > div:nth-child(n+5) { animation-delay: 0.3s; }
-
-    /* Quote Icon for Cards */
-    .quote-icon {
-      font-family: serif;
-      line-height: 1;
-    }
-
-    /* HEADER & FOOTER CSS INTEGRATION */
-    .top-header { background: var(--white); border-bottom: 1px solid var(--border); }
-    .top-header .inner { max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
-    .top-header-logo { display: flex; align-items: center; gap: 10px; }
-    .top-header-logo img { height: 40px; width: auto; border-radius: 6px; }
-    .top-header-logo span { font-size: 0.95rem; font-weight: 700; color: #1a1d23; display: none; }
-    @media (min-width: 500px) { .top-header-logo span { display: block; } }
-    .top-header-actions { display: flex; gap: 8px; }
-    .top-header-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all var(--transition); }
-    .btn-wa  { background: #f0faf3; color: #1a7a3c; border: 1px solid #c3e6cc; }
-    .btn-wa:hover { background: #dcf5e4; }
-    .btn-start { background: var(--red); color: var(--white); border: 1px solid var(--red); }
-    .btn-start:hover { background: #c0121f; }
-    .top-hamburger { display: none; background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 1rem; }
-    .top-mobile-nav { display: none; background: var(--bg); border-top: 1px solid var(--border); }
-    .top-mobile-nav.open { display: block; }
-    .top-mobile-nav a { display: block; padding: 12px 24px; color: var(--text-mid); font-weight: 500; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition); }
-    .top-mobile-nav a:hover { color: var(--red); }
-    @media (max-width: 500px) { .top-header-actions { display: none; } .top-hamburger { display: block; } }
-
-    .navbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 200; box-shadow: var(--shadow-xs); }
-    .navbar-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 60px; }
-    .navbar-brand { font-size: 1.45rem; font-weight: 800; color: #1a1d23; text-decoration: none; letter-spacing: -0.3px; }
-    .navbar-brand em { font-style: normal; color: var(--red); }
-    .nav-links { display: none; align-items: center; gap: 28px; }
-    @media (min-width: 768px) { .nav-links { display: flex; } }
-    .nav-links a, .nav-links .dropdown-trigger { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; cursor: pointer; transition: color var(--transition); }
-    .nav-links a:hover, .nav-links .dropdown-trigger:hover { color: var(--red); }
-    .nav-dropdown { position: relative; }
-    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); min-width: 210px; box-shadow: var(--shadow-md); z-index: 300; overflow: hidden; padding: 6px 0; }
-    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: var(--text-mid); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background var(--transition), color var(--transition); }
-    .nav-dropdown-menu a:hover { background: #fff0f1; color: var(--red); }
-    .nav-right { display: none; align-items: center; gap: 18px; }
-    @media (min-width: 768px) { .nav-right { display: flex; } }
-    .nav-right a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; transition: color var(--transition); }
-    .nav-right a:hover { color: var(--red); }
-    .nav-divider { color: var(--border-dark); }
-    .nav-mobile-quick { display: flex; align-items: center; gap: 14px; }
-    @media (min-width: 768px) { .nav-mobile-quick { display: none; } }
-    .nav-mobile-quick a { font-weight: 600; font-size: 0.875rem; color: var(--text-mid); text-decoration: none; }
-    .nav-hamburger { background: none; border: 1px solid var(--border); color: var(--text-mid); padding: 7px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.95rem; transition: border-color var(--transition), color var(--transition); }
-    .nav-hamburger:hover { border-color: var(--red); color: var(--red); }
-    .nav-mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); }
-    .nav-mobile-menu.open { display: flex; }
-    .nav-mobile-menu a { padding: 12px 24px; font-weight: 500; font-size: 0.9rem; color: var(--text-mid); text-decoration: none; border-bottom: 1px solid var(--border); transition: color var(--transition), background var(--transition); }
-    .nav-mobile-menu a:hover { color: var(--red); background: #fff0f1; }
-
-    .footer { background: #1a1d23; color: var(--white); padding: 56px 24px 24px; }
-    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .footer-col h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
-    .footer-col p, .footer-col address { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.85; font-style: normal; }
-    .footer-col a { color: rgba(255,255,255,0.65); text-decoration: none; display: block; font-size: 0.875rem; margin-bottom: 8px; transition: color var(--transition); }
-    .footer-col a:hover { color: var(--white); }
-    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
-    .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0; border: 1px solid rgba(255,255,255,0.1); transition: all var(--transition); }
-    .footer-social a:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-    .footer-bottom { max-width: 1160px; margin: 24px auto 0; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-    .wa-float { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #25d366; color: #fff; width: 52px; height: 52px; border-radius: 50%; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 20px rgba(37,211,102,0.45); text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
-    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
-    @media (max-width: 768px) { .wa-float { display: flex; } .top-header { display: none; } .navbar-inner { height: 52px; padding: 0 16px; } .navbar-brand { font-size: 1.2rem; } .footer { padding: 40px 16px 80px; } .footer-inner { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; } .footer-col h3 { margin-bottom: 12px; } .footer-bottom { font-size: 0.75rem; margin-top: 20px; } }
   </style>
- </head>
- <body class="bg-slate-50 text-[#ff0000] min-h-screen flex flex-col">
-
-  <!-- TOP HEADER -->
-  <div class="top-header">
-    <div class="inner">
-      <div class="top-header-logo">
-        <img src="images/logo.jpg" alt="AB Classes Logo">
-        <span>Welcome to AB Classes!</span>
-      </div>
-      <div class="top-header-actions">
-        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-wa" target="_blank">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-start" target="_blank">Get Started</a>
-      </div>
-      <button class="top-hamburger" id="topHamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
-    </div>
-    <nav class="top-mobile-nav" id="topMobileNav">
-      <a href="index.html">Home</a>
-      <a href="cd.html">Courses</a>
-      <a href="#why-choose-title">Why Choose Us</a>
-      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
-    </nav>
-  </div>
+</head>
+<body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar" id="mainNav">
     <div class="navbar-inner">
       <a class="navbar-brand" href="index.html">AB<em>Classes</em></a>
       <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
         <a href="about.html">About Us</a>
         <a href="py.html">Previous Papers</a>
         <div class="nav-dropdown">
-          <span class="dropdown-trigger">Resources <i class="fas fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></span>
+          <span class="dropdown-trigger">Resources <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:2px;"></i></span>
           <div class="nav-dropdown-menu" role="menu">
             <a href="https://www.youtube.com/@Abhishekabclasses" role="menuitem">Free CAT Resources</a>
             <a href="articles-with-navbar.html" role="menuitem">Latest MBA Articles</a>
@@ -174,10 +300,10 @@
         <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Register</a>
         <span class="nav-divider">|</span>
         <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="btn-nav-cta">Get Started</a>
       </div>
       <div class="nav-mobile-quick">
         <a href="https://learn.abclasses.in/learn/account/signin">Login</a>
-        <a href="results.html">Results</a>
         <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -190,754 +316,246 @@
       <a href="mba-colleges.html">MBA Colleges</a>
       <a href="results.html">Results</a>
       <a href="https://www.google.com/maps/@21.245791,81.627098,19z?entry=ttu">Locate a Center</a>
-      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" style="color:var(--red); font-weight:700;">Register / Contact</a>
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" style="color:var(--red);font-weight:700;">Register / Contact</a>
     </nav>
   </header>
 
-   
-  <!-- Hero Section -->
-  <section
-    class="relative bg-gradient-to-b from-red-50 to-white py-24 px-6 flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-12 rounded-b-[3rem] shadow-sm mb-8"
-  >
-   <div class="md:w-1/2 text-center md:text-left">
-    <h1 class="text-5xl font-extrabold text-[#ff0000] leading-tight mb-6">
-     CAT 2024 Results &amp; Success Stories
-    </h1>
-    <p class="text-xl text-[#660000] max-w-xl mx-auto md:mx-0 mb-8">
-     Congratulations to all our students who have achieved outstanding results!
-     Explore the success stories and get inspired to start your own CAT journey
-     with AB Classes.
-    </p>
-    <a
-      aria-label="Enquire about AB Classes on WhatsApp"
-      class="inline-block bg-[#ff0000] text-white font-bold px-10 py-4 rounded hover:bg-[#cc0000] transition shadow-lg"
-      href="https://api.whatsapp.com/send?phone=919827118488&amp;text=I%20want%20to%20enquire%20about%20AB%20Classes"
-      rel="noopener"
-      target="_blank"
-    >
-     Enquire Now on WhatsApp
-     <i class="fab fa-whatsapp ml-3"></i>
-    </a>
-   </div>
-   <div class="md:w-1/2 max-w-md mx-auto">
-    <div class="w-full max-w-md p-8 border border-gray-200 rounded-3xl shadow-2xl bg-white space-y-8">
-      <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-6">Performance Dashboard</h2>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-particle" style="width:5px;height:5px;background:#e8192c;left:8%;top:72%;animation-duration:9s;animation-delay:0s;"></div>
+    <div class="hero-particle" style="width:3px;height:3px;background:#ff9a3c;left:18%;top:80%;animation-duration:11s;animation-delay:1.8s;"></div>
+    <div class="hero-particle" style="width:4px;height:4px;background:#ff7a85;left:80%;top:68%;animation-duration:8s;animation-delay:3.2s;"></div>
+    <div class="hero-particle" style="width:6px;height:6px;background:#e8192c;left:90%;top:78%;animation-duration:13s;animation-delay:0.6s;"></div>
+    <div class="hero-particle" style="width:3px;height:3px;background:#ffb347;left:55%;top:74%;animation-duration:10s;animation-delay:2s;"></div>
 
-      <!-- Card 1 -->
-      <div class="flex items-center gap-4 p-4 border rounded-xl shadow-sm bg-gradient-to-r from-red-600 to-red-400 text-white">
-        <div class="text-4xl"><i class="fas fa-chart-line"></i></div>
-        <div class="flex-1">
-          <div class="text-sm uppercase tracking-wide">Selections</div>
-          <div class="text-2xl font-bold">99%ile+</div>
-          <div class="w-full bg-white/30 h-2 rounded-full mt-2 overflow-hidden">
-            <div class="h-2 bg-white rounded-full progress-fill" style="--fill: 99%; width: 99%"></div>
-          </div>
+    <div class="hero-inner">
+      <div class="hero-badge-pill">
+        <span class="pdot"></span> CAT 2025 Results Are In
+      </div>
+      <h1 class="hero-h1">Our Students.<br><span class="grad">Extraordinary Results.</span></h1>
+      <p class="hero-sub-text">Year after year, AB Classes students dominate the CAT scoreboard. The numbers speak for themselves.</p>
+
+      <div class="hero-big-stats">
+        <div class="hstat">
+          <div class="hstat-num"><span class="count" data-target="50">0</span><span class="suffix">+</span></div>
+          <div class="hstat-label">99+ %ile Scorers</div>
         </div>
-        <div class="text-right font-semibold text-lg">50+</div>
+        <div class="hstat">
+          <div class="hstat-num"><span class="count" data-target="99">0</span><span class="suffix">.57</span></div>
+          <div class="hstat-label">Top Score 2025</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num"><span class="count" data-target="8">0</span><span class="suffix">+</span></div>
+          <div class="hstat-label">Years of Excellence</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num"><span class="count" data-target="100">0</span><span class="suffix">+</span></div>
+          <div class="hstat-label">IIM Calls 2025</div>
+        </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="flex items-center gap-4 p-4 border rounded-xl shadow-sm bg-gradient-to-r from-yellow-600 to-yellow-400 text-white">
-        <div class="text-4xl"><i class="fas fa-user-graduate"></i></div>
-        <div class="flex-1">
-          <div class="text-sm uppercase tracking-wide">Student Satisfaction</div>
-          <div class="text-2xl font-bold">97%</div>
-          <div class="w-full bg-white/30 h-2 rounded-full mt-2 overflow-hidden">
-            <div class="h-2 bg-white rounded-full progress-fill" style="--fill: 97%; width: 97%"></div>
-          </div>
-        </div>
-        <div class="text-right font-semibold text-lg">900+</div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="flex items-center gap-4 p-4 border rounded-xl shadow-sm bg-gradient-to-r from-green-600 to-green-400 text-white">
-        <div class="text-4xl"><i class="fas fa-users"></i></div>
-        <div class="flex-1">
-          <div class="text-sm uppercase tracking-wide">Community Growth</div>
-          <div class="text-2xl font-bold">95%</div>
-          <div class="w-full bg-white/30 h-2 rounded-full mt-2 overflow-hidden">
-            <div class="h-2 bg-white rounded-full progress-fill" style="--fill: 95%; width: 95%"></div>
-          </div>
-        </div>
-        <div class="text-right font-semibold text-lg">1500+</div>
+      <div class="hero-cta-row">
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+           class="btn-hero-primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Enquire Now
+        </a>
+        <a href="#results" class="btn-ghost">
+          See All Results <i class="fas fa-arrow-down"></i>
+        </a>
       </div>
     </div>
-   </div>
   </section>
 
-  <!-- Results Grid Section 2024 and 2023 with tabs below -->
-  <section class="py-12 px-6 bg-slate-50 flex-grow max-w-7xl mx-auto">
-   <h2
-     class="text-3xl font-bold text-[#ff0000] text-center mb-6 max-w-4xl mx-auto"
-   >
-    Top Scorers &amp; Their CAT Percentiles 
-   </h2>
-
-   <!-- Year Tabs Section -->
-   <div class="flex justify-center space-x-4 mb-16 bg-white p-2 rounded-full shadow-md w-fit mx-auto border border-gray-100">
-      <button id="tab-2025" class="px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 bg-green-600 text-white shadow-lg transform scale-105" aria-selected="true" aria-controls="panel-2025" role="tab" type="button">2025</button>
-      <button id="tab-2024" class="px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 text-gray-500 hover:text-red-600 hover:bg-red-50" aria-selected="false" aria-controls="panel-2024" role="tab" type="button">2024</button>
-      <button id="tab-2023" class="px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 text-gray-500 hover:text-yellow-600 hover:bg-yellow-50" aria-selected="false" aria-controls="panel-2023" role="tab" type="button">2023</button>
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <!-- set 1 -->
+      <span class="marquee-item"><span class="dot"></span> Aditya Agrawal <span class="pct">99.57 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Saurabh Singh <span class="pct">98.93 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Aditya Jaggi <span class="pct">98.91 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Pranav Agarwal <span class="pct">98.89 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Abhinav Shrivas <span class="pct">98.66 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Devansh Kedia <span class="pct">98.6 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Chahak Kedia <span class="pct">99.76 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Achintya Jain <span class="pct">99.64 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Shivansh Patle <span class="pct">99.44 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Kritika Yadav <span class="pct">99.31 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Vansh Thacker <span class="pct">97.30 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Jigyasha Pagare <span class="pct">97.29 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Priyansh Gupta <span class="pct">97.26 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Moulik Jain <span class="pct">96.78 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Khushi Telang <span class="pct">96.42 %ile</span></span>
+      <!-- set 2 (duplicate for seamless loop) -->
+      <span class="marquee-item"><span class="dot"></span> Aditya Agrawal <span class="pct">99.57 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Saurabh Singh <span class="pct">98.93 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Aditya Jaggi <span class="pct">98.91 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Pranav Agarwal <span class="pct">98.89 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Abhinav Shrivas <span class="pct">98.66 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Devansh Kedia <span class="pct">98.6 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Chahak Kedia <span class="pct">99.76 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Achintya Jain <span class="pct">99.64 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Shivansh Patle <span class="pct">99.44 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Kritika Yadav <span class="pct">99.31 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Vansh Thacker <span class="pct">97.30 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Jigyasha Pagare <span class="pct">97.29 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Priyansh Gupta <span class="pct">97.26 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Moulik Jain <span class="pct">96.78 %ile</span></span>
+      <span class="marquee-item"><span class="dot"></span> Khushi Telang <span class="pct">96.42 %ile</span></span>
     </div>
-
-    <!-- 2025 Results Panel -->
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
-      role="tabpanel"
-      id="panel-2025"
-      aria-labelledby="tab-2025"
-    >
-      <!-- 2025 Results Start Here -->
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Aditya Agrawal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">99.57<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Saurabh Singh</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">98.93<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Aditya Jaggi</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">98.91<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Pranav Agarwal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">98.89<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Abhinav Shrivas</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">98.66<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Devansh Kedia</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">98.6<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Vansh Thacker</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">97.30<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Jigyasha Pagare</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">97.29<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Priyansh Gupta</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">97.26<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Abhisht Pandey</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">97.25<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Rishika Kanungo</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">96.94<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Moulik Jain</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">96.78<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Khushi Telang</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">96.42<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">G Vahini</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">95.19<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Devanssh Taparia</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">95.13<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Prakriti Dey</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">94.49<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Gaurav Sirohia</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">94.28<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">G Jayant Rao</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">92.81<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Ritika Sharma</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">92.61<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Achyut Patro</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">92.1<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Achintya Jain</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">91.72<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Ritwick Mandal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">91.49<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Sanskriti Modi</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">91.35<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Harsh Hinduja</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">91.28<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Aaditya Singh</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">91<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Rishika Agrawal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.48<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Bhoomi Verma</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.45<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Shreyansh Diwan</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.41<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Sheta Agrawal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.1<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Vanshika Jain</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.1<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The strategy sessions and mock interviews at AB Classes were very helpful. Highly recommended!"</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Gaurav Agrawal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90.03<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The mentorship at AB Classes was exceptional. The mock tests and analysis helped me identify my weak areas."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Anwesha Agrawal</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"I am grateful to AB Classes for their constant support and guidance. The study material was very comprehensive."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Nilay Manna</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"The faculty at AB Classes is very knowledgeable and approachable. They helped me clear my doubts instantly."</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-green-100 p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-green-500 transition-colors duration-300">
-        <div class="absolute top-0 right-0 p-4 opacity-5 text-green-600 text-9xl quote-icon select-none group-hover:opacity-10 transition-opacity">"</div>
-        <div class="text-green-600 text-6xl mb-6"><i class="fas fa-trophy"></i></div>
-        <h3 class="text-2xl font-extrabold text-green-700 mb-2">Divyanjali Sharma</h3>
-        <p class="text-green-800 font-bold text-lg mb-4">90<sup>th</sup> Percentile</p>
-        <p class="text-gray-600 italic leading-relaxed text-base max-w-[280px] relative z-10">"AB Classes played a crucial role in my success. The personalized attention I received was amazing."</p>
-      </div>
-      <!-- 2025 Results End Here -->
-    </div>
-
-   <div
-     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 hidden"
-     role="tabpanel"
-     id="panel-2024"
-     aria-labelledby="tab-2024"
-   >
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Chahak Kedia</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">99.76<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "AB CLASSES provided the perfect strategy and resources to push my percentile beyond expectations. The mentorship here is truly game-changing!"
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Achintya Jain</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">99.64<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "From structured content to personalized doubt-solving, every aspect of preparation was spot on. AB CLASSES was the key to my success."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Shivansh Patle</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">99.44<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "Thanks to AB CLASSES, I could balance my college and CAT prep with ease. Their mock analysis tools are the best!"
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Kritika Yadav</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">99.31<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "The constant motivation and timely feedback from mentors kept me on track. AB CLASSES made all the difference."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Aditya Agrawal</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">98.93<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "Concept clarity and consistent support helped me stay confident throughout. I owe a lot to AB CLASSES!"
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Adarsh Sharma</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">98.63<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "Each session brought me closer to my goal. The dedication of the faculty at AB CLASSES is unmatched."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Priyanshu</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">97.70<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "AB CLASSES helped me convert my potential into results. Their structured plan worked wonders for me."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Abhisht Pandey</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">97.54<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "I couldn’t have asked for a better prep partner. AB CLASSES simplified even the toughest sections for me."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Shreeyansh Sharma</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">97.42<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "With every mock test and review, I saw real improvement. AB CLASSES helped me stay focused and efficient."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Ritwick Mandal</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">97.42<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "Their flexible learning schedule helped me plan better. The mentorship made me feel personally guided."
-     </p>
-    </div>
-    <div class="bg-[#ffe6e6] rounded-lg shadow-lg border border-[#ff0000] p-6 flex flex-col items-center text-center">
-     <div class="text-[#ff0000] text-6xl mb-6">
-      <i class="fas fa-trophy"></i>
-     </div>
-     <h3 class="text-2xl font-extrabold text-[#ff0000] mb-2">Vanshika Singhal</h3>
-     <p class="text-[#660000] font-bold text-lg mb-4">97.03<sup>th</sup> Percentile</p>
-     <p class="text-[#660000] italic leading-relaxed text-base max-w-[280px]">
-      "Joining AB CLASSES was the best decision. The learning environment is truly supportive and inspiring."
-     </p>
-    </div>
-   </div>
-    
-   <section
-     class="py-12 px-6 bg-slate-50 flex-grow max-w-7xl mx-auto hidden"
-     role="tabpanel"
-     id="panel-2023"
-     aria-labelledby="tab-2023"
-     tabindex="0"
-   >
-    <h2
-      class="text-3xl font-extrabold text-yellow-700 text-center mb-12 max-w-4xl mx-auto"
-    >
-     Top Scorers &amp; Their CAT Percentiles - 2023
-    </h2>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
-    >
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Shubh Kela</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">99.82<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "AB CLASSES gave me the clarity and discipline I needed to reach 99.82 percentile. The mentors kept me constantly focused."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Bhavesh Chandwani</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.95<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "From smart strategies to timely feedback, everything was aligned for success at AB CLASSES."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Chahak Kedia</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">99.76<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "I cracked CAT with confidence, thanks to the structured learning and personal attention at AB CLASSES."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Abhi Agrawal</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">99.50<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "What worked for me was AB CLASSES’ consistent support and precise material. A game-changer!"
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Rohan Verma</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">99.27<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "Scoring 99.27 was possible because of the rigorous mocks and detailed analysis provided here."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Ashrut Sharma</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">99.10<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "AB CLASSES helped me push my limits and refine my performance with every mock."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Krishna Agrawal</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.85<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "It wasn’t just about studying — it was about learning the right way. AB CLASSES nailed that!"
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Anshul Laddha</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.70<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "A fantastic team of mentors and top-tier study plans—AB CLASSES made my dream percentile possible."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Rahul Agrawal</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.50<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "What I loved most was the logical approach to every section and the personal mentorship."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Anushk Hansraj</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.30<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "AB CLASSES helped me channel my efforts in the right direction. Their mock strategy is brilliant."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Priyansh Sharma</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">98.10<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "Mock tests, analysis, and personal feedback sessions—AB CLASSES gave me the complete package."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Mani Bhushan</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">97.90<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "With a strong foundation and continuous mentorship, AB CLASSES helped me stay on top of my prep."
-      </p>
-     </div>
-     <div class="bg-white rounded-lg shadow-lg border border-yellow-400 p-6 flex flex-col items-center text-center">
-      <div class="text-yellow-600 text-6xl mb-6">
-       <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-2xl font-extrabold text-yellow-700 mb-2">Sagarika Shukla</h3>
-      <p class="text-yellow-700 font-bold text-lg mb-4">97.75<sup>th</sup> Percentile</p>
-      <p class="text-yellow-700 italic leading-relaxed text-base max-w-[280px]">
-       "From building basics to acing mocks, every step at AB CLASSES was a step toward success."
-      </p>
-     </div>
-    </div>
-   </section>
-  </section>
-
-  
-
-  <div style="background-color: #FF0000; padding: 20px; text-align: center;">
-    <span style="white-space: nowrap; color: white; font-size: 28px; font-weight: 800;">
-      Hear From Our Students
-    </span>
   </div>
-  <iframe src="testimonial.html" class="w-full" style="height: 1000px; border: none;"></iframe>
 
-  
-  
-  <!-- Footer -->
-  <footer class="bg-[#ff0000] flex-shrink-0 p-12 text-white w-full">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-12">
-     <div class="flex flex-col space-y-4 md:w-1/3">
-      <h3 class="text-xl font-bold border-b border-white pb-2">AB Classes</h3>
-      <p class="text-sm text-white/90">
-       AB Classes is your trusted partner for CAT preparation, delivering
-       top-notch coaching and success stories year after year.
-      </p>
-      <div class="flex space-x-4 mt-2">
-       <a
-         href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
-         target="_blank"
-         rel="noopener"
-         aria-label="Facebook"
-         class="hover:text-white/80 transition"
-         ><i class="fab fa-facebook fa-lg"></i
-       ></a>
-       <a
-         href="https://twitter.com/abclasses"
-         target="_blank"
-         rel="noopener"
-         aria-label="Twitter"
-         class="hover:text-white/80 transition"
-         ><i class="fab fa-twitter fa-lg"></i
-       ></a>
-       <a
-         href="https://www.instagram.com/cat_abclasses/"
-         target="_blank"
-         rel="noopener"
-         aria-label="Instagram"
-         class="hover:text-white/80 transition"
-         ><i class="fab fa-instagram fa-lg"></i
-       ></a>
-       <a
-         href="https://www.linkedin.com/company/abclasses"
-         target="_blank"
-         rel="noopener"
-         aria-label="LinkedIn"
-         class="hover:text-white/80 transition"
-         ><i class="fab fa-linkedin fa-lg"></i
-       ></a>
+  <!-- RESULTS TABS -->
+  <section class="results-section" id="results">
+    <div class="results-inner">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Top Scorers</span>
+        <h2>Wall of Fame</h2>
+        <div class="bar"></div>
       </div>
-     </div>
-     <div class="flex flex-col space-y-4 md:w-1/3">
-      <h3 class="text-xl font-bold border-b border-white pb-2">Quick Links</h3>
-      <nav class="flex flex-col space-y-2 text-white/90">
-       <a
-         href="index.html"
-         class="hover:text-white/80 transition"
-         >Home</a
-       >
-       <a href="results.html"
-         class="hover:text-white/80 transition"
-         >Results</a
-       >
-       <a href="cd.html"
-         class="hover:text-white/80 transition"
-         >Courses</a
-       >
-       <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes" class="hover:text-white/80 transition"
-         >Contact</a
-       >
-      </nav>
-     </div>
-     <div class="flex flex-col space-y-4 md:w-1/3">
-      <h3 class="text-xl font-bold border-b border-white pb-2">Contact Us</h3>
-      <address class="not-italic text-white/90 space-y-2">
-       <p>AB Classes Pvt. Ltd.</p>
-       <p> Agrasen Chowk, Raipur, Chhattisgarh 492001</p>
-       <p>Phone: <a href="tel:+919827118488" class="hover:text-white/80">+91 98271 18488</a></p>
-       <p>Email: <a href="mailto:info@abclasses.in" class="hover:text-white/80">info@abclasses.in</a></p>
-      </address>
-     </div>
-    </div>
-   </footer>
+      <div class="year-tabs" role="tablist">
+        <button class="ytab active-2025" data-year="2025" role="tab" aria-selected="true">CAT 2025</button>
+        <button class="ytab" data-year="2024" role="tab" aria-selected="false">CAT 2024</button>
+        <button class="ytab" data-year="2023" role="tab" aria-selected="false">CAT 2023</button>
+      </div>
 
+      <!-- 2025 -->
+      <div class="results-grid panel active" id="panel-2025">
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#1</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.57</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Aditya Agrawal</div><p class="rcard-quote">The mentorship at AB Classes was exceptional. Mock tests and analysis helped me find my weak areas.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#2</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">98.93</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Saurabh Singh</div><p class="rcard-quote">Constant support and guidance from the team. The study material was very comprehensive.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#3</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">98.91</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Aditya Jaggi</div><p class="rcard-quote">The faculty is very knowledgeable and approachable. They helped me clear my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#4</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">98.89</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Pranav Agarwal</div><p class="rcard-quote">AB Classes played a crucial role in my success. The personalised attention was amazing.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#5</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">98.66</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Abhinav Shrivas</div><p class="rcard-quote">Strategy sessions and mock interviews were very helpful. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#6</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">98.6</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Devansh Kedia</div><p class="rcard-quote">The mentorship at AB Classes was exceptional. Mock tests helped me identify my weak areas.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#7</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">97.30</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Vansh Thacker</div><p class="rcard-quote">Constant support and guidance. The study material was very comprehensive.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#8</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">97.29</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Jigyasha Pagare</div><p class="rcard-quote">Very knowledgeable faculty who helped me clear my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#9</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">97.26</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Priyansh Gupta</div><p class="rcard-quote">AB Classes played a crucial role in my success.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#10</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">97.25</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Abhisht Pandey</div><p class="rcard-quote">Strategy sessions at AB Classes were very helpful. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#11</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">96.94</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Rishika Kanungo</div><p class="rcard-quote">The mentorship was exceptional and the analysis helped me tremendously.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#12</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">96.78</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Moulik Jain</div><p class="rcard-quote">Grateful for constant support and guidance. Study material was comprehensive.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#13</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">96.42</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Khushi Telang</div><p class="rcard-quote">Knowledgeable and approachable faculty who cleared my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#14</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">95.19</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">G Vahini</div><p class="rcard-quote">AB Classes played a crucial role in my success.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#15</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">95.13</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Devanssh Taparia</div><p class="rcard-quote">Strategy sessions were very helpful. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#16</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">94.49</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Prakriti Dey</div><p class="rcard-quote">Exceptional mentorship and mock test analysis.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#17</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">94.28</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Gaurav Sirohia</div><p class="rcard-quote">Grateful for constant support. Study material was very comprehensive.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#18</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">92.81</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">G Jayant Rao</div><p class="rcard-quote">Very knowledgeable faculty who helped me clear my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#19</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">92.61</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Ritika Sharma</div><p class="rcard-quote">AB Classes played a crucial role in my success.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#20</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">92.1</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Achyut Patro</div><p class="rcard-quote">Strategy sessions and mock interviews were very helpful. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#21</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">91.72</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Achintya Jain</div><p class="rcard-quote">Exceptional mentorship and mock test analysis helped me grow.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#22</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">91.49</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Ritwick Mandal</div><p class="rcard-quote">Grateful for constant support and comprehensive study material.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#23</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">91.35</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Sanskriti Modi</div><p class="rcard-quote">Knowledgeable faculty who helped clear my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#24</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">91.28</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Harsh Hinduja</div><p class="rcard-quote">AB Classes played a crucial role in my success.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#25</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">91.0</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Aaditya Singh</div><p class="rcard-quote">Strategy sessions and mock interviews were very helpful. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#26</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.48</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Rishika Agrawal</div><p class="rcard-quote">Exceptional mentorship. Mock tests and analysis were game changers.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#27</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.45</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Bhoomi Verma</div><p class="rcard-quote">Grateful for constant support and guidance from the entire team.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#28</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.41</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Shreyansh Diwan</div><p class="rcard-quote">Knowledgeable and approachable faculty. Helped me clear doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#29</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.1</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Shweta Agrawal</div><p class="rcard-quote">AB Classes played a crucial role in my success.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#30</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.1</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Vanshika Jain</div><p class="rcard-quote">Strategy sessions and mock interviews. Highly recommended!</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#31</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.03</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Gaurav Agrawal</div><p class="rcard-quote">Exceptional mentorship. Mock test analysis helped me identify weak areas.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#32</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.0</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Anwesha Agrawal</div><p class="rcard-quote">Grateful for constant support and comprehensive study material.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#33</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.0</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Nilay Manna</div><p class="rcard-quote">Very knowledgeable faculty who helped me clear my doubts instantly.</p></div></div>
+        <div class="rcard y2025"><div class="rcard-accent"></div><span class="rcard-rank">#34</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">90.0</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Divyanjali Sharma</div><p class="rcard-quote">AB Classes played a crucial role in my success. Personalised attention was amazing.</p></div></div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="results-grid panel" id="panel-2024">
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#1</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.76</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Chahak Kedia</div><p class="rcard-quote">AB Classes provided the perfect strategy to push my percentile beyond expectations. Truly game-changing!</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#2</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.64</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Achintya Jain</div><p class="rcard-quote">From structured content to personalised doubt-solving — every aspect was spot on.</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#3</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.44</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Shivansh Patle</div><p class="rcard-quote">I could balance college and CAT prep with ease. Their mock analysis tools are the best!</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#4</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.31</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Kritika Yadav</div><p class="rcard-quote">Constant motivation and timely feedback from mentors kept me on track.</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#5</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">98.93</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Aditya Agrawal</div><p class="rcard-quote">Concept clarity and consistent support helped me stay confident throughout.</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#6</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">98.63</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Adarsh Sharma</div><p class="rcard-quote">Each session brought me closer to my goal. Faculty dedication is unmatched.</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#7</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">97.70</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Priyanshu</div><p class="rcard-quote">AB Classes helped me convert my potential into results. Their structured plan worked wonders.</p></div></div>
+        <div class="rcard y2024"><div class="rcard-accent"></div><span class="rcard-rank">#8</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">97.54</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">Abhisht Pandey</div><p class="rcard-quote">Couldn't have asked for a better prep partner. AB Classes simplified even the toughest sections.</p></div></div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="results-grid panel" id="panel-2023">
+        <div class="rcard y2023"><div class="rcard-accent"></div><span class="rcard-rank">#1</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">99.5+</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">CAT 2023 Topper</div><p class="rcard-quote">AB Classes helped me crack CAT with a phenomenal percentile. Best coaching in Raipur, hands down.</p></div></div>
+        <div class="rcard y2023"><div class="rcard-accent"></div><span class="rcard-rank">#2</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-trophy"></i></div><div class="rcard-pct">98.2</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">XAT Achiever</div><p class="rcard-quote">The study material and expert teachers gave me the confidence to succeed in XAT and IIFT.</p></div></div>
+        <div class="rcard y2023"><div class="rcard-accent"></div><span class="rcard-rank">#3</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-medal"></i></div><div class="rcard-pct">97.8</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">SNAP Scholar</div><p class="rcard-quote">Joining AB Classes was the best decision for my MBA journey. The demo class convinced me instantly.</p></div></div>
+        <div class="rcard y2023"><div class="rcard-accent"></div><span class="rcard-rank">#4</span><div class="rcard-body"><div class="rcard-icon"><i class="fas fa-star"></i></div><div class="rcard-pct">96.5</div><div class="rcard-pct-label">Percentile</div><div class="rcard-divider"></div><div class="rcard-name">NMAT Star</div><p class="rcard-quote">Personalised coaching approach and focused mock analysis gave me the edge on exam day.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-glow"></div>
+    <span class="cta-eyebrow">Be The Next</span>
+    <h2>Write Your Success Story</h2>
+    <p>Join AB Classes and become the next 99+ percentile achiever from Raipur.</p>
+    <div class="cta-actions">
+      <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+         class="btn-hero-primary" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+      </a>
+      <a href="cd.html" class="btn-ghost">Explore Courses <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-brand">AB<em>Classes</em></span>
+        <p>Your trusted partner for CAT preparation — delivering top-notch coaching and IIM success stories year after year from Raipur, Chhattisgarh.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/abclasses" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/abclasses" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/cat_abclasses/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/abclasses" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=919827118488" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/@Abhishekabclasses" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="cd.html">Courses</a>
+        <a href="about.html">About Us</a>
+        <a href="articles-with-navbar.html">MBA Articles</a>
+        <a href="iim-call-predictor.html">IIM Call Predictor</a>
+        <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <address>
+          <p>AB Classes Pvt. Ltd.</p>
+          <p>Agrasen Chowk, Raipur<br>Chhattisgarh — 492001</p>
+          <p style="margin-top:12px;">
+            <a href="tel:+919827118488"><i class="fas fa-phone" style="color:var(--red);margin-right:7px;font-size:0.72rem;"></i>+91 98271 18488</a>
+            <a href="mailto:info@abclasses.in"><i class="fas fa-envelope" style="color:var(--red);margin-right:7px;font-size:0.72rem;"></i>info@abclasses.in</a>
+          </p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AB Classes Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=919827118488&text=I%20want%20to%20enquire%20about%20AB%20Classes"
+     class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-float-ring"></span>
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script>
-    const tab2025 = document.getElementById('tab-2025');
-    const tab2024 = document.getElementById('tab-2024');
-    const tab2023 = document.getElementById('tab-2023');
-    const panel2025 = document.getElementById('panel-2025');
-    const panel2024 = document.getElementById('panel-2024');
-    const panel2023 = document.getElementById('panel-2023');
+    // Navbar scroll
+    const nav = document.getElementById('mainNav');
+    function updateNav() { nav.classList.toggle('scrolled', window.scrollY > 60); }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
 
-    const allTabs = [tab2025, tab2024, tab2023];
-    const allPanels = [panel2025, panel2024, panel2023];
-
-    function switchTab(selectedTab, selectedPanel) {
-      // Reset all tabs
-      allTabs.forEach(tab => {
-        tab.classList.remove('bg-green-600', 'bg-red-600', 'bg-yellow-500', 'text-white', 'shadow-lg', 'transform', 'scale-105');
-        tab.classList.add('text-gray-500');
-        tab.setAttribute('aria-selected', 'false');
-      });
-
-      // Hide all panels
-      allPanels.forEach(panel => {
-        panel.classList.add('hidden');
-      });
-
-      // Activate selected tab
-      selectedTab.classList.remove('text-gray-500');
-      selectedTab.classList.add('text-white', 'shadow-lg', 'transform', 'scale-105');
-      
-      if (selectedTab.id === 'tab-2025') {
-        selectedTab.classList.add('bg-green-600');
-        selectedTab.classList.remove('hover:text-red-600', 'hover:bg-red-50', 'hover:text-yellow-600', 'hover:bg-yellow-50');
-      } else if (selectedTab.id === 'tab-2024') {
-        selectedTab.classList.add('bg-red-600');
-        selectedTab.classList.remove('hover:text-red-600', 'hover:bg-red-50');
-      } else if (selectedTab.id === 'tab-2023') {
-        selectedTab.classList.add('bg-yellow-500');
-        selectedTab.classList.remove('hover:text-yellow-600', 'hover:bg-yellow-50');
-      }
-
-      // Show selected panel
-      selectedTab.setAttribute('aria-selected', 'true');
-      selectedPanel.classList.remove('hidden');
-    }
-
-    tab2025.addEventListener('click', () => switchTab(tab2025, panel2025));
-    tab2024.addEventListener('click', () => switchTab(tab2024, panel2024));
-    tab2023.addEventListener('click', () => switchTab(tab2023, panel2023));
-
-    // Header Scripts
-    document.getElementById('topHamburger').addEventListener('click', function () {
-      document.getElementById('topMobileNav').classList.toggle('open');
-    });
-
+    // Hamburger
     document.getElementById('navHamburger').addEventListener('click', function () {
       const menu = document.getElementById('navMobileMenu');
       const icon = this.querySelector('i');
@@ -945,6 +563,90 @@
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-times');
     });
+
+    // easeOutExpo counter
+    function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+    function animateCount(el, target, duration) {
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(easeOutExpo(t) * target);
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+    }
+    const counterObs = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animateCount(entry.target, +entry.target.getAttribute('data-target'), 1800);
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.count').forEach(c => counterObs.observe(c));
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Tab switching
+    const tabs   = document.querySelectorAll('.ytab');
+    const panels = document.querySelectorAll('.panel');
+    const activeClasses = { '2025': 'active-2025', '2024': 'active-2024', '2023': 'active-2023' };
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const year = tab.dataset.year;
+        tabs.forEach(t => { t.classList.remove('active-2025','active-2024','active-2023'); t.setAttribute('aria-selected','false'); });
+        tab.classList.add(activeClasses[year]);
+        tab.setAttribute('aria-selected','true');
+        panels.forEach(p => p.classList.remove('active'));
+        const panel = document.getElementById('panel-' + year);
+        panel.classList.add('active');
+        panel.querySelectorAll('.rcard').forEach((c, i) => {
+          c.classList.remove('in');
+          c.style.transition = 'none';
+          requestAnimationFrame(() => {
+            c.style.transition = '';
+            setTimeout(() => c.classList.add('in'), i * 35);
+          });
+        });
+      });
+    });
+
+    // Animate initial panel
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('#panel-2025 .rcard').forEach((c, i) => {
+        setTimeout(() => c.classList.add('in'), 120 + i * 30);
+      });
+    });
+
+    // Lerp 3D tilt on cards
+    if (window.matchMedia('(min-width:769px) and (hover:hover)').matches) {
+      const lerp = (a, b, t) => a + (b - a) * t;
+      document.querySelectorAll('.rcard').forEach(card => {
+        let cx = 0, cy = 0, tx = 0, ty = 0, raf = null, over = false;
+        function tick() {
+          cx = lerp(cx, over ? tx : 0, 0.1);
+          cy = lerp(cy, over ? ty : 0, 0.1);
+          card.style.transform = `perspective(700px) rotateY(${cx * 9}deg) rotateX(${-cy * 9}deg) translateY(-8px)`;
+          if (Math.abs(cx) > 0.002 || Math.abs(cy) > 0.002 || over) raf = requestAnimationFrame(tick);
+          else { cx = cy = 0; card.style.transform = ''; raf = null; }
+        }
+        card.addEventListener('mouseenter', () => { over = true; if (!raf) raf = requestAnimationFrame(tick); });
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          tx = ((e.clientX - r.left) / r.width  - 0.5) * 2;
+          ty = ((e.clientY - r.top)  / r.height - 0.5) * 2;
+        });
+        card.addEventListener('mouseleave', () => { over = false; tx = ty = 0; });
+      });
+    }
   </script>
- </body>
+</body>
 </html>
